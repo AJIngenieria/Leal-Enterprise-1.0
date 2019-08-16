@@ -326,7 +326,7 @@
             // 
             this.ingresoDeBodegaToolStripMenuItem1.Name = "ingresoDeBodegaToolStripMenuItem1";
             this.ingresoDeBodegaToolStripMenuItem1.Size = new System.Drawing.Size(190, 22);
-            this.ingresoDeBodegaToolStripMenuItem1.Text = "Ingreso de Bodega";
+            this.ingresoDeBodegaToolStripMenuItem1.Text = "Ingreso de Inventario";
             // 
             // salidaDeInventarioToolStripMenuItem
             // 
