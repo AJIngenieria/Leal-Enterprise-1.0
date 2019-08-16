@@ -44,40 +44,40 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="frmAlmacen_Bodega.cs">
+    <Compile Include="Almacen\frmAlmacen_Bodega.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAlmacen_Bodega.Designer.cs">
+    <Compile Include="Almacen\frmAlmacen_Bodega.Designer.cs">
       <DependentUpon>frmAlmacen_Bodega.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAlmacen_Cliente.cs">
+    <Compile Include="Almacen\frmAlmacen_Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAlmacen_Cliente.Designer.cs">
+    <Compile Include="Almacen\frmAlmacen_Cliente.Designer.cs">
       <DependentUpon>frmAlmacen_Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAlmacen_Ingreso.cs">
+    <Compile Include="Almacen\frmAlmacen_Ingreso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAlmacen_Ingreso.Designer.cs">
+    <Compile Include="Almacen\frmAlmacen_Ingreso.Designer.cs">
       <DependentUpon>frmAlmacen_Ingreso.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAlmacen_Salidas.cs">
+    <Compile Include="Almacen\frmAlmacen_Salidas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAlmacen_Salidas.Designer.cs">
+    <Compile Include="Almacen\frmAlmacen_Salidas.Designer.cs">
       <DependentUpon>frmAlmacen_Salidas.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAlmacen_Sucurzal.cs">
+    <Compile Include="Almacen\frmAlmacen_Sucurzal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAlmacen_Sucurzal.Designer.cs">
+    <Compile Include="Almacen\frmAlmacen_Sucurzal.Designer.cs">
       <DependentUpon>frmAlmacen_Sucurzal.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAlmacen_Traslados.cs">
+    <Compile Include="Almacen\frmAlmacen_Traslados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAlmacen_Traslados.Designer.cs">
+    <Compile Include="Almacen\frmAlmacen_Traslados.Designer.cs">
       <DependentUpon>frmAlmacen_Traslados.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMenuPrincipal.cs">
@@ -86,94 +86,94 @@
     <Compile Include="frmMenuPrincipal.Designer.cs">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProductos_CodigoDeBarra.cs">
+    <Compile Include="Productos\frmProductos_CodigoDeBarra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProductos_CodigoDeBarra.Designer.cs">
+    <Compile Include="Productos\frmProductos_CodigoDeBarra.Designer.cs">
       <DependentUpon>frmProductos_CodigoDeBarra.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProductos_CodigoQR.cs">
+    <Compile Include="Productos\frmProductos_CodigoQR.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProductos_CodigoQR.Designer.cs">
+    <Compile Include="Productos\frmProductos_CodigoQR.Designer.cs">
       <DependentUpon>frmProductos_CodigoQR.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProductos_CostosyPrecios.cs">
+    <Compile Include="Productos\frmProductos_CostosyPrecios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProductos_CostosyPrecios.Designer.cs">
+    <Compile Include="Productos\frmProductos_CostosyPrecios.Designer.cs">
       <DependentUpon>frmProductos_CostosyPrecios.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProductos_DatosBasicos.cs">
+    <Compile Include="Productos\frmProductos_DatosBasicos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProductos_DatosBasicos.Designer.cs">
+    <Compile Include="Productos\frmProductos_DatosBasicos.Designer.cs">
       <DependentUpon>frmProductos_DatosBasicos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProductos_Grupo.cs">
+    <Compile Include="Productos\frmProductos_Grupo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProductos_Grupo.Designer.cs">
+    <Compile Include="Productos\frmProductos_Grupo.Designer.cs">
       <DependentUpon>frmProductos_Grupo.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProductos_Laboratorio.cs">
+    <Compile Include="Productos\frmProductos_Laboratorio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProductos_Laboratorio.Designer.cs">
+    <Compile Include="Productos\frmProductos_Laboratorio.Designer.cs">
       <DependentUpon>frmProductos_Laboratorio.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProductos_Marca.cs">
+    <Compile Include="Productos\frmProductos_Marca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProductos_Marca.Designer.cs">
+    <Compile Include="Productos\frmProductos_Marca.Designer.cs">
       <DependentUpon>frmProductos_Marca.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProductos_Proveedor.cs">
+    <Compile Include="Productos\frmProductos_Proveedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProductos_Proveedor.Designer.cs">
+    <Compile Include="Productos\frmProductos_Proveedor.Designer.cs">
       <DependentUpon>frmProductos_Proveedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProductos_Tipo.cs">
+    <Compile Include="Productos\frmProductos_Tipo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProductos_Tipo.Designer.cs">
+    <Compile Include="Productos\frmProductos_Tipo.Designer.cs">
       <DependentUpon>frmProductos_Tipo.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSistema_Configuracion.cs">
+    <Compile Include="Sistema\frmSistema_Configuracion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSistema_Configuracion.Designer.cs">
+    <Compile Include="Sistema\frmSistema_Configuracion.Designer.cs">
       <DependentUpon>frmSistema_Configuracion.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSistema_Empleados.cs">
+    <Compile Include="Sistema\frmSistema_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSistema_Empleados.Designer.cs">
+    <Compile Include="Sistema\frmSistema_Empleados.Designer.cs">
       <DependentUpon>frmSistema_Empleados.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSistema_Empresa.cs">
+    <Compile Include="Sistema\frmSistema_Empresa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSistema_Empresa.Designer.cs">
+    <Compile Include="Sistema\frmSistema_Empresa.Designer.cs">
       <DependentUpon>frmSistema_Empresa.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSistema_EmpresaDescripcion.cs">
+    <Compile Include="Sistema\frmSistema_EmpresaDescripcion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSistema_EmpresaDescripcion.Designer.cs">
+    <Compile Include="Sistema\frmSistema_EmpresaDescripcion.Designer.cs">
       <DependentUpon>frmSistema_EmpresaDescripcion.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSistema_ResolucionDian.cs">
+    <Compile Include="Sistema\frmSistema_ResolucionDian.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSistema_ResolucionDian.Designer.cs">
+    <Compile Include="Sistema\frmSistema_ResolucionDian.Designer.cs">
       <DependentUpon>frmSistema_ResolucionDian.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSistema_Usuario.cs">
+    <Compile Include="Sistema\frmSistema_Usuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSistema_Usuario.Designer.cs">
+    <Compile Include="Sistema\frmSistema_Usuario.Designer.cs">
       <DependentUpon>frmSistema_Usuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
