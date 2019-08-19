@@ -80,6 +80,18 @@
     <Compile Include="Almacen\frmAlmacen_Traslados.Designer.cs">
       <DependentUpon>frmAlmacen_Traslados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Almacen\frmAlmacen_DatosDeEnvio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Almacen\frmAlmacen_DatosDeEnvio.Designer.cs">
+      <DependentUpon>frmAlmacen_DatosDeEnvio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,17 +152,22 @@
     <Compile Include="Productos\frmProductos_Tipo.Designer.cs">
       <DependentUpon>frmProductos_Tipo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Sistema\frmSistema_Configuracion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Sistema\frmSistema_Configuracion.Designer.cs">
       <DependentUpon>frmSistema_Configuracion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sistema\frmSistema_Empleados.cs">
+    <Compile Include="Gestion Humana\frmGestionHumana_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sistema\frmSistema_Empleados.Designer.cs">
-      <DependentUpon>frmSistema_Empleados.cs</DependentUpon>
+    <Compile Include="Gestion Humana\frmGestionHumana_Empleados.Designer.cs">
+      <DependentUpon>frmGestionHumana_Empleados.cs</DependentUpon>
     </Compile>
     <Compile Include="Sistema\frmSistema_Empresa.cs">
       <SubType>Form</SubType>
@@ -185,9 +202,52 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Almacen\frmAlmacen_Bodega.resx">
+      <DependentUpon>frmAlmacen_Bodega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Almacen\frmAlmacen_DatosDeEnvio.resx">
+      <DependentUpon>frmAlmacen_DatosDeEnvio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BR_Agregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BR_Editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BR_Eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BR_Guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BR_Nuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BV_Agregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BV_Editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BV_Eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BV_Guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BV_Nuevo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
