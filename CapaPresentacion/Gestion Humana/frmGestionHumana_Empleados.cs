@@ -205,34 +205,31 @@ namespace CapaPresentacion
         {
             try
             {
-                if (!IsNuevo)
+                if (Guardar == "Si")
                 {
-                    if (Guardar == "Si")
-                    {
-                        // Se procede habilitar los campos de textos
-                        this.Limpiar();
-                        this.Habilitar();
+                    // Se procede habilitar los campos de textos
+                    this.Limpiar();
+                    this.Habilitar();
 
-                        //Se Habilita el Boton Guardar para realizar los nuevos Registros
-                        //Los demas botones solo se habilitan al realizar la consulta
-                        //Y se tenga el permiso para editar, eliminar y consultar
+                    //Se Habilita el Boton Guardar para realizar los nuevos Registros
+                    //Los demas botones solo se habilitan al realizar la consulta
+                    //Y se tenga el permiso para editar, eliminar y consultar
 
-                        this.btnGuardar.Enabled = true;
-                        this.btnEliminar.Enabled = false;
-                        this.btnEditar.Enabled = false;
+                    this.btnGuardar.Enabled = true;
+                    this.btnEliminar.Enabled = false;
+                    this.btnEditar.Enabled = false;
 
-                        // Se hace enfasis (Focus) Al Iniciar el Evento Click 
-                        // sobre el Campo Con Nombre Proveedor
+                    // Se hace enfasis (Focus) Al Iniciar el Evento Click 
+                    // sobre el Campo Con Nombre Proveedor
 
-                        this.TBEmpleado.Focus();
-                        this.IsNuevo = true;
-                        this.IsEditar = false;
-                    }
+                    this.TBEmpleado.Focus();
+                    this.IsNuevo = true;
+                    this.IsEditar = false;
+                }
 
-                    else if (Guardar == "No")
-                    {
-                        MessageBox.Show("El Usuario Iniciado Actualmente no Contiene Permisos Para Realizar Registros en el Sistema", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
+                else
+                {
+                    MessageBox.Show("El Usuario Iniciado Actualmente no Contiene Permisos Para Realizar Registros en el Sistema", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             catch (Exception ex)

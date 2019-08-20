@@ -24,7 +24,6 @@ namespace CapaPresentacion
         public string Menu_GestionHumana = "";
         public string Menu_Productos = "";
         public string Menu_Reportes = "";
-        public string Menu_Remision = "";
         public string Menu_Sistema = "";
         public string Menu_Ventas = "";
 
@@ -77,15 +76,6 @@ namespace CapaPresentacion
             if (Menu_Productos == "No")
             {
                 this.MP_Productos.Enabled = false;
-            }
-
-            if (Menu_Remision == "Si")
-            {
-                this.MP_Remision.Enabled = true;
-            }
-            if (Menu_Remision == "No")
-            {
-                this.MP_Remision.Enabled = false;
             }
 
             if (Menu_Reportes == "Si")

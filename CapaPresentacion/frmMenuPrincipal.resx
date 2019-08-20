@@ -120,6 +120,29 @@
   <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="MP_Ventas.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxMAAAsTAQCanBgAAAOhSURBVFhH7ZR/TJR1HMc/d/fc83zLxK2M1ZqtrblW/IMr
+        p6s/pP6wHBw1guGhwvzF4eS4Foyls7hCQAlPRvyYiJyepIgKCgN/i8pjLSVZRlT+lU1NsxVE/kDAd9/n
+        7vsQyCF3V2628dpee+7zeb77vL/Ps3u+NMEE/zuioqKk1NTUWU6nUxYtstvtYbGxsTNE+eBISEiQbTZb
+        g8PhQFJSUrpoU0pKijsrKwt8E07R+u8ZHm61Wrujo6NfFLcoJibGkpycPDhsE6ZnnqPIyDdpWcQcsk4J
+        p+d9K0Pk3nCLxTJT3BqCB8/XNpGdswTZO6b8kn+asP4MoZCb10aIX027Jk+mJ8TywAkkXOfdxLkrPmwx
+        o+gcYUPHSD89S0gtp2/4MrNv9X0AyIhWkjY5X340Lc22Tw9PjJs3W+uPpbuJGvP50677YqQlZ8O919xW
+        wkwLZYkY/6BNKUIb6x84+Qgq1s6DFr40JR4X6sLB+369e4phgLu6gfDJcZ+5rUbvtfa8Bbf7e+BSn/bW
+        i/LoKxE1Gv4Uj/UdZdD82jPdG76Eh3fWhOP2YTbCW4dGeqlZQeYuwppmQtWXc3C5ux11HVbcGbiB3R0L
+        vH3N9CrqFXGj4a/e0NvI2v9sZPi1Pgw1eTPQ6Z6Knv1syO5999jA8Af3ej1DhpuQvYewql5G15UmDN4d
+        wM4zC7w9XevH9J2I889VD006UWju6iiVfh/ys9Ge8+OqUgMcHsJ72wmZn8soO/KG97duxlbCrDjaKKLG
+        5rTLdPFClQnBerTMgLTyfwKHq21sYQFdpzB6XMSMjVquqP7+bOPZd1zGgW2ElWUEe7UvOEOrt/DaRX1T
+        p9ErIuL+nCpV1METDLp/HVJwaY8cUN3TIqGdh1cVE4pKCC5+9bgIjTkG7QwIjJPFinqHfwm6DR+ZsHE5
+        4dpeJaB67xqjt24vMeA8fxs/VBqxLdNUK8aPz7ENinrzIIOu530jXMsIP7rlkGrNwjRzsRg/PkcKFbW3
+        iUG32m7E+mRCV6UcUq25bnkQGzhQoKjat627aYURa+cTvq2QQ6o1C5YGsYHmXEX9bTeDbqXNiJw438BQ
+        as28xUFsYLPDXHdtJ4NuJx/UkiPham1otWZ6rJQtxo/P27NNiZc9DLpXavjRzIeFWl/cyvpfepYixPiA
+        MHwQL+X/tIUN/lzN8G/8voL1xr1qWiTmBseTk+ipqAjprbmRpndC8bUXpNf5uRsmxk0wwcMI0d8vrct+
+        KmZRZAAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>223, 17</value>
   </metadata>

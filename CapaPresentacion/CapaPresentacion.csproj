@@ -284,5 +284,29 @@
   <ItemGroup>
     <Folder Include="Filtros\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almacen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Configuracion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gestion_Humana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Productos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reportes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ventas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ventas1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ayuda.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
