@@ -72,11 +72,11 @@ namespace CapaNegocio
             return Obj.Eliminar_DatosBasicos(Obj);
         }
 
-        public static DataTable Buscar_Empleado(string filtro)
+        public static DataTable Buscar_Empresa(string filtro)
         {
             Conexion_Sistema_Empresa Obj = new Conexion_Sistema_Empresa();
             Obj.Filtro = filtro;
-            return Obj.Buscar_Empleado(Obj);
+            return Obj.Buscar_Empresa(Obj);
         }
     }
 }

@@ -292,7 +292,7 @@ namespace CapaDatos
 
         }
 
-        public DataTable Buscar_Empleado(Conexion_Sistema_Empresa Empresa)
+        public DataTable Buscar_Empresa(Conexion_Sistema_Empresa Empresa)
         {
             DataTable DtResultado = new DataTable("Sistema.Empleado");
             SqlConnection SqlCon = new SqlConnection();

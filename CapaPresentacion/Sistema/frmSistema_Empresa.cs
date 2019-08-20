@@ -129,23 +129,23 @@ namespace CapaPresentacion
                 {
                     if (this.IsNuevo)
                     {
-                        rptaDatosBasicos = f.Guardar_DatosBasicos
+                        rptaDatosBasicos = fSistema_Empresa.Guardar_DatosBasicos
 
                             (
                                 //Panel de Datos Basicos
-                                this.TBEmpleado.Text, this.TBDocumento.Text, this.TBTelefono.Text,
-                                this.TBMovil.Text, this.TBEmail.Text, this.TBDireccion.Text, 1
+                                this.TBEmpresa.Text, this.TBEslogan.Text,this.TBDocumento.Text, this.TBDireccion.Text,
+                                this.TBMovil.Text, this.TBTelefono.Text, this.TBCorreo.Text, 1
                             );
                     }
 
                     else if (this.IsEditar)
                     {
-                        rptaDatosBasicos = f.Editar_DatosBasicos
+                        rptaDatosBasicos = fSistema_Empresa.Editar_DatosBasicos
 
                             (
                                 //Panel de Datos Basicos
-                                Convert.ToInt32(this.TBIdempleado.Text), this.TBEmpleado.Text, this.TBDocumento.Text, this.TBTelefono.Text,
-                                this.TBMovil.Text, this.TBEmail.Text, this.TBDireccion.Text, 1
+                                Convert.ToInt32(this.TBIdempresa.Text), this.TBEmpresa.Text, this.TBEslogan.Text, this.TBDocumento.Text, this.TBDireccion.Text,
+                                this.TBMovil.Text, this.TBTelefono.Text, this.TBCorreo.Text, 2
                             );
                     }
 
@@ -296,7 +296,7 @@ namespace CapaPresentacion
 
                     if (this.TBBuscar.Text != "")
                     {
-                        this.DGResultados.DataSource = f.Buscar_Empleado(this.TBBuscar.Text);
+                        this.DGResultados.DataSource = fSistema_Empresa.Buscar_Empresa(this.TBBuscar.Text);
                         //this.DGResultado.Columns[0].Visible = false;
                         this.lblTotal.Text = "Datos Registrados: " + Convert.ToString(DGResultados.Rows.Count);
 
