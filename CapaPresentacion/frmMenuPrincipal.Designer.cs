@@ -491,7 +491,7 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
             this.Name = "frmMenuPrincipal";
-            this.Text = "frmMenuPrincipal";
+            this.Text = "Menu Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmMenuPrincipal_Load);
             this.menuStrip.ResumeLayout(false);

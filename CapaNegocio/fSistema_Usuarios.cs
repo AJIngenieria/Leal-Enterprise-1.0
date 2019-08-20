@@ -19,20 +19,6 @@ namespace CapaNegocio
             return Obj.Login(Obj);
         }
 
-        public static DataTable Permiso(int idusuario)
-        {
-            Conexion_Sistema_Usuarios Obj = new Conexion_Sistema_Usuarios();
-            Obj.Idusuario = idusuario;
-            return Obj.Permiso(Obj);
-        }
-
-        public static DataTable Niveles(int idusuario)
-        {
-            Conexion_Sistema_Usuarios Obj = new Conexion_Sistema_Usuarios();
-            Obj.Idusuario = idusuario;
-            return Obj.Niveles(Obj);
-        }
-
         public static string Guardar_DatosBasicos
             (
                 //Llaves Primarias

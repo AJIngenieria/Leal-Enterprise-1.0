@@ -18,7 +18,6 @@ namespace CapaPresentacion
         public string Cede = "";
         public string UsuarioLogueado = "";
         public string Idusuario = "";
-        public string UsuarioEstado = "";
 
         //Menu Principal
         public string Menu_Almacen = "";

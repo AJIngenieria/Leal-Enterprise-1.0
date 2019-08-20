@@ -73,57 +73,27 @@ namespace CapaPresentacion
                         this.TBInicioDeSesion.Text = "Usuario Existente en la Base de Datos...";
 
                         frmMenuPrincipal frm = new frmMenuPrincipal();
-                        frm.Idusuario = Datos.Rows[0][0].ToString();
-                        frm.Idempleado = Datos.Rows[0][1].ToString();
+                        frm.Idempleado = Datos.Rows[0][0].ToString();
+                        frm.Idusuario = Datos.Rows[0][1].ToString();
                         frm.Empleado = Datos.Rows[0][2].ToString();
-                        frm.UsuarioEstado = Datos.Rows[0][3].ToString();
+                        frm.UsuarioLogueado = Datos.Rows[0][3].ToString();
 
-                        this.TBInicioDeSesion.Text = "Capturando Datos de Acceso...";
+                        //this.TBInicioDeSesion.Text = "Capturando Datos de Acceso...";
 
                         //Captura de Valores en la Base de Datos
 
-                        this.SQL_Idsuario = frm.Idusuario;
+                        frm.SQL_Guardar = Datos.Rows[0][4].ToString();
+                        frm.SQL_Editar = Datos.Rows[0][5].ToString();
+                        frm.SQL_Eliminar = Datos.Rows[0][6].ToString();
+                        frm.SQL_Consultar = Datos.Rows[0][7].ToString();
 
-                        if (SQL_Permisos)
-                        {
-                            DataTable Permiso = CapaNegocio.fSistema_Usuarios.Permiso(Convert.ToInt32(SQL_Idsuario));
-                            if (Datos.Rows.Count == 0)
-                            {
-                                MessageBox.Show("No se Encuentran Permisos de Operacion en el Sistema, Por Favor Contacte al Area de Sistema, ", "Servi Lavado Las Brisas", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                            else
-                            {
-                                this.TBInicioDeSesion.Text = "Iniciando Permisos de Operacion...";
-
-                                frm.SQL_Consultar = Permiso.Rows[0][2].ToString();
-                                frm.SQL_Guardar = Permiso.Rows[0][3].ToString();
-                                frm.SQL_Eliminar = Permiso.Rows[0][4].ToString();
-                                frm.SQL_Editar = Permiso.Rows[0][5].ToString();
-
-                            }
-                        }
-
-                        if (SQL_Niveles)
-                        {
-                            DataTable Niveles = CapaNegocio.fSistema_Usuarios.Niveles(Convert.ToInt32(SQL_Idsuario));
-                            if (Datos.Rows.Count == 0)
-                            {
-                                MessageBox.Show("No se Encuentran Niveles de Operacion en el Sistema, Por Favor Contacte al Area de Sistema, ", "Servi Lavado Las Brisas", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                            else
-                            {
-                                this.TBInicioDeSesion.Text = "Iniciando Niveles de Operacion...";
-
-                                frm.Menu_Cliente = Niveles.Rows[0][3].ToString();
-                                frm.Menu_Nomina = Niveles.Rows[0][4].ToString();
-                                frm.Menu_Produccion = Niveles.Rows[0][5].ToString();
-                                frm.Menu_Ventas = Niveles.Rows[0][6].ToString();
-                                frm.Menu_Sistema = Niveles.Rows[0][7].ToString();
-
-                                this.TBInicioDeSesion.Text = "Iniciando Aplicacion";
-
-                            }
-                        }
+                        frm.Menu_Almacen = Datos.Rows[0][8].ToString();
+                        frm.Menu_GestionHumana = Datos.Rows[0][9].ToString();
+                        frm.Menu_Productos = Datos.Rows[0][10].ToString();
+                        frm.Menu_Remision = Datos.Rows[0][11].ToString();
+                        frm.Menu_Reportes = Datos.Rows[0][12].ToString();
+                        frm.Menu_Sistema = Datos.Rows[0][13].ToString();
+                        frm.Menu_Ventas = Datos.Rows[0][14].ToString();
 
                         frm.Show();
                         this.Hide();

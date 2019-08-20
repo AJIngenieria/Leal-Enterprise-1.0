@@ -168,64 +168,6 @@ namespace CapaDatos
             return DtResultado;
         }
 
-        public DataTable Niveles(Conexion_Sistema_Usuarios Niveles)
-        {
-            DataTable DtResultado = new DataTable("Sistema.Usuarios");
-            SqlConnection SqlCon = new SqlConnection();
-            try
-            {
-                SqlCon.ConnectionString = Conexion_BaseDeDatos.Conexion_SQL;
-                SqlCommand SqlCmd = new SqlCommand();
-                SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "Sistema.Login_Niveles";
-                SqlCmd.CommandType = CommandType.StoredProcedure;
-
-                SqlParameter ParIdusuario = new SqlParameter();
-                ParIdusuario.ParameterName = "@Idusuario";
-                ParIdusuario.SqlDbType = SqlDbType.Int;
-                ParIdusuario.Value = Niveles.Idusuario;
-                SqlCmd.Parameters.Add(ParIdusuario);
-
-                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
-                SqlDat.Fill(DtResultado);
-
-            }
-            catch (Exception ex)
-            {
-                DtResultado = null;
-            }
-            return DtResultado;
-        }
-
-        public DataTable Permiso(Conexion_Sistema_Usuarios Permiso)
-        {
-            DataTable DtResultado = new DataTable("Sistema.Permisos");
-            SqlConnection SqlCon = new SqlConnection();
-            try
-            {
-                SqlCon.ConnectionString = Conexion_BaseDeDatos.Conexion_SQL;
-                SqlCommand SqlCmd = new SqlCommand();
-                SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "Sistema.Login_Permisos";
-                SqlCmd.CommandType = CommandType.StoredProcedure;
-
-                SqlParameter ParIdusuario = new SqlParameter();
-                ParIdusuario.ParameterName = "@Idusuario";
-                ParIdusuario.SqlDbType = SqlDbType.Int;
-                ParIdusuario.Value = Permiso.Idusuario;
-                SqlCmd.Parameters.Add(ParIdusuario);
-
-                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
-                SqlDat.Fill(DtResultado);
-
-            }
-            catch (Exception ex)
-            {
-                DtResultado = null;
-            }
-            return DtResultado;
-        }
-
         //Método Insertar
         public string Guardar_DatosBasicos(Conexion_Sistema_Usuarios DatosBasicos)
         {
