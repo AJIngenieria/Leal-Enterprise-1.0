@@ -86,6 +86,12 @@
     <Compile Include="Almacen\frmAlmacen_DatosDeEnvio.Designer.cs">
       <DependentUpon>frmAlmacen_DatosDeEnvio.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmExaminar_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExaminar_Empleado.Designer.cs">
+      <DependentUpon>frmExaminar_Empleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,12 @@
     </Compile>
     <Compile Include="frmMenuPrincipal.Designer.cs">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\frmSistema_Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\frmSistema_Usuarios.Designer.cs">
+      <DependentUpon>frmSistema_Usuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Productos\frmProductos_CodigoDeBarra.cs">
       <SubType>Form</SubType>
@@ -187,12 +199,6 @@
     <Compile Include="Sistema\frmSistema_ResolucionDian.Designer.cs">
       <DependentUpon>frmSistema_ResolucionDian.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sistema\frmSistema_Usuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sistema\frmSistema_Usuario.Designer.cs">
-      <DependentUpon>frmSistema_Usuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -208,11 +214,20 @@
     <EmbeddedResource Include="Almacen\frmAlmacen_DatosDeEnvio.resx">
       <DependentUpon>frmAlmacen_DatosDeEnvio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmExaminar_Empleado.resx">
+      <DependentUpon>frmExaminar_Empleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\frmSistema_Usuarios.resx">
+      <DependentUpon>frmSistema_Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion Humana\frmGestionHumana_Empleados.resx">
+      <DependentUpon>frmGestionHumana_Empleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -248,6 +263,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BV_Nuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnExaminar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Filtros\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
