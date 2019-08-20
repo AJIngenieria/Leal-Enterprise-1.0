@@ -256,24 +256,33 @@ namespace CapaPresentacion
         {
             try
             {
-                if (!IsNuevo)
+                if (Guardar=="Si")
                 {
+                    // Se hace enfasis (Focus) Al Iniciar el Evento Click 
+                    // sobre el Campo Con Nombre Proveedor
+
+                    this.TBUsuario.Focus();
+                    this.IsNuevo = true;
+
                     // Se procede habilitar los campos de textos
                     this.Habilitar();
+                    this.Limpiar();
 
                     // Se procede habilitar los Botones Basicos
                     // Los Campos de Textos y Botones de Examinar
 
                     this.btnNuevo.Enabled = false;
                     this.btnGuardar.Enabled = true;
+                    this.btnEliminar.Enabled = false;
+                    this.btnEditar.Enabled = false;
 
                 }
 
-                // Se hace enfasis (Focus) Al Iniciar el Evento Click 
-                // sobre el Campo Con Nombre Proveedor
+                else
+                {
+                    MessageBox.Show("El Usuario Iniciado Actualmente no Contiene Permisos Para Realizar Registros en el Sistema", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
 
-                this.TBUsuario.Focus();
-                this.IsNuevo = true;
             }
             catch (Exception ex)
             {

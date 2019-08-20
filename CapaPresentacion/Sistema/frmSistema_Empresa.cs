@@ -42,10 +42,6 @@ namespace CapaPresentacion
             //Inicio de Clase y Botones
             this.DesHabilitar();
 
-            this.btnGuardar.Enabled = false;
-            this.btnEliminar.Enabled = false;
-            this.btnEditar.Enabled = false;
-
             //Ocultacion de Texbox ID
             this.TBIdempresa.Visible = false;
 
@@ -59,6 +55,8 @@ namespace CapaPresentacion
             // Los Campos de Textos se Habilitaran 
             this.TBEmpresa.ReadOnly = false;
             this.TBEmpresa.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBEslogan.ReadOnly = false;
+            this.TBEslogan.BackColor = Color.FromArgb(32, 178, 170);
             this.TBDocumento.ReadOnly = false;
             this.TBDocumento.BackColor = Color.FromArgb(32, 178, 170);
             this.TBTelefono.ReadOnly = false;
@@ -77,6 +75,8 @@ namespace CapaPresentacion
             //Panel - Datos Basicos
             this.TBEmpresa.ReadOnly = true;
             this.TBEmpresa.BackColor = Color.FromArgb(187, 222, 251);
+            this.TBEslogan.ReadOnly = true;
+            this.TBEslogan.BackColor = Color.FromArgb(187, 222, 251);
             this.TBDocumento.ReadOnly = true;
             this.TBDocumento.BackColor = Color.FromArgb(187, 222, 251);
             this.TBTelefono.ReadOnly = true;
@@ -89,6 +89,7 @@ namespace CapaPresentacion
             this.TBDireccion.BackColor = Color.FromArgb(187, 222, 251);
 
             //Desabilitacion de Botones
+            this.btnNuevo.Enabled = true;
             this.btnEditar.Enabled = false;
             this.btnGuardar.Enabled = false;
             this.btnEliminar.Enabled = false;
@@ -100,6 +101,7 @@ namespace CapaPresentacion
             //Panel - Datos Basicos
             this.TBIdempresa.Clear();
             this.TBEmpresa.Clear();
+            this.TBEslogan.Clear();
             this.TBDocumento.Clear();
             this.TBTelefono.Clear();
             this.TBMovil.Clear();
@@ -195,35 +197,32 @@ namespace CapaPresentacion
         {
             try
             {
-                if (!IsNuevo)
+                if (Guardar == "Si")
                 {
-                    if (Guardar == "Si")
-                    {
-                        // Se procede habilitar los campos de textos
-                        this.Limpiar();
-                        this.Habilitar();
+                    // Se procede habilitar los campos de textos
+                    this.Habilitar();
+                    this.Limpiar();
 
-                        //Se Habilita el Boton Guardar para realizar los nuevos Registros
-                        //Los demas botones solo se habilitan al realizar la consulta
-                        //Y se tenga el permiso para editar, eliminar y consultar
+                    // Se procede habilitar los Botones Basicos
+                    // Los Campos de Textos y Botones de Examinar
 
-                        this.btnGuardar.Enabled = true;
-                        this.btnEliminar.Enabled = false;
-                        this.btnEditar.Enabled = false;
+                    this.btnNuevo.Enabled = false;
+                    this.btnGuardar.Enabled = true;
+                    this.btnEliminar.Enabled = false;
+                    this.btnEditar.Enabled = false;
 
-                        // Se hace enfasis (Focus) Al Iniciar el Evento Click 
-                        // sobre el Campo Con Nombre Proveedor
+                    // Se hace enfasis (Focus) Al Iniciar el Evento Click 
+                    // sobre el Campo Con Nombre Proveedor
 
-                        this.TBEmpresa.Focus();
-                        this.IsNuevo = true;
-                        this.IsEditar = false;
-                    }
-
-                    else if (Guardar == "No")
-                    {
-                        MessageBox.Show("El Usuario Iniciado Actualmente no Contiene Permisos Para Realizar Registros en el Sistema", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
+                    this.TBEmpresa.Focus();
+                    this.IsNuevo = true;
                 }
+
+                else
+                {
+                    MessageBox.Show("El Usuario Iniciado Actualmente no Contiene Permisos Para Realizar Registros en el Sistema", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
             }
             catch (Exception ex)
             {
@@ -357,8 +356,9 @@ namespace CapaPresentacion
                         if (!IsEditar)
                         {
                             this.TBIdempresa.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Codigo"].Value);
-                            this.TBEmpresa.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Empleado"].Value);
+                            this.TBEmpresa.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Empresa"].Value);
                             this.TBDocumento.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Documento"].Value);
+                            this.TBEslogan.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Eslogan"].Value);
                             this.TBMovil.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Movil"].Value);
                             this.TBTelefono.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Telefono"].Value);
                             this.TBCorreo.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Correo"].Value);
@@ -371,6 +371,7 @@ namespace CapaPresentacion
                             this.IsEditar = true;
 
                             //Botones Comunes
+                            this.btnNuevo.Enabled = true;
                             this.btnEditar.Enabled = true;
                             this.btnEliminar.Enabled = false;
                             this.btnGuardar.Enabled = false;
@@ -402,8 +403,9 @@ namespace CapaPresentacion
                     if (!IsEditar)
                     {
                         this.TBIdempresa.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Codigo"].Value);
-                        this.TBEmpresa.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Empleado"].Value);
+                        this.TBEmpresa.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Empresa"].Value);
                         this.TBDocumento.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Documento"].Value);
+                        this.TBEslogan.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Eslogan"].Value);
                         this.TBMovil.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Movil"].Value);
                         this.TBTelefono.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Telefono"].Value);
                         this.TBCorreo.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Correo"].Value);
@@ -416,6 +418,7 @@ namespace CapaPresentacion
                         this.IsEditar = true;
 
                         //Botones Comunes
+                        this.btnNuevo.Enabled = true;
                         this.btnEditar.Enabled = true;
                         this.btnEliminar.Enabled = false;
                         this.btnGuardar.Enabled = false;

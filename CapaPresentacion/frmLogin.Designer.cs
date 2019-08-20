@@ -104,8 +104,10 @@
             // 
             this.TBContraseña.Location = new System.Drawing.Point(85, 47);
             this.TBContraseña.Name = "TBContraseña";
+            this.TBContraseña.PasswordChar = '*';
             this.TBContraseña.Size = new System.Drawing.Size(200, 21);
             this.TBContraseña.TabIndex = 3;
+            this.TBContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TBContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBContraseña_KeyPress);
             // 
             // label2
@@ -132,6 +134,7 @@
             this.TBUsuario.Name = "TBUsuario";
             this.TBUsuario.Size = new System.Drawing.Size(200, 21);
             this.TBUsuario.TabIndex = 0;
+            this.TBUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TBUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBUsuario_KeyPress);
             // 
             // frmLogin

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TBIdempresa = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -52,7 +53,6 @@
             this.TBBuscar = new System.Windows.Forms.TextBox();
             this.lblTotal = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.TBIdempresa = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGResultados)).BeginInit();
@@ -85,6 +85,13 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Leal Enterprise - Datos de la Empresa";
+            // 
+            // TBIdempresa
+            // 
+            this.TBIdempresa.Location = new System.Drawing.Point(56, 179);
+            this.TBIdempresa.Name = "TBIdempresa";
+            this.TBIdempresa.Size = new System.Drawing.Size(21, 21);
+            this.TBIdempresa.TabIndex = 18;
             // 
             // btnEliminar
             // 
@@ -322,7 +329,7 @@
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(131, 44);
+            this.lblTotal.Location = new System.Drawing.Point(6, 44);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(31, 15);
             this.lblTotal.TabIndex = 1;
@@ -337,13 +344,6 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Empresa a Consultar";
             // 
-            // TBIdempresa
-            // 
-            this.TBIdempresa.Location = new System.Drawing.Point(56, 179);
-            this.TBIdempresa.Name = "TBIdempresa";
-            this.TBIdempresa.Size = new System.Drawing.Size(21, 21);
-            this.TBIdempresa.TabIndex = 18;
-            // 
             // frmSistema_Empresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -353,7 +353,9 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaximizeBox = false;
             this.Name = "frmSistema_Empresa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSistema_Empresa";
             this.Load += new System.EventHandler(this.FrmSistema_Empresa_Load);
             this.groupBox1.ResumeLayout(false);

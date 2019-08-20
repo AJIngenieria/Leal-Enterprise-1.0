@@ -267,11 +267,11 @@ namespace CapaDatos
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 //Comienzo a mandar a la base de datos
-                SqlParameter ParIdcliente = new SqlParameter();
-                ParIdcliente.ParameterName = "@Idempresa";
-                ParIdcliente.SqlDbType = SqlDbType.Int;
-                ParIdcliente.Value = Empresa.Idempresa;
-                SqlCmd.Parameters.Add(ParIdcliente);
+                SqlParameter ParIdempresa = new SqlParameter();
+                ParIdempresa.ParameterName = "@Idempresa";
+                ParIdempresa.SqlDbType = SqlDbType.Int;
+                ParIdempresa.Value = Empresa.Idempresa;
+                SqlCmd.Parameters.Add(ParIdempresa);
 
                 //ejecutamos el envio de datos
 

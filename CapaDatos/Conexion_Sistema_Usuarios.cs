@@ -151,7 +151,7 @@ namespace CapaDatos
                 SqlCmd.Parameters.Add(ParUsuario);
 
                 SqlParameter ParContraseña = new SqlParameter();
-                ParContraseña.ParameterName = "@Password";
+                ParContraseña.ParameterName = "@Contraseña";
                 ParContraseña.SqlDbType = SqlDbType.VarChar;
                 ParContraseña.Size = 20;
                 ParContraseña.Value = Usuarios_Login.Contraseña;

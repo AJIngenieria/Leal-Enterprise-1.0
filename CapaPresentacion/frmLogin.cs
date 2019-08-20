@@ -14,11 +14,6 @@ namespace CapaPresentacion
 {
     public partial class frmLogin : Form
     {
-        //Variable para Iniciar la Consulta de Permisos y Niveles de Operaciones
-        private bool SQL_Niveles = true;
-        private bool SQL_Permisos = true;
-        private string SQL_Idsuario;
-
         public frmLogin()
         {
             InitializeComponent();
@@ -65,20 +60,16 @@ namespace CapaPresentacion
                     //Evaluamos si  existen los Datos
                     if (Datos.Rows.Count == 0)
                     {
-                        MessageBox.Show("Acceso Denegado al Sistema, Usuario o Contraseña Incorrecto. Si el Problema Persiste Contacte al Area de Sistemas", "Servi Lavado Las Brisas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Acceso Denegado al Sistema, Usuario o Contraseña Incorrecto. Si el Problema Persiste Contacte al Area de Sistemas", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
-
-                        this.TBInicioDeSesion.Text = "Usuario Existente en la Base de Datos...";
 
                         frmMenuPrincipal frm = new frmMenuPrincipal();
                         frm.Idempleado = Datos.Rows[0][0].ToString();
                         frm.Idusuario = Datos.Rows[0][1].ToString();
                         frm.Empleado = Datos.Rows[0][2].ToString();
                         frm.UsuarioLogueado = Datos.Rows[0][3].ToString();
-
-                        //this.TBInicioDeSesion.Text = "Capturando Datos de Acceso...";
 
                         //Captura de Valores en la Base de Datos
 
