@@ -203,7 +203,6 @@
             this.TBTelefono.Size = new System.Drawing.Size(250, 21);
             this.TBTelefono.TabIndex = 9;
             this.TBTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBTelefono_KeyPress);
-            this.TBTelefono.MouseLeave += new System.EventHandler(this.TBTelefono_MouseLeave);
             // 
             // label5
             // 

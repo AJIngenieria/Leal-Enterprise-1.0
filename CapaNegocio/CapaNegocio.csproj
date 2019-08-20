@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="fGestionHumana_Empleados.cs" />
+    <Compile Include="fSistema_Empresa.cs" />
     <Compile Include="fSistema_Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
