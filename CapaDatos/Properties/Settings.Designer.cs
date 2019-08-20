@@ -33,5 +33,16 @@ namespace CapaDatos.Properties {
                 return ((string)(this["Conexion_SQL"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=Leal_Tecnologia;User ID=LealTecnologia;Passwo" +
+            "rd=TecnologiaLealSQL.XXX")]
+        public string Seguridad_SQL {
+            get {
+                return ((string)(this["Seguridad_SQL"]));
+            }
+        }
     }
 }

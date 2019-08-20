@@ -146,5 +146,10 @@ namespace CapaPresentacion
         {
             Application.Exit();
         }
+
+        private void ConfiguracionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

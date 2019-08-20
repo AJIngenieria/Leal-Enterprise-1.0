@@ -45,7 +45,9 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Conexion_BaseDeDatos.cs" />
     <Compile Include="Conexion_GestionHumana_Empleados.cs" />
+    <Compile Include="Conexion_Sistema_Configuracion.cs" />
     <Compile Include="Conexion_Sistema_Empresa.cs" />
+    <Compile Include="Conexion_Sistema_Equipos.cs" />
     <Compile Include="Conexion_Sistema_Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
