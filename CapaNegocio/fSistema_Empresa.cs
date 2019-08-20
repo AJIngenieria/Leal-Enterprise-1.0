@@ -78,5 +78,6 @@ namespace CapaNegocio
             Obj.Filtro = filtro;
             return Obj.Buscar_Empresa(Obj);
         }
+
     }
 }

@@ -29,6 +29,9 @@ namespace CapaPresentacion
         public string Consultar = "";
         public string Eliminar = "";
 
+        //Variable para Capturar el Nombre de la Empresa desde la Base de Datos
+        public string Empresa = "";
+
         //Variable para Metodo Eliminar
         private string Eliminacion = null;
 

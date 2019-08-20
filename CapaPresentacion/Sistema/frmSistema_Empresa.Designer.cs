@@ -356,7 +356,7 @@
             this.MaximizeBox = false;
             this.Name = "frmSistema_Empresa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmSistema_Empresa";
+            this.Text = "Sistema - Empresa";
             this.Load += new System.EventHandler(this.FrmSistema_Empresa_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
