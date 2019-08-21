@@ -64,8 +64,51 @@ namespace CapaDatos
 
         }
 
-        //Metodo Insertar
+        public DataTable Seguridad_SQL(Conexion_Sistema_Equipos Equipos)
+        {
+            DataTable DtResultado = new DataTable("Seguridad.Equipos");
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Conexion_BaseDeDatos.Seguridad_SQL;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "Seguridad.SQL_Equipo";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
 
+                SqlParameter ParEquipo = new SqlParameter();
+                ParEquipo.ParameterName = "@Equipo_SQL";
+                ParEquipo.SqlDbType = SqlDbType.VarChar;
+                ParEquipo.Size = 20;
+                ParEquipo.Value = Equipos.Equipo;
+                SqlCmd.Parameters.Add(ParEquipo);
+
+                SqlParameter ParHDD = new SqlParameter();
+                ParHDD.ParameterName = "@HDD_SQL";
+                ParHDD.SqlDbType = SqlDbType.VarChar;
+                ParHDD.Size = 20;
+                ParHDD.Value = Equipos.HDD;
+                SqlCmd.Parameters.Add(ParHDD);
+
+                SqlParameter ParMacSeguridad = new SqlParameter();
+                ParMacSeguridad.ParameterName = "@MacSeguridad_SQL";
+                ParMacSeguridad.SqlDbType = SqlDbType.VarChar;
+                ParMacSeguridad.Size = 20;
+                ParMacSeguridad.Value = Equipos.Mac_Seguridad;
+                SqlCmd.Parameters.Add(ParMacSeguridad);
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+        }
+
+        //Metodo Insertar
         public string Guardar_DatosBasicos(Conexion_Sistema_Equipos Equipos)
         {
             string rpta = "";

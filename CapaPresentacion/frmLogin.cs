@@ -14,6 +14,10 @@ namespace CapaPresentacion
 {
     public partial class frmLogin : Form
     {
+        private string Equipo_SQL = "";
+        private string HDD_SQL = "";
+        private string MacSeguridad_SQL = "";
+
         public frmLogin()
         {
             InitializeComponent();
@@ -37,9 +41,27 @@ namespace CapaPresentacion
             this.TBDesarrollo.ReadOnly = true;
             this.TBDesarrollo.BackColor = Color.FromArgb(255, 255, 255);
 
-            //Reloj
-            //this.lblHora.Enabled = false;
-            //this.lblHora.BackColor = Color.FromArgb(255, 255, 255);
+            //Datos de Seguridad
+            this.Seguridad_SQL();
+        }
+
+        private void Seguridad_SQL()
+        {
+            try
+            {
+                //Se capturan los valores del computador donde esta iniciado
+                this.HDD_SQL = Informacion_Computer.Serial_HDD();
+                this.MacSeguridad_SQL = Informacion_Computer.MAC_Address();
+                this.Equipo_SQL = Informacion_Computer.Nombre_PC();
+
+                //this.TBSerialProcesador.Text = Informacion_Computer.Serial_Procesador();
+                //this.TBCodigoDeSeguridad.Text = Informacion_Computer.SO_Informacion();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+            
         }
 
         private void TBUsuario_KeyPress(object sender, KeyPressEventArgs e)
@@ -56,38 +78,51 @@ namespace CapaPresentacion
             {
                 if (e.KeyChar == Convert.ToChar(Keys.Enter))
                 {
-                    DataTable Datos = CapaNegocio.fSistema_Usuarios.Login(this.TBUsuario.Text, this.TBContraseña.Text);
+
+                    DataTable Datos_Seguridad = CapaNegocio.fSistema_Equipos.Seguridad_SQL(Equipo_SQL, HDD_SQL, MacSeguridad_SQL);
                     //Evaluamos si  existen los Datos
-                    if (Datos.Rows.Count == 0)
+                    if (Datos_Seguridad.Rows.Count == 0)
                     {
-                        MessageBox.Show("Acceso Denegado al Sistema, Usuario o Contraseña Incorrecto. Si el Problema Persiste Contacte al Area de Sistemas", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Niveles de Seguridad no Cumplidos", "Leal Enterprise - Acceso Denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
+                        
+                        ////<<<<<<----- Al pasar las pruebas de seguridad se procede a verificar los usuarios ingresados
 
-                        frmMenuPrincipal frm = new frmMenuPrincipal();
-                        frm.Idempleado = Datos.Rows[0][0].ToString();
-                        frm.Idusuario = Datos.Rows[0][1].ToString();
-                        frm.Empleado = Datos.Rows[0][2].ToString();
-                        frm.UsuarioLogueado = Datos.Rows[0][3].ToString();
+                        DataTable Datos = CapaNegocio.fSistema_Usuarios.Login(this.TBUsuario.Text, this.TBContraseña.Text);
+                        //Evaluamos si  existen los Datos
+                        if (Datos.Rows.Count == 0)
+                        {
+                            MessageBox.Show("Acceso Denegado al Sistema, Usuario o Contraseña Incorrecto. Si el Problema Persiste Contacte al Area de Sistemas", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
 
-                        //Captura de Valores en la Base de Datos
+                            frmMenuPrincipal frm = new frmMenuPrincipal();
+                            frm.Idempleado = Datos.Rows[0][0].ToString();
+                            frm.Idusuario = Datos.Rows[0][1].ToString();
+                            frm.Empleado = Datos.Rows[0][2].ToString();
+                            frm.UsuarioLogueado = Datos.Rows[0][3].ToString();
 
-                        frm.SQL_Guardar = Datos.Rows[0][4].ToString();
-                        frm.SQL_Editar = Datos.Rows[0][5].ToString();
-                        frm.SQL_Eliminar = Datos.Rows[0][6].ToString();
-                        frm.SQL_Consultar = Datos.Rows[0][7].ToString();
+                            //Captura de Valores en la Base de Datos
 
-                        frm.Menu_Almacen = Datos.Rows[0][8].ToString();
-                        frm.Menu_GestionHumana = Datos.Rows[0][9].ToString();
-                        frm.Menu_Productos = Datos.Rows[0][10].ToString();
-                        frm.Menu_Reportes = Datos.Rows[0][11].ToString();
-                        frm.Menu_Sistema = Datos.Rows[0][12].ToString();
-                        frm.Menu_Ventas = Datos.Rows[0][13].ToString();
+                            frm.SQL_Guardar = Datos.Rows[0][4].ToString();
+                            frm.SQL_Editar = Datos.Rows[0][5].ToString();
+                            frm.SQL_Eliminar = Datos.Rows[0][6].ToString();
+                            frm.SQL_Consultar = Datos.Rows[0][7].ToString();
 
-                        frm.Show();
-                        this.Hide();
+                            frm.Menu_Almacen = Datos.Rows[0][8].ToString();
+                            frm.Menu_GestionHumana = Datos.Rows[0][9].ToString();
+                            frm.Menu_Productos = Datos.Rows[0][10].ToString();
+                            frm.Menu_Reportes = Datos.Rows[0][11].ToString();
+                            frm.Menu_Sistema = Datos.Rows[0][12].ToString();
+                            frm.Menu_Ventas = Datos.Rows[0][13].ToString();
 
+                            frm.Show();
+                            this.Hide();
+
+                        }
                     }
 
                 }

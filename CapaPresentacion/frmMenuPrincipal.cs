@@ -15,7 +15,6 @@ namespace CapaPresentacion
         //Parametros Basicos
         public string Idempleado = "";
         public string Empleado = "";
-        public string Cede = "";
         public string UsuarioLogueado = "";
         public string Idusuario = "";
 
@@ -33,6 +32,11 @@ namespace CapaPresentacion
         public string SQL_Editar = "";
         public string SQL_Eliminar = "";
         public string SQL_Consultar = "";
+
+        //
+        public string Cede = "";
+        //public string Cede = "";
+        //public string Cede = "";
 
         public frmMenuPrincipal()
         {
@@ -157,6 +161,13 @@ namespace CapaPresentacion
             frmSistema_Equipos frmSistema_Equipos = new frmSistema_Equipos();
             frmSistema_Equipos.MdiParent = this;
             frmSistema_Equipos.Show();
+        }
+
+        private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAcercaDe frmAcercaDe = new frmAcercaDe();
+            frmAcercaDe.MdiParent = this;
+            frmAcercaDe.Show();
         }
     }
 }

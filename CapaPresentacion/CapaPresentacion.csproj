@@ -33,8 +33,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -87,11 +89,17 @@
     <Compile Include="Almacen\frmAlmacen_DatosDeEnvio.Designer.cs">
       <DependentUpon>frmAlmacen_DatosDeEnvio.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmExaminar_Empleado.cs">
+    <Compile Include="Filtros\frmExaminar_Empleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmExaminar_Empleado.Designer.cs">
+    <Compile Include="Filtros\frmExaminar_Empleado.Designer.cs">
       <DependentUpon>frmExaminar_Empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAcercaDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAcercaDe.Designer.cs">
+      <DependentUpon>frmAcercaDe.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -105,6 +113,7 @@
     <Compile Include="frmMenuPrincipal.Designer.cs">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Informacion_Computer.cs" />
     <Compile Include="Sistema\frmSistema_Equipos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,8 +235,11 @@
     <EmbeddedResource Include="Almacen\frmAlmacen_DatosDeEnvio.resx">
       <DependentUpon>frmAlmacen_DatosDeEnvio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmExaminar_Empleado.resx">
+    <EmbeddedResource Include="Filtros\frmExaminar_Empleado.resx">
       <DependentUpon>frmExaminar_Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAcercaDe.resx">
+      <DependentUpon>frmAcercaDe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -291,7 +303,7 @@
     <None Include="Resources\btnExaminar1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Filtros\" />
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Almacen.png" />

@@ -11,6 +11,16 @@ namespace CapaNegocio
 {
     public class fSistema_Equipos
     {
+        public static DataTable Seguridad_SQL(string equipo, string hdd, string macseguridad)
+        {
+            Conexion_Sistema_Equipos Obj = new Conexion_Sistema_Equipos();
+            Obj.Equipo = equipo;
+            Obj.HDD = hdd;
+            Obj.Mac_Seguridad = macseguridad;
+            return Obj.Seguridad_SQL(Obj);
+        }
+
+
         public static string Guardar_DatosBasicos
             (
                 //Datos Basicos

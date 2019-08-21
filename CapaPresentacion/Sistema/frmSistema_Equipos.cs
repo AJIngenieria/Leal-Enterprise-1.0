@@ -10,6 +10,10 @@ using System.Windows.Forms;
 
 using CapaNegocio;
 
+using System.IO;
+using System.Management;
+using System.Configuration;
+
 namespace CapaPresentacion
 {
     public partial class frmSistema_Equipos : Form
@@ -40,6 +44,8 @@ namespace CapaPresentacion
 
             //Color para Texboxt Buscar
             this.TBBuscar.BackColor = Color.FromArgb(32, 178, 170);
+
+            
         }
 
         private void Habilitar()
@@ -155,6 +161,18 @@ namespace CapaPresentacion
             }
         }
 
+        public static String Serial_HDD()
+        {
+            ManagementClass mangnmt = new ManagementClass("Win32_LogicalDisk");
+            ManagementObjectCollection mcol = mangnmt.GetInstances();
+            string result = "";
+            foreach (ManagementObject strt in mcol)
+            {
+                result += Convert.ToString(strt["VolumeSerialNumber"]);
+            }
+            return result;
+        }
+
         //Mensaje de confirmacion
         private void MensajeOk(string mensaje)
         {
@@ -169,17 +187,49 @@ namespace CapaPresentacion
 
         private void BtnNuevo_Click(object sender, EventArgs e)
         {
+            try
+            {
+                // Se procede habilitar los campos de textos
+                this.Habilitar();
+                this.Limpiar();
 
+                // Se procede habilitar los Botones Basicos
+                // Los Campos de Textos y Botones de Examinar
+
+                this.btnNuevo.Enabled = false;
+                this.btnGuardar.Enabled = true;
+                this.btnEliminar.Enabled = false;
+                this.btnEditar.Enabled = false;
+
+                // Se hace enfasis (Focus) Al Iniciar el Evento Click 
+                // sobre el Campo Con Nombre Proveedor
+
+                this.TBEquipo.Focus();
+                this.IsNuevo = true;
+
+                //Se capturan los valores del computador donde esta iniciado
+                this.TBDiscoDuro.Text = Informacion_Computer.Serial_HDD();
+                this.TBMacseguridad.Text = Informacion_Computer.MAC_Address();
+                this.TBEquipo.Text = Informacion_Computer.Nombre_PC();
+
+                //this.TBSerialProcesador.Text = Informacion_Computer.Serial_Procesador();
+                //this.TBCodigoDeSeguridad.Text = Informacion_Computer.SO_Informacion();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-
+            this.Guardar_SQL();
         }
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-
+            this.Guardar_SQL();
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
