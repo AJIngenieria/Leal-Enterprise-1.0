@@ -151,5 +151,12 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void EquiposToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSistema_Equipos frmSistema_Equipos = new frmSistema_Equipos();
+            frmSistema_Equipos.MdiParent = this;
+            frmSistema_Equipos.Show();
+        }
     }
 }

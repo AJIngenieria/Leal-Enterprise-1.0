@@ -195,7 +195,6 @@ namespace CapaPresentacion
             MessageBox.Show(mensaje, "Leal Enterprise - Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
-
         private void BtnNuevo_Click(object sender, EventArgs e)
         {
             try

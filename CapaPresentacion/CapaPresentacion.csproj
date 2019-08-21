@@ -105,6 +105,12 @@
     <Compile Include="frmMenuPrincipal.Designer.cs">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sistema\frmSistema_Equipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\frmSistema_Equipos.Designer.cs">
+      <DependentUpon>frmSistema_Equipos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -228,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\frmSistema_Equipos.resx">
+      <DependentUpon>frmSistema_Equipos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sistema\frmSistema_Empresa.resx">
       <DependentUpon>frmSistema_Empresa.cs</DependentUpon>

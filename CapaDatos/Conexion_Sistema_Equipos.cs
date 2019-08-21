@@ -79,63 +79,55 @@ namespace CapaDatos
                 //Establecer la conexion para mandar a la base de datos
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "Sistema.LI_Empresa";
+                SqlCmd.CommandText = "Seguridad.LI_Equipos";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 //Comienzo a mandar a la base de datos
-                SqlParameter ParIdempresa = new SqlParameter();
-                ParIdempresa.ParameterName = "@Idempresa";
-                ParIdempresa.SqlDbType = SqlDbType.Int;
-                ParIdempresa.Direction = ParameterDirection.Output;
-                SqlCmd.Parameters.Add(ParIdempresa);
+                SqlParameter ParIdequipo = new SqlParameter();
+                ParIdequipo.ParameterName = "@Idequipo";
+                ParIdequipo.SqlDbType = SqlDbType.Int;
+                ParIdequipo.Direction = ParameterDirection.Output;
+                SqlCmd.Parameters.Add(ParIdequipo);
 
                 SqlParameter ParAuto = new SqlParameter();
                 ParAuto.ParameterName = "@Auto";
                 ParAuto.SqlDbType = SqlDbType.Int;
-                ParAuto.Value = Empresa.Auto;
+                ParAuto.Value = Equipos.Auto;
                 SqlCmd.Parameters.Add(ParAuto);
 
                 SqlParameter ParEmpleado = new SqlParameter();
-                ParEmpleado.ParameterName = "@Empresa";
+                ParEmpleado.ParameterName = "@Equipo";
                 ParEmpleado.SqlDbType = SqlDbType.VarChar;
-                ParEmpleado.Size = 50;
-                ParEmpleado.Value = Empresa.Empresa;
+                ParEmpleado.Size = 30;
+                ParEmpleado.Value = Equipos.Equipo;
                 SqlCmd.Parameters.Add(ParEmpleado);
 
-                SqlParameter ParDocumento = new SqlParameter();
-                ParDocumento.ParameterName = "@Documento";
-                ParDocumento.SqlDbType = SqlDbType.VarChar;
-                ParDocumento.Size = 20;
-                ParDocumento.Value = Empresa.Documento;
-                SqlCmd.Parameters.Add(ParDocumento);
+                SqlParameter ParHDD = new SqlParameter();
+                ParHDD.ParameterName = "@HDD";
+                ParHDD.SqlDbType = SqlDbType.VarChar;
+                ParHDD.Size = 50;
+                ParHDD.Value = Equipos.HDD;
+                SqlCmd.Parameters.Add(ParHDD);
 
-                SqlParameter ParMovil = new SqlParameter();
-                ParMovil.ParameterName = "@Movil";
-                ParMovil.SqlDbType = SqlDbType.VarChar;
-                ParMovil.Size = 30;
-                ParMovil.Value = Empresa.Movil;
-                SqlCmd.Parameters.Add(ParMovil);
+                SqlParameter ParTipo = new SqlParameter();
+                ParTipo.ParameterName = "@Tipo";
+                ParTipo.SqlDbType = SqlDbType.VarChar;
+                ParTipo.Size = 10;
+                ParTipo.Value = Equipos.Tipo;
+                SqlCmd.Parameters.Add(ParTipo);
 
-                SqlParameter ParTelefono = new SqlParameter();
-                ParTelefono.ParameterName = "@Telefono";
-                ParTelefono.SqlDbType = SqlDbType.VarChar;
-                ParTelefono.Size = 30;
-                ParTelefono.Value = Empresa.Telefono;
-                SqlCmd.Parameters.Add(ParTelefono);
+                SqlParameter ParMac_Seguridad = new SqlParameter();
+                ParMac_Seguridad.ParameterName = "@Mac_Seguridad";
+                ParMac_Seguridad.SqlDbType = SqlDbType.VarChar;
+                ParMac_Seguridad.Size = 50;
+                ParMac_Seguridad.Value = Equipos.Mac_Seguridad;
+                SqlCmd.Parameters.Add(ParMac_Seguridad);
 
-                SqlParameter ParEmail = new SqlParameter();
-                ParEmail.ParameterName = "@Correo";
-                ParEmail.SqlDbType = SqlDbType.VarChar;
-                ParEmail.Size = 50;
-                ParEmail.Value = Empresa.Correo;
-                SqlCmd.Parameters.Add(ParEmail);
-
-                SqlParameter ParDireccion = new SqlParameter();
-                ParDireccion.ParameterName = "@Direccion";
-                ParDireccion.SqlDbType = SqlDbType.VarChar;
-                ParDireccion.Size = 100;
-                ParDireccion.Value = Empresa.Direccion;
-                SqlCmd.Parameters.Add(ParDireccion);
+                SqlParameter ParEstado = new SqlParameter();
+                ParEstado.ParameterName = "@Estado";
+                ParEstado.SqlDbType = SqlDbType.Int;
+                ParEstado.Value = Equipos.Estado;
+                SqlCmd.Parameters.Add(ParEstado);
 
                 //ejecutamos el envio de datos
 
@@ -167,63 +159,55 @@ namespace CapaDatos
                 //Establecer la conexion para mandar a la base de datos
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "Sistema.LI_Empresa";
+                SqlCmd.CommandText = "Seguridad.LI_Equipos";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 //Comienzo a mandar a la base de datos
-                SqlParameter ParIdcliente = new SqlParameter();
-                ParIdcliente.ParameterName = "@Idempresa";
-                ParIdcliente.SqlDbType = SqlDbType.Int;
-                ParIdcliente.Value = Empresa.Idempresa;
-                SqlCmd.Parameters.Add(ParIdcliente);
+                SqlParameter ParIdequipo = new SqlParameter();
+                ParIdequipo.ParameterName = "@Idequipo";
+                ParIdequipo.SqlDbType = SqlDbType.Int;
+                ParIdequipo.Value = Equipos.Idequipo;
+                SqlCmd.Parameters.Add(ParIdequipo);
 
                 SqlParameter ParAuto = new SqlParameter();
                 ParAuto.ParameterName = "@Auto";
                 ParAuto.SqlDbType = SqlDbType.Int;
-                ParAuto.Value = Empresa.Auto;
+                ParAuto.Value = Equipos.Auto;
                 SqlCmd.Parameters.Add(ParAuto);
 
                 SqlParameter ParEmpleado = new SqlParameter();
-                ParEmpleado.ParameterName = "@Empresa";
+                ParEmpleado.ParameterName = "@Equipo";
                 ParEmpleado.SqlDbType = SqlDbType.VarChar;
-                ParEmpleado.Size = 50;
-                ParEmpleado.Value = Empresa.Empresa;
+                ParEmpleado.Size = 30;
+                ParEmpleado.Value = Equipos.Equipo;
                 SqlCmd.Parameters.Add(ParEmpleado);
 
-                SqlParameter ParDocumento = new SqlParameter();
-                ParDocumento.ParameterName = "@Documento";
-                ParDocumento.SqlDbType = SqlDbType.VarChar;
-                ParDocumento.Size = 20;
-                ParDocumento.Value = Empresa.Documento;
-                SqlCmd.Parameters.Add(ParDocumento);
+                SqlParameter ParHDD = new SqlParameter();
+                ParHDD.ParameterName = "@HDD";
+                ParHDD.SqlDbType = SqlDbType.VarChar;
+                ParHDD.Size = 50;
+                ParHDD.Value = Equipos.HDD;
+                SqlCmd.Parameters.Add(ParHDD);
 
-                SqlParameter ParMovil = new SqlParameter();
-                ParMovil.ParameterName = "@Movil";
-                ParMovil.SqlDbType = SqlDbType.VarChar;
-                ParMovil.Size = 30;
-                ParMovil.Value = Empresa.Movil;
-                SqlCmd.Parameters.Add(ParMovil);
+                SqlParameter ParTipo = new SqlParameter();
+                ParTipo.ParameterName = "@Tipo";
+                ParTipo.SqlDbType = SqlDbType.VarChar;
+                ParTipo.Size = 10;
+                ParTipo.Value = Equipos.Tipo;
+                SqlCmd.Parameters.Add(ParTipo);
 
-                SqlParameter ParTelefono = new SqlParameter();
-                ParTelefono.ParameterName = "@Telefono";
-                ParTelefono.SqlDbType = SqlDbType.VarChar;
-                ParTelefono.Size = 30;
-                ParTelefono.Value = Empresa.Telefono;
-                SqlCmd.Parameters.Add(ParTelefono);
+                SqlParameter ParMac_Seguridad = new SqlParameter();
+                ParMac_Seguridad.ParameterName = "@Mac_Seguridad";
+                ParMac_Seguridad.SqlDbType = SqlDbType.VarChar;
+                ParMac_Seguridad.Size = 50;
+                ParMac_Seguridad.Value = Equipos.Mac_Seguridad;
+                SqlCmd.Parameters.Add(ParMac_Seguridad);
 
-                SqlParameter ParEmail = new SqlParameter();
-                ParEmail.ParameterName = "@Correo";
-                ParEmail.SqlDbType = SqlDbType.VarChar;
-                ParEmail.Size = 50;
-                ParEmail.Value = Empresa.Correo;
-                SqlCmd.Parameters.Add(ParEmail);
-
-                SqlParameter ParDireccion = new SqlParameter();
-                ParDireccion.ParameterName = "@Direccion";
-                ParDireccion.SqlDbType = SqlDbType.VarChar;
-                ParDireccion.Size = 100;
-                ParDireccion.Value = Empresa.Direccion;
-                SqlCmd.Parameters.Add(ParDireccion);
+                SqlParameter ParEstado = new SqlParameter();
+                ParEstado.ParameterName = "@Estado";
+                ParEstado.SqlDbType = SqlDbType.Int;
+                ParEstado.Value = Equipos.Estado;
+                SqlCmd.Parameters.Add(ParEstado);
 
                 //ejecutamos el envio de datos
 
@@ -256,15 +240,15 @@ namespace CapaDatos
                 //Establecer la conexion para mandar a la base de datos
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "Eliminar.Empresa";
+                SqlCmd.CommandText = "Eliminar.Equipo";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 //Comienzo a mandar a la base de datos
-                SqlParameter ParIdempresa = new SqlParameter();
-                ParIdempresa.ParameterName = "@Idempresa";
-                ParIdempresa.SqlDbType = SqlDbType.Int;
-                ParIdempresa.Value = Empresa.Idempresa;
-                SqlCmd.Parameters.Add(ParIdempresa);
+                SqlParameter ParIdequipo = new SqlParameter();
+                ParIdequipo.ParameterName = "@Idequipo";
+                ParIdequipo.SqlDbType = SqlDbType.Int;
+                ParIdequipo.Value = Equipos.Idequipo;
+                SqlCmd.Parameters.Add(ParIdequipo);
 
                 //ejecutamos el envio de datos
 
@@ -287,14 +271,14 @@ namespace CapaDatos
 
         public DataTable Buscar_Equipos(Conexion_Sistema_Equipos Equipos)
         {
-            DataTable DtResultado = new DataTable("Sistema.Empleado");
+            DataTable DtResultado = new DataTable("Seguridad.Equipo");
             SqlConnection SqlCon = new SqlConnection();
             try
             {
                 SqlCon.ConnectionString = Conexion_BaseDeDatos.Seguridad_SQL;
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "Consulta.Empresa";
+                SqlCmd.CommandText = "Consulta.Equipo";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 SqlParameter ParTextoBuscar = new SqlParameter();
