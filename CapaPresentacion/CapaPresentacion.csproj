@@ -329,5 +329,8 @@
   <ItemGroup>
     <None Include="Resources\Ayuda.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SQL Server\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
