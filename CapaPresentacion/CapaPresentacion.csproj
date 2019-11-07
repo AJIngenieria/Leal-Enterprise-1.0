@@ -83,12 +83,6 @@
     <Compile Include="Almacen\frmAlmacen_Traslados.Designer.cs">
       <DependentUpon>frmAlmacen_Traslados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Almacen\frmAlmacen_DatosDeEnvio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Almacen\frmAlmacen_DatosDeEnvio.Designer.cs">
-      <DependentUpon>frmAlmacen_DatosDeEnvio.cs</DependentUpon>
-    </Compile>
     <Compile Include="Filtros\frmExaminar_Empleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,9 +226,6 @@
     <EmbeddedResource Include="Almacen\frmAlmacen_Bodega.resx">
       <DependentUpon>frmAlmacen_Bodega.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Almacen\frmAlmacen_DatosDeEnvio.resx">
-      <DependentUpon>frmAlmacen_DatosDeEnvio.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Filtros\frmExaminar_Empleado.resx">
       <DependentUpon>frmExaminar_Empleado.cs</DependentUpon>
     </EmbeddedResource>
@@ -303,9 +294,6 @@
     <None Include="Resources\btnExaminar1.png" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Almacen.png" />
   </ItemGroup>
   <ItemGroup>
@@ -331,6 +319,18 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="SQL Server\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BR_Cancelar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BV_Cancelar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BR - Imprimir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BV - Imprimir.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

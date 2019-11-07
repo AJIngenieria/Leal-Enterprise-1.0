@@ -22,22 +22,22 @@ namespace CapaPresentacion
 
         }
 
-        private void BtnNuevo_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void BtnEditar_Click(object sender, EventArgs e)
+        private void BtnEliminar_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void BtnEliminar_Click(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
         {
 
         }
@@ -57,21 +57,6 @@ namespace CapaPresentacion
 
         }
 
-        private void BtnNuevo_MouseDown(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void BtnNuevo_MouseLeave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnNuevo_MouseMove(object sender, MouseEventArgs e)
-        {
-
-        }
-
         private void BtnGuardar_MouseDown(object sender, MouseEventArgs e)
         {
 
@@ -87,21 +72,6 @@ namespace CapaPresentacion
 
         }
 
-        private void BtnEditar_MouseDown(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void BtnEditar_MouseLeave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnEditar_MouseMove(object sender, MouseEventArgs e)
-        {
-
-        }
-
         private void BtnEliminar_MouseDown(object sender, MouseEventArgs e)
         {
 
@@ -113,6 +83,36 @@ namespace CapaPresentacion
         }
 
         private void BtnEliminar_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void btnImprimir_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void btnImprimir_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnImprimir_MouseMove(object sender, MouseEventArgs e)
         {
 
         }

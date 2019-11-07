@@ -18,7 +18,7 @@ namespace Leal_Enterprise_1._0
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+            Application.Run(new frmMenuPrincipal());
         }
     }
 }

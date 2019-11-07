@@ -169,5 +169,12 @@ namespace CapaPresentacion
             frmAcercaDe.MdiParent = this;
             frmAcercaDe.Show();
         }
+
+        private void bodegaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAlmacen_Bodega frmAlmacen_Bodega = new frmAlmacen_Bodega();
+            frmAlmacen_Bodega.MdiParent = this;
+            frmAlmacen_Bodega.Show();
+        }
     }
 }
