@@ -32,6 +32,7 @@ namespace CapaPresentacion
         public string SQL_Editar = "";
         public string SQL_Eliminar = "";
         public string SQL_Consultar = "";
+        public string SQL_Imprimir = "";
 
         //
         public string Cede = "";
@@ -172,9 +173,35 @@ namespace CapaPresentacion
 
         private void bodegaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAlmacen_Bodega frmAlmacen_Bodega = new frmAlmacen_Bodega();
+            frmAlmacen_Bodega frmAlmacen_Bodega =new frmAlmacen_Bodega();
             frmAlmacen_Bodega.MdiParent = this;
             frmAlmacen_Bodega.Show();
+            frmAlmacen_Bodega.Idempleado = Convert.ToInt32(this.Idempleado);
+
+            frmAlmacen_Bodega.Guardar = Convert.ToString(this.SQL_Guardar);
+            frmAlmacen_Bodega.Editar = Convert.ToString(this.SQL_Editar);
+            frmAlmacen_Bodega.Eliminar = Convert.ToString(this.SQL_Eliminar);
+            frmAlmacen_Bodega.Consultar = Convert.ToString(this.SQL_Consultar);
+            frmAlmacen_Bodega.Imprimir = Convert.ToString(this.SQL_Imprimir);
+        }
+
+        private void frmMenuPrincipal_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                DialogResult result = MessageBox.Show("¿Desea Salir del Sistema?", "Leal Enterprise", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                if (result == DialogResult.Yes)
+                {
+                    this.Close();
+
+                }
+                else if (result == DialogResult.No)
+                {
+                    this.Refresh();
+                }
+
+            }
         }
     }
 }
