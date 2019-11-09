@@ -35,7 +35,7 @@
             this.TBMovil = new System.Windows.Forms.TextBox();
             this.TBTelefono = new System.Windows.Forms.TextBox();
             this.TBDocumento = new System.Windows.Forms.TextBox();
-            this.DGResultados = new System.Windows.Forms.DataGridView();
+            this.DGResultadoss = new System.Windows.Forms.DataGridView();
             this.TBBuscar = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblTotal = new System.Windows.Forms.Label();
@@ -51,7 +51,7 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.DGResultados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGResultadoss)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -112,22 +112,22 @@
             this.TBDocumento.TabIndex = 7;
             this.TBDocumento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBDocumento_KeyPress);
             // 
-            // DGResultados
+            // DGResultadoss
             // 
-            this.DGResultados.AllowUserToAddRows = false;
-            this.DGResultados.AllowUserToDeleteRows = false;
-            this.DGResultados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.DGResultados.BackgroundColor = System.Drawing.Color.White;
-            this.DGResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGResultados.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DGResultados.Location = new System.Drawing.Point(6, 62);
-            this.DGResultados.Name = "DGResultados";
-            this.DGResultados.ReadOnly = true;
-            this.DGResultados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGResultados.Size = new System.Drawing.Size(500, 179);
-            this.DGResultados.TabIndex = 17;
-            this.DGResultados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGResultados_CellDoubleClick);
-            this.DGResultados.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DGResultados_KeyPress);
+            this.DGResultadoss.AllowUserToAddRows = false;
+            this.DGResultadoss.AllowUserToDeleteRows = false;
+            this.DGResultadoss.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DGResultadoss.BackgroundColor = System.Drawing.Color.White;
+            this.DGResultadoss.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGResultadoss.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DGResultadoss.Location = new System.Drawing.Point(6, 62);
+            this.DGResultadoss.Name = "DGResultadoss";
+            this.DGResultadoss.ReadOnly = true;
+            this.DGResultadoss.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGResultadoss.Size = new System.Drawing.Size(500, 179);
+            this.DGResultadoss.TabIndex = 17;
+            this.DGResultadoss.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGResultadoss_CellDoubleClick);
+            this.DGResultadoss.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DGResultadoss_KeyPress);
             // 
             // TBBuscar
             // 
@@ -139,7 +139,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.DGResultados);
+            this.groupBox2.Controls.Add(this.DGResultadoss);
             this.groupBox2.Controls.Add(this.TBBuscar);
             this.groupBox2.Controls.Add(this.lblTotal);
             this.groupBox2.Controls.Add(this.label7);
@@ -337,7 +337,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestion Humana - Empleados";
             this.Load += new System.EventHandler(this.FrmSistema_Empleados_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DGResultados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGResultadoss)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -359,7 +359,7 @@
         private System.Windows.Forms.TextBox TBMovil;
         private System.Windows.Forms.TextBox TBTelefono;
         private System.Windows.Forms.TextBox TBDocumento;
-        private System.Windows.Forms.DataGridView DGResultados;
+        private System.Windows.Forms.DataGridView DGResultadoss;
         private System.Windows.Forms.TextBox TBBuscar;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblTotal;

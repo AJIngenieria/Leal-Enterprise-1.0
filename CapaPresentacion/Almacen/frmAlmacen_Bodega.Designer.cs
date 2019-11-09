@@ -323,6 +323,7 @@
             this.TBNumeroImpresora.Name = "TBNumeroImpresora";
             this.TBNumeroImpresora.Size = new System.Drawing.Size(179, 21);
             this.TBNumeroImpresora.TabIndex = 11;
+            this.TBNumeroImpresora.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBNumeroImpresora_KeyPress);
             this.TBNumeroImpresora.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBNumeroImpresora_KeyUp);
             // 
             // label16
@@ -340,6 +341,7 @@
             this.TBNumeroCelular.Name = "TBNumeroCelular";
             this.TBNumeroCelular.Size = new System.Drawing.Size(179, 21);
             this.TBNumeroCelular.TabIndex = 9;
+            this.TBNumeroCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBNumeroCelular_KeyPress);
             this.TBNumeroCelular.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBNumeroCelular_KeyUp);
             // 
             // label15
@@ -357,6 +359,7 @@
             this.TBNumeroPC.Name = "TBNumeroPC";
             this.TBNumeroPC.Size = new System.Drawing.Size(179, 21);
             this.TBNumeroPC.TabIndex = 7;
+            this.TBNumeroPC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBNumeroPC_KeyPress);
             this.TBNumeroPC.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBNumeroPC_KeyUp);
             // 
             // label14
@@ -474,7 +477,7 @@
             this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImprimir.FlatAppearance.BorderSize = 0;
             this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImprimir.Image = global::CapaPresentacion.Properties.Resources.BV___Imprimir;
+            this.btnImprimir.Image = global::CapaPresentacion.Properties.Resources.BV_Imprimir;
             this.btnImprimir.Location = new System.Drawing.Point(430, 281);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(76, 26);

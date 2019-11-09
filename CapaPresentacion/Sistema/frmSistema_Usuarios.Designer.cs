@@ -72,7 +72,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.TPConsultas = new System.Windows.Forms.TabPage();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.DGResultados = new System.Windows.Forms.DataGridView();
+            this.DGResultadoss = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.TBBuscar = new System.Windows.Forms.TextBox();
             this.TBIdusuario = new System.Windows.Forms.TextBox();
@@ -83,7 +83,7 @@
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.TPConsultas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGResultados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGResultadoss)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -605,7 +605,7 @@
             // TPConsultas
             // 
             this.TPConsultas.Controls.Add(this.lblTotal);
-            this.TPConsultas.Controls.Add(this.DGResultados);
+            this.TPConsultas.Controls.Add(this.DGResultadoss);
             this.TPConsultas.Controls.Add(this.label5);
             this.TPConsultas.Controls.Add(this.TBBuscar);
             this.TPConsultas.Location = new System.Drawing.Point(4, 24);
@@ -624,18 +624,18 @@
             this.lblTotal.TabIndex = 3;
             this.lblTotal.Text = "----------";
             // 
-            // DGResultados
+            // DGResultadoss
             // 
-            this.DGResultados.AllowUserToAddRows = false;
-            this.DGResultados.AllowUserToDeleteRows = false;
-            this.DGResultados.BackgroundColor = System.Drawing.Color.White;
-            this.DGResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGResultados.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DGResultados.Location = new System.Drawing.Point(6, 48);
-            this.DGResultados.Name = "DGResultados";
-            this.DGResultados.ReadOnly = true;
-            this.DGResultados.Size = new System.Drawing.Size(330, 186);
-            this.DGResultados.TabIndex = 2;
+            this.DGResultadoss.AllowUserToAddRows = false;
+            this.DGResultadoss.AllowUserToDeleteRows = false;
+            this.DGResultadoss.BackgroundColor = System.Drawing.Color.White;
+            this.DGResultadoss.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGResultadoss.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DGResultadoss.Location = new System.Drawing.Point(6, 48);
+            this.DGResultadoss.Name = "DGResultadoss";
+            this.DGResultadoss.ReadOnly = true;
+            this.DGResultadoss.Size = new System.Drawing.Size(330, 186);
+            this.DGResultadoss.TabIndex = 2;
             // 
             // label5
             // 
@@ -686,7 +686,7 @@
             this.groupBox2.PerformLayout();
             this.TPConsultas.ResumeLayout(false);
             this.TPConsultas.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGResultados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGResultadoss)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -735,7 +735,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TabPage TPConsultas;
         private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.DataGridView DGResultados;
+        private System.Windows.Forms.DataGridView DGResultadoss;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TBBuscar;
         private System.Windows.Forms.ComboBox CBVentas;

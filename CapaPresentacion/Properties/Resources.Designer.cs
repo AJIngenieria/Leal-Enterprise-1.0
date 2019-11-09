@@ -83,16 +83,6 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap BR___Imprimir {
-            get {
-                object obj = ResourceManager.GetObject("BR - Imprimir", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap BR_Agregar {
             get {
                 object obj = ResourceManager.GetObject("BR_Agregar", resourceCulture);
@@ -143,6 +133,16 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BR_Imprimir {
+            get {
+                object obj = ResourceManager.GetObject("BR_Imprimir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BR_Nuevo {
             get {
                 object obj = ResourceManager.GetObject("BR_Nuevo", resourceCulture);
@@ -156,16 +156,6 @@ namespace CapaPresentacion.Properties {
         internal static System.Drawing.Bitmap btnExaminar {
             get {
                 object obj = ResourceManager.GetObject("btnExaminar", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap BV___Imprimir {
-            get {
-                object obj = ResourceManager.GetObject("BV - Imprimir", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -216,6 +206,16 @@ namespace CapaPresentacion.Properties {
         internal static System.Drawing.Bitmap BV_Guardar {
             get {
                 object obj = ResourceManager.GetObject("BV_Guardar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BV_Imprimir {
+            get {
+                object obj = ResourceManager.GetObject("BV_Imprimir", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

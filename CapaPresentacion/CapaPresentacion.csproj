@@ -71,11 +71,11 @@
     <Compile Include="Almacen\frmAlmacen_Salidas.Designer.cs">
       <DependentUpon>frmAlmacen_Salidas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Almacen\frmAlmacen_Sucurzal.cs">
+    <Compile Include="Sistema\frmSistema_Sucurzal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Almacen\frmAlmacen_Sucurzal.Designer.cs">
-      <DependentUpon>frmAlmacen_Sucurzal.cs</DependentUpon>
+    <Compile Include="Sistema\frmSistema_Sucurzal.Designer.cs">
+      <DependentUpon>frmSistema_Sucurzal.cs</DependentUpon>
     </Compile>
     <Compile Include="Almacen\frmAlmacen_Traslados.cs">
       <SubType>Form</SubType>
@@ -244,6 +244,9 @@
     <EmbeddedResource Include="Sistema\frmSistema_Empresa.resx">
       <DependentUpon>frmSistema_Empresa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\frmSistema_Sucurzal.resx">
+      <DependentUpon>frmSistema_Sucurzal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sistema\frmSistema_Usuarios.resx">
       <DependentUpon>frmSistema_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -327,10 +330,10 @@
     <None Include="Resources\BV_Cancelar1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\BR - Imprimir.png" />
+    <None Include="Resources\BR_Imprimir.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\BV - Imprimir.png" />
+    <None Include="Resources\BV_Imprimir.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

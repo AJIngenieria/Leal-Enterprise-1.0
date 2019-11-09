@@ -262,9 +262,9 @@ namespace CapaPresentacion
 
                     if (Opcion == DialogResult.OK)
                     {
-                        if (DGResultados.SelectedRows.Count > 0)
+                        if (DGResultadoss.SelectedRows.Count > 0)
                         {
-                            Eliminacion = DGResultados.CurrentRow.Cells["Codigo"].Value.ToString();
+                            Eliminacion = DGResultadoss.CurrentRow.Cells["Codigo"].Value.ToString();
                             Respuesta = CapaNegocio.fGestionHumana_Empleados.Eliminar_DatosBasicos(Convert.ToInt32(Eliminacion));
                         }
 
@@ -303,9 +303,9 @@ namespace CapaPresentacion
 
                     if (this.TBBuscar.Text != "")
                     {
-                        this.DGResultados.DataSource = fGestionHumana_Empleados.Buscar_Empleado(this.TBBuscar.Text);
-                        //this.DGResultado.Columns[0].Visible = false;
-                        this.lblTotal.Text = "Datos Registrados: " + Convert.ToString(DGResultados.Rows.Count);
+                        this.DGResultadoss.DataSource = fGestionHumana_Empleados.Buscar_Empleado(this.TBBuscar.Text);
+                        //this.DGResultados.Columns[0].Visible = false;
+                        this.lblTotal.Text = "Datos Registrados: " + Convert.ToString(DGResultadoss.Rows.Count);
 
 
                         this.Limpiar();
@@ -328,7 +328,7 @@ namespace CapaPresentacion
                         this.btnEliminar.Enabled = true;
 
                         //Se Limpian las Filas y Columnas de la tabla
-                        this.DGResultados.DataSource = null;
+                        this.DGResultadoss.DataSource = null;
                         this.lblTotal.Text = "Datos Registrados: 0";
 
                         //Variables de Procedimientos iniciadas en False
@@ -349,7 +349,7 @@ namespace CapaPresentacion
             }
         }
 
-        private void DGResultados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void DGResultadoss_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -361,13 +361,13 @@ namespace CapaPresentacion
 
                     if (!IsEditar)
                     {
-                        this.TBIdempleado.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Codigo"].Value);
-                        this.TBEmpleado.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Empleado"].Value);
-                        this.TBDocumento.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Documento"].Value);
-                        this.TBMovil.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Movil"].Value);
-                        this.TBTelefono.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Telefono"].Value);
-                        this.TBEmail.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Correo"].Value);
-                        this.TBDireccion.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Direccion"].Value);
+                        this.TBIdempleado.Text = Convert.ToString(this.DGResultadoss.CurrentRow.Cells["Codigo"].Value);
+                        this.TBEmpleado.Text = Convert.ToString(this.DGResultadoss.CurrentRow.Cells["Empleado"].Value);
+                        this.TBDocumento.Text = Convert.ToString(this.DGResultadoss.CurrentRow.Cells["Documento"].Value);
+                        this.TBMovil.Text = Convert.ToString(this.DGResultadoss.CurrentRow.Cells["Movil"].Value);
+                        this.TBTelefono.Text = Convert.ToString(this.DGResultadoss.CurrentRow.Cells["Telefono"].Value);
+                        this.TBEmail.Text = Convert.ToString(this.DGResultadoss.CurrentRow.Cells["Correo"].Value);
+                        this.TBDireccion.Text = Convert.ToString(this.DGResultadoss.CurrentRow.Cells["Direccion"].Value);
 
                         //Se procede Habilitar los campos de Textos y Botones
 
@@ -394,7 +394,7 @@ namespace CapaPresentacion
             }
         }
 
-        private void DGResultados_KeyPress(object sender, KeyPressEventArgs e)
+        private void DGResultadoss_KeyPress(object sender, KeyPressEventArgs e)
         {
             try
             {
@@ -408,13 +408,13 @@ namespace CapaPresentacion
 
                         if (!IsEditar)
                         {
-                            this.TBIdempleado.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Codigo"].Value);
-                            this.TBEmpleado.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Empleado"].Value);
-                            this.TBDocumento.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Documento"].Value);
-                            this.TBMovil.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Movil"].Value);
-                            this.TBTelefono.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Telefono"].Value);
-                            this.TBEmail.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Correo"].Value);
-                            this.TBDireccion.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Direccion"].Value);
+                            this.TBIdempleado.Text = Convert.ToString(this.DGResultadoss.CurrentRow.Cells["Codigo"].Value);
+                            this.TBEmpleado.Text = Convert.ToString(this.DGResultadoss.CurrentRow.Cells["Empleado"].Value);
+                            this.TBDocumento.Text = Convert.ToString(this.DGResultadoss.CurrentRow.Cells["Documento"].Value);
+                            this.TBMovil.Text = Convert.ToString(this.DGResultadoss.CurrentRow.Cells["Movil"].Value);
+                            this.TBTelefono.Text = Convert.ToString(this.DGResultadoss.CurrentRow.Cells["Telefono"].Value);
+                            this.TBEmail.Text = Convert.ToString(this.DGResultadoss.CurrentRow.Cells["Correo"].Value);
+                            this.TBDireccion.Text = Convert.ToString(this.DGResultadoss.CurrentRow.Cells["Direccion"].Value);
 
                             //Se procede Habilitar los campos de Textos y Botones
 

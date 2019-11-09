@@ -203,5 +203,18 @@ namespace CapaPresentacion
 
             }
         }
+
+        private void sucurzalToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmSistema_Sucurzal frmSistema_Sucurzal = new frmSistema_Sucurzal();
+            frmSistema_Sucurzal.MdiParent = this;
+            frmSistema_Sucurzal.Show();
+
+            frmSistema_Sucurzal.Guardar = Convert.ToString(this.SQL_Guardar);
+            frmSistema_Sucurzal.Editar = Convert.ToString(this.SQL_Editar);
+            frmSistema_Sucurzal.Eliminar = Convert.ToString(this.SQL_Eliminar);
+            frmSistema_Sucurzal.Consultar = Convert.ToString(this.SQL_Consultar);
+            frmSistema_Sucurzal.Imprimir = Convert.ToString(this.SQL_Imprimir);
+        }
     }
 }

@@ -45,11 +45,11 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblTotal = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.DGResultados = new System.Windows.Forms.DataGridView();
+            this.DGResultadoss = new System.Windows.Forms.DataGridView();
             this.TBBuscar = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGResultados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGResultadoss)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -235,7 +235,7 @@
             // 
             this.groupBox2.Controls.Add(this.lblTotal);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.DGResultados);
+            this.groupBox2.Controls.Add(this.DGResultadoss);
             this.groupBox2.Controls.Add(this.TBBuscar);
             this.groupBox2.Location = new System.Drawing.Point(335, 12);
             this.groupBox2.Name = "groupBox2";
@@ -262,19 +262,19 @@
             this.label5.TabIndex = 2;
             this.label5.Text = "Equipo a Consultar";
             // 
-            // DGResultados
+            // DGResultadoss
             // 
-            this.DGResultados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.DGResultados.BackgroundColor = System.Drawing.Color.White;
-            this.DGResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGResultados.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DGResultados.Location = new System.Drawing.Point(6, 62);
-            this.DGResultados.Name = "DGResultados";
-            this.DGResultados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGResultados.Size = new System.Drawing.Size(500, 126);
-            this.DGResultados.TabIndex = 1;
-            this.DGResultados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGResultados_CellDoubleClick);
-            this.DGResultados.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DGResultados_KeyPress);
+            this.DGResultadoss.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DGResultadoss.BackgroundColor = System.Drawing.Color.White;
+            this.DGResultadoss.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGResultadoss.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DGResultadoss.Location = new System.Drawing.Point(6, 62);
+            this.DGResultadoss.Name = "DGResultadoss";
+            this.DGResultadoss.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGResultadoss.Size = new System.Drawing.Size(500, 126);
+            this.DGResultadoss.TabIndex = 1;
+            this.DGResultadoss.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGResultadoss_CellDoubleClick);
+            this.DGResultadoss.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DGResultadoss_KeyPress);
             // 
             // TBBuscar
             // 
@@ -302,7 +302,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGResultados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGResultadoss)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -317,7 +317,7 @@
         private System.Windows.Forms.TextBox TBEquipo;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox TBBuscar;
-        private System.Windows.Forms.DataGridView DGResultados;
+        private System.Windows.Forms.DataGridView DGResultadoss;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TBDiscoDuro;

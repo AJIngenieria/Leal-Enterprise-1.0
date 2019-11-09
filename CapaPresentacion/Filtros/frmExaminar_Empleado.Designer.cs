@@ -31,17 +31,17 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.DGResultados = new System.Windows.Forms.DataGridView();
+            this.DGResultadoss = new System.Windows.Forms.DataGridView();
             this.TBBuscar = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGResultados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGResultadoss)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lblTotal);
-            this.groupBox1.Controls.Add(this.DGResultados);
+            this.groupBox1.Controls.Add(this.DGResultadoss);
             this.groupBox1.Controls.Add(this.TBBuscar);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -68,22 +68,22 @@
             this.lblTotal.TabIndex = 7;
             this.lblTotal.Text = "--------------";
             // 
-            // DGResultados
+            // DGResultadoss
             // 
-            this.DGResultados.AllowUserToAddRows = false;
-            this.DGResultados.AllowUserToDeleteRows = false;
-            this.DGResultados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.DGResultados.BackgroundColor = System.Drawing.Color.White;
-            this.DGResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGResultados.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DGResultados.Location = new System.Drawing.Point(6, 64);
-            this.DGResultados.Name = "DGResultados";
-            this.DGResultados.ReadOnly = true;
-            this.DGResultados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGResultados.Size = new System.Drawing.Size(500, 274);
-            this.DGResultados.TabIndex = 6;
-            this.DGResultados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGResultados_CellDoubleClick);
-            this.DGResultados.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DGResultados_KeyPress);
+            this.DGResultadoss.AllowUserToAddRows = false;
+            this.DGResultadoss.AllowUserToDeleteRows = false;
+            this.DGResultadoss.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DGResultadoss.BackgroundColor = System.Drawing.Color.White;
+            this.DGResultadoss.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGResultadoss.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DGResultadoss.Location = new System.Drawing.Point(6, 64);
+            this.DGResultadoss.Name = "DGResultadoss";
+            this.DGResultadoss.ReadOnly = true;
+            this.DGResultadoss.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGResultadoss.Size = new System.Drawing.Size(500, 274);
+            this.DGResultadoss.TabIndex = 6;
+            this.DGResultadoss.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGResultadoss_CellDoubleClick);
+            this.DGResultadoss.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DGResultadoss_KeyPress);
             // 
             // TBBuscar
             // 
@@ -111,7 +111,7 @@
             this.Load += new System.EventHandler(this.FrmExaminar_Empleado_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGResultados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGResultadoss)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -121,7 +121,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.DataGridView DGResultados;
+        private System.Windows.Forms.DataGridView DGResultadoss;
         private System.Windows.Forms.TextBox TBBuscar;
     }
 }

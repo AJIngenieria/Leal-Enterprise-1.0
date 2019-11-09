@@ -243,9 +243,9 @@ namespace CapaPresentacion
 
                 if (Opcion == DialogResult.OK)
                 {
-                    if (DGResultados.SelectedRows.Count > 0)
+                    if (DGResultadoss.SelectedRows.Count > 0)
                     {
-                        Eliminacion = DGResultados.CurrentRow.Cells["Codigo"].Value.ToString();
+                        Eliminacion = DGResultadoss.CurrentRow.Cells["Codigo"].Value.ToString();
                         Respuesta = CapaNegocio.fSistema_Equipos.Eliminar_DatosBasicos(Convert.ToInt32(Eliminacion));
                     }
 
@@ -277,9 +277,9 @@ namespace CapaPresentacion
 
                 if (this.TBBuscar.Text != "")
                 {
-                    this.DGResultados.DataSource = fSistema_Equipos.Buscar_Equipos(this.TBBuscar.Text);
-                    //this.DGResultado.Columns[0].Visible = false;
-                    this.lblTotal.Text = "Datos Registrados: " + Convert.ToString(DGResultados.Rows.Count);
+                    this.DGResultadoss.DataSource = fSistema_Equipos.Buscar_Equipos(this.TBBuscar.Text);
+                    //this.DGResultados.Columns[0].Visible = false;
+                    this.lblTotal.Text = "Datos Registrados: " + Convert.ToString(DGResultadoss.Rows.Count);
 
 
                     this.Limpiar();
@@ -302,7 +302,7 @@ namespace CapaPresentacion
                     this.btnEliminar.Enabled = true;
 
                     //Se Limpian las Filas y Columnas de la tabla
-                    this.DGResultados.DataSource = null;
+                    this.DGResultadoss.DataSource = null;
                     this.lblTotal.Text = "Datos Registrados: 0";
 
                     //Variables de Procedimientos iniciadas en False
@@ -316,7 +316,7 @@ namespace CapaPresentacion
             }
         }
 
-        private void DGResultados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void DGResultadoss_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -326,11 +326,11 @@ namespace CapaPresentacion
 
                 if (!IsEditar)
                 {
-                    this.TBIdequipo.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Codigo"].Value);
-                    this.TBEquipo.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Equipo"].Value);
-                    this.CBTipo.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Tipo"].Value);
-                    this.TBDiscoDuro.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Disco Duro"].Value);
-                    this.TBMacseguridad.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Mac Seguridad"].Value);
+                    this.TBIdequipo.Text = Convert.ToString(this.DGResultadoss.CurrentRow.Cells["Codigo"].Value);
+                    this.TBEquipo.Text = Convert.ToString(this.DGResultadoss.CurrentRow.Cells["Equipo"].Value);
+                    this.CBTipo.Text = Convert.ToString(this.DGResultadoss.CurrentRow.Cells["Tipo"].Value);
+                    this.TBDiscoDuro.Text = Convert.ToString(this.DGResultadoss.CurrentRow.Cells["Disco Duro"].Value);
+                    this.TBMacseguridad.Text = Convert.ToString(this.DGResultadoss.CurrentRow.Cells["Mac Seguridad"].Value);
 
                     //Se procede Habilitar los campos de Textos y Botones
 
@@ -351,7 +351,7 @@ namespace CapaPresentacion
             }
         }
 
-        private void DGResultados_KeyPress(object sender, KeyPressEventArgs e)
+        private void DGResultadoss_KeyPress(object sender, KeyPressEventArgs e)
         {
             try
             {
@@ -363,11 +363,11 @@ namespace CapaPresentacion
 
                     if (!IsEditar)
                     {
-                        this.TBIdequipo.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Codigo"].Value);
-                        this.TBEquipo.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Equipo"].Value);
-                        this.CBTipo.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Tipo"].Value);
-                        this.TBDiscoDuro.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Disco Duro"].Value);
-                        this.TBMacseguridad.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Mac Seguridad"].Value);
+                        this.TBIdequipo.Text = Convert.ToString(this.DGResultadoss.CurrentRow.Cells["Codigo"].Value);
+                        this.TBEquipo.Text = Convert.ToString(this.DGResultadoss.CurrentRow.Cells["Equipo"].Value);
+                        this.CBTipo.Text = Convert.ToString(this.DGResultadoss.CurrentRow.Cells["Tipo"].Value);
+                        this.TBDiscoDuro.Text = Convert.ToString(this.DGResultadoss.CurrentRow.Cells["Disco Duro"].Value);
+                        this.TBMacseguridad.Text = Convert.ToString(this.DGResultadoss.CurrentRow.Cells["Mac Seguridad"].Value);
 
                         //Se procede Habilitar los campos de Textos y Botones
 

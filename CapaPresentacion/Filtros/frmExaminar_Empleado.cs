@@ -28,8 +28,8 @@ namespace CapaPresentacion
         {
             try
             {
-                this.DGResultados.DataSource = fGestionHumana_Empleados.Buscar_Empleado(this.TBBuscar.Text);
-                lblTotal.Text = "Datos Registrados: " + Convert.ToString(DGResultados.Rows.Count);
+                this.DGResultadoss.DataSource = fGestionHumana_Empleados.Buscar_Empleado(this.TBBuscar.Text);
+                lblTotal.Text = "Datos Registrados: " + Convert.ToString(DGResultadoss.Rows.Count);
             }
             catch (Exception ex)
             {
@@ -37,7 +37,7 @@ namespace CapaPresentacion
             }
         }
 
-        private void DGResultados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void DGResultadoss_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -48,8 +48,8 @@ namespace CapaPresentacion
 
                 if (frmPE.Filtro)
                 {
-                    frmPE1 = Convert.ToString(this.DGResultados.CurrentRow.Cells["Codigo"].Value);
-                    frmPE2 = Convert.ToString(this.DGResultados.CurrentRow.Cells["Empleado"].Value);
+                    frmPE1 = Convert.ToString(this.DGResultadoss.CurrentRow.Cells["Codigo"].Value);
+                    frmPE2 = Convert.ToString(this.DGResultadoss.CurrentRow.Cells["Empleado"].Value);
                     frmPE.setEmpleado(frmPE1, frmPE2);
                     this.Hide();
                 }
@@ -61,7 +61,7 @@ namespace CapaPresentacion
             }
         }
 
-        private void DGResultados_KeyPress(object sender, KeyPressEventArgs e)
+        private void DGResultadoss_KeyPress(object sender, KeyPressEventArgs e)
         {
             try
             {
@@ -74,8 +74,8 @@ namespace CapaPresentacion
 
                     if (frmPE.Filtro)
                     {
-                        frmPE1 = Convert.ToString(this.DGResultados.CurrentRow.Cells["Codigo"].Value);
-                        frmPE2 = Convert.ToString(this.DGResultados.CurrentRow.Cells["Empleado"].Value);
+                        frmPE1 = Convert.ToString(this.DGResultadoss.CurrentRow.Cells["Codigo"].Value);
+                        frmPE2 = Convert.ToString(this.DGResultadoss.CurrentRow.Cells["Empleado"].Value);
                         frmPE.setEmpleado(frmPE1, frmPE2);
                         this.Hide();
                     }

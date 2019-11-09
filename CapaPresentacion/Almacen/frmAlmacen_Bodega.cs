@@ -19,9 +19,6 @@ namespace CapaPresentacion
         private bool Digitar = true;
         public bool Filtro = true;
 
-        //Variable para Metodo Eliminar
-        private string Eliminacion = null;
-
         //Variable para Captura el Empleado Logueado
         public int Idempleado;
 
@@ -136,9 +133,9 @@ namespace CapaPresentacion
         {
             try
             {
-                //this.CBSucurzal.DataSource = fs.Mostrar();
-                //this.CBSucurzal.ValueMember = "Idcliente";
-                //this.CBSucurzal.DisplayMember = "Cliente";
+                this.CBSucurzal.DataSource = fSistema_Sucurzal.Mostrar();
+                this.CBSucurzal.ValueMember = "Idsucurzal";
+                this.CBSucurzal.DisplayMember = "Nombre";
             }
             catch (Exception ex)
             {
@@ -150,94 +147,117 @@ namespace CapaPresentacion
         {
             try
             {
-                if (Guardar == "1")
+                string rptaDatosBasicos = "";
+
+                // <<<<<<------ Panel Datos Basicos ------>>>>>
+
+                if (this.TBBodega.Text == string.Empty)
                 {
-                    string rptaDatosBasicos = "";
+                    MensajeError("Debe ingresar el nombre de la bodega a registrar");
+                    TBBodega.BackColor = Color.FromArgb(250, 235, 215);
+                }
+                else if (this.TBTipo.Text == string.Empty)
+                {
+                    MensajeError("Por favor ingrese el tipo de bodega a registrar");
+                    TBTipo.BackColor = Color.FromArgb(250, 235, 215);
+                }
+                else if (this.TBCiudad.Text == string.Empty)
+                {
+                    MensajeError("Por favor ingrese la ciudad donde se encuentra la bodega");
+                    TBCiudad.BackColor = Color.FromArgb(250, 235, 215);
+                }
+                else if (this.TBResponsable.Text == string.Empty)
+                {
+                    MensajeError("Por favor ingrese el nombre de la persona responsable de la bodega");
+                    TBResponsable.BackColor = Color.FromArgb(250, 235, 215);
+                }
+                
 
-                    // <<<<<<------ Panel Datos Basicos ------>>>>>
+                // <<<<<<------ Panel Datos Basicos ------>>>>>
 
-                    if (this.TBBodega.Text == string.Empty)
-                    {
-                        MensajeError("Debe ingresar el nombre de la bodega a registrar");
-                        TBBodega.BackColor = Color.FromArgb(250, 235, 215);
-                    }
-                    else if (this.TBTipo.Text == string.Empty)
-                    {
-                        MensajeError("Por favor ingrese el tipo de bodega a registrar");
-                        TBTipo.BackColor = Color.FromArgb(250, 235, 215);
-                    }
-                    else if (this.TBCiudad.Text == string.Empty)
-                    {
-                        MensajeError("Por favor ingrese la ciudad donde se encuentra la bodega");
-                        TBCiudad.BackColor = Color.FromArgb(250, 235, 215);
-                    }
-                    else if (this.TBResponsable.Text == string.Empty)
-                    {
-                        MensajeError("Por favor ingrese el nombre de la persona responsable de la bodega");
-                        TBResponsable.BackColor = Color.FromArgb(250, 235, 215);
-                    }
-
-                    // <<<<<<------ Panel Datos Basicos ------>>>>>
-
-                    else if (this.TBDireccion01.Text == string.Empty)
-                    {
-                        MensajeError("Debe ingresar la direccion principal de la bodega");
-                        TBDireccion01.BackColor = Color.FromArgb(250, 235, 215);
-                    }
-
-                    else
-                    {
-                        if (this.Digitar)
-                        {
-                            //rptaDatosBasicos = fClientes_Vehiculos.Guardar_DatosBasicos
-
-                            //    (
-                            //         //Panel Datos Basicos
-                            //         Convert.ToInt32(this.TBIDClientes.Text), this.TBTipo.Text,
-                            //         this.TBCiudad.Text, this.TBTelefono.Text, this.TBMovil.Text, 1
-                            //    );
-                        }
-
-                        else
-                        {
-                            //rptaDatosBasicos = fClientes_Vehiculos.Editar_DatosBasicos
-
-                            //    (
-                            //         //Panel Datos Basicos
-                            //         Convert.ToInt32(this.TBIdvehiculo.Text), Convert.ToInt32(this.TBIDClientes.Text), this.TBTipo.Text,
-                            //         this.TBCiudad.Text, this.TBTelefono.Text, this.TBMovil.Text, 2
-                            //    );
-                        }
-
-                        if (rptaDatosBasicos.Equals("OK"))
-                        {
-                            if (this.Digitar)
-                            {
-                                this.MensajeOk("Registro Exitoso");
-                            }
-
-                            else
-                            {
-                                this.MensajeOk("Registro Actualizado");
-                            }
-                        }
-
-                        else
-                        {
-                            this.MensajeError(rptaDatosBasicos);
-                        }
-
-                        //Llamada de Clases y Focus
-                        this.Digitar = true;
-                        this.Botones();
-                        this.Limpiar();
-                        this.TBBodega.Focus();
-                    }
+                else if (this.TBDireccion01.Text == string.Empty)
+                {
+                    MensajeError("Debe ingresar la direccion principal de la bodega");
+                    TBDireccion01.BackColor = Color.FromArgb(250, 235, 215);
+                }
+                else if (this.TBNumeroCelular.Text == string.Empty)
+                {
+                    MensajeError("Por favor ingrese la cantidad de equipos celulares que son propiedad de la bodega a registrar");
+                    TBNumeroCelular.BackColor = Color.FromArgb(250, 235, 215);
+                }
+                else if (this.TBNumeroImpresora.Text == string.Empty)
+                {
+                    MensajeError("Por favor ingrese la cantidad de impresoras que son propiedad de la bodega a registrar");
+                    TBNumeroImpresora.BackColor = Color.FromArgb(250, 235, 215);
+                }
+                else if (this.TBNumeroPC.Text == string.Empty)
+                {
+                    MensajeError("Por favor ingrese la cantidad computadores que son propiedad de la bodega a registrar");
+                    TBNumeroPC.BackColor = Color.FromArgb(250, 235, 215);
                 }
 
                 else
                 {
-                    MessageBox.Show("El usuario iniciado actualmente no contiene permisos para guardar", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    if (this.Digitar)
+                    {
+                        rptaDatosBasicos = fAlmacen_Bodega.Guardar_DatosBasicos
+
+                            (
+                                 //Panel Datos Basicos
+                                 Convert.ToInt32(this.CBSucurzal.SelectedValue), this.TBBodega.Text, this.TBTipo.Text,
+                                 this.TBCiudad.Text, this.TBTelefono.Text, this.TBMovil.Text, this.TBResponsable.Text,
+                                 this.TBCorreo.Text, 
+                                 
+                                 //Panel Otros Datos
+                                 this.TBDireccion01.Text, this.TBDireccion02.Text, this.TBMercancia.Text, Convert.ToInt32(this.TBNumeroPC.Text),
+                                  Convert.ToInt32(this.TBNumeroImpresora.Text), Convert.ToInt32(this.TBNumeroCelular.Text), this.TBObservacion.Text, 1
+                            );
+                    }
+
+                    else
+                    {
+                        rptaDatosBasicos = fAlmacen_Bodega.Editar_DatosBasicos
+
+                            (
+                                 //Panel Datos Basicos
+                                 Convert.ToInt32(this.TBIdbodega.Text), Convert.ToInt32(this.CBSucurzal.Text), this.TBBodega.Text, this.TBTipo.Text,
+                                 this.TBCiudad.Text, this.TBTelefono.Text, this.TBMovil.Text, this.TBResponsable.Text,
+                                 this.TBCorreo.Text,
+
+                                 //Panel Otros Datos
+                                 this.TBDireccion01.Text, this.TBDireccion02.Text, this.TBMercancia.Text, Convert.ToInt32(this.TBNumeroPC.Text),
+                                  Convert.ToInt32(this.TBNumeroImpresora.Text), Convert.ToInt32(this.TBNumeroCelular.Text), this.TBObservacion.Text, 2
+                            );
+                    }
+
+                    if (rptaDatosBasicos.Equals("OK"))
+                    {
+                        if (this.Digitar)
+                        {
+                            this.MensajeOk("Registro Exitoso");
+                        }
+
+                        else
+                        {
+                            this.MensajeOk("Registro Actualizado");
+                        }
+                    }
+
+                    else
+                    {
+                        this.MensajeError(rptaDatosBasicos);
+                    }
+
+                    //Llamada de Clases y Focus
+                    this.Digitar = true;
+                    this.Habilitar();
+                    this.Botones();
+                    this.Limpiar();
+                    this.TBBodega.Focus();
+
+                    //
+                    this.TCPrincipal.SelectedIndex = 0;
+                    this.TBBodega.Select();
                 }
 
             }
@@ -313,9 +333,9 @@ namespace CapaPresentacion
 
                     if (Opcion == DialogResult.OK)
                     {
-                        //if (DGResultados.SelectedRows.Count > 0)
+                        //if (DGResultadoss.SelectedRows.Count > 0)
                         //{
-                        //    Eliminacion = DGResultados.CurrentRow.Cells["Codigo"].Value.ToString();
+                        //    Eliminacion = DGResultadoss.CurrentRow.Cells["Codigo"].Value.ToString();
                         //    Respuesta = CapaNegocio.fClientes_Vehiculos.Eliminar_DatosBasicos(Eliminacion);
                         //}
 
@@ -386,29 +406,29 @@ namespace CapaPresentacion
                 {
                     if (TBBuscar.Text != "")
                     {
-                        //this.DGResultado.DataSource = fClientes_Vehiculos.Buscar_Vehiculo(this.TBBuscar.Text);
-                        //this.DGResultado.Columns[0].Visible = false;
-                        //this.DGResultado.Columns[1].Visible = false;
-                        //this.DGResultado.Columns[6].Visible = false;
-                        //this.DGResultado.Columns[7].Visible = false;
+                        this.DGResultados.DataSource = fAlmacen_Bodega.Buscar_Bodega(1, this.TBBuscar.Text);
+                        this.DGResultados.Columns[0].Visible = false;
+                        //this.DGResultados.Columns[1].Visible = false;
+                        //this.DGResultados.Columns[6].Visible = false;
+                        //this.DGResultados.Columns[7].Visible = false;
 
-                        //lblTotal.Text = "Datos Registrados: " + Convert.ToString(DGResultado.Rows.Count);
+                        lblTotal.Text = "Datos Registrados: " + Convert.ToString(DGResultados.Rows.Count);
 
-                        //this.btnEliminar.Enabled = true;
-                        //this.btnImprimir.Enabled = true;
-                        //this.DGResultado.Enabled = true;
+                        this.btnEliminar.Enabled = true;
+                        this.btnImprimir.Enabled = true;
+                        this.DGResultados.Enabled = true;
                     }
                     else
                     {
-                        //this.Limpiar();
+                        this.Limpiar();
 
-                        ////Se Limpian las Filas y Columnas de la tabla
-                        //DGResultado.DataSource = null;
-                        //this.DGResultado.Enabled = false;
-                        //this.lblTotal.Text = "Datos Registrados: 0";
+                        //Se Limpian las Filas y Columnas de la tabla
+                        DGResultados.DataSource = null;
+                        this.DGResultados.Enabled = false;
+                        this.lblTotal.Text = "Datos Registrados: 0";
 
-                        //this.btnEliminar.Enabled = false;
-                        //this.btnImprimir.Enabled = false;
+                        this.btnEliminar.Enabled = false;
+                        this.btnImprimir.Enabled = false;
                     }
                 }
 
@@ -431,28 +451,38 @@ namespace CapaPresentacion
 
                 if (Editar == "1")
                 {
-                    //this.btnGuardar.Enabled = true;
-                    //this.btnCancelar.Enabled = true;
+                    this.btnGuardar.Enabled = true;
+                    this.btnCancelar.Enabled = true;
 
-                    ////
-                    //this.TBIdvehiculo.Text = Convert.ToString(this.DGResultado.CurrentRow.Cells["Idvehiculos"].Value);
-                    //this.TBIDClientes.Text = Convert.ToString(this.DGResultado.CurrentRow.Cells["Idcliente"].Value);
-                    //this.CBCliente.Text = Convert.ToString(this.DGResultado.CurrentRow.Cells["Cliente"].Value);
-                    //this.TBBodega.Text = Convert.ToString(this.DGResultado.CurrentRow.Cells["Documento"].Value);
-                    //this.TBTipo.Text = Convert.ToString(this.DGResultado.CurrentRow.Cells["Marca"].Value);
-                    //this.TBCiudad.Text = Convert.ToString(this.DGResultado.CurrentRow.Cells["Modelo"].Value);
-                    //this.TBTelefono.Text = Convert.ToString(this.DGResultado.CurrentRow.Cells["Placa"].Value);
-                    //this.TBMovil.Text = Convert.ToString(this.DGResultado.CurrentRow.Cells["Descripcion"].Value);
+                    //
+                    this.TBIdbodega.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Codigo"].Value);
+                    this.TBBodega.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Bodega"].Value);
+                    this.TBTipo.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Tipo"].Value);
+                    this.CBSucurzal.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Idsucurzal"].Value);
+                    this.TBCiudad.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Ciudad"].Value);
+                    this.TBTelefono.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Telefono"].Value);
+                    this.TBMovil.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Movil"].Value);
+                    this.TBResponsable.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Responsable"].Value);
+                    this.TBCorreo.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Correo"].Value);
 
-                    ////Se procede Habilitar los campos de Textos y Botones
-                    ////cuando se le realice el evento Clip del Boton Ediatar/Guardar
+                    //
+                    this.TBDireccion01.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Cliente"].Value);
+                    this.TBDireccion02.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Cliente"].Value);
+                    this.TBMercancia.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Cliente"].Value);
+                    this.TBNumeroPC.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Cliente"].Value);
+                    this.TBNumeroCelular.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Cliente"].Value);
+                    this.TBNumeroImpresora.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Cliente"].Value);
+                    this.TBObservacion.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Cliente"].Value);
 
-                    //this.Habilitar();
-                    //this.TBTipo.Focus();
+                    //Se procede Habilitar los campos de Textos y Botones
+                    //cuando se le realice el evento Clip del Boton Ediatar/Guardar
 
-                    ////Se cambia la imagen del Boton la cual inicialmente es Guardar
-                    ////Y se cambiar por la imagen Editar
-                    //this.btnGuardar.Image = Properties.Resources.BV_Editar;
+                    this.Habilitar();
+                    this.TBTipo.Focus();
+
+                    //Se cambia la imagen del Boton la cual inicialmente es Guardar
+                    //Y se cambiar por la imagen Editar
+                    this.btnGuardar.Image = Properties.Resources.BV_Editar;
                 }
                 else
                 {
@@ -475,27 +505,37 @@ namespace CapaPresentacion
 
                     if (Editar == "1")
                     {
-                        //this.btnGuardar.Enabled = true;
-                        //this.btnCancelar.Enabled = true;
+                        this.btnGuardar.Enabled = true;
+                        this.btnCancelar.Enabled = true;
 
-                        ////
-                        //this.TBIdvehiculo.Text = Convert.ToString(this.DGResultado.CurrentRow.Cells["Idvehiculos"].Value);
-                        //this.TBIDClientes.Text = Convert.ToString(this.DGResultado.CurrentRow.Cells["Idcliente"].Value);
-                        //this.CBCliente.Text = Convert.ToString(this.DGResultado.CurrentRow.Cells["Cliente"].Value);
-                        //this.TBBodega.Text = Convert.ToString(this.DGResultado.CurrentRow.Cells["Documento"].Value);
-                        //this.TBTipo.Text = Convert.ToString(this.DGResultado.CurrentRow.Cells["Marca"].Value);
-                        //this.TBCiudad.Text = Convert.ToString(this.DGResultado.CurrentRow.Cells["Modelo"].Value);
-                        //this.TBTelefono.Text = Convert.ToString(this.DGResultado.CurrentRow.Cells["Placa"].Value);
-                        //this.TBMovil.Text = Convert.ToString(this.DGResultado.CurrentRow.Cells["Descripcion"].Value);
+                        //
+                        this.TBIdbodega.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Codigo"].Value);
+                        this.TBBodega.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Bodega"].Value);
+                        this.TBTipo.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Tipo"].Value);
+                        this.CBSucurzal.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Idsucurzal"].Value);
+                        this.TBCiudad.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Ciudad"].Value);
+                        this.TBTelefono.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Telefono"].Value);
+                        this.TBMovil.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Movil"].Value);
+                        this.TBResponsable.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Responsable"].Value);
+                        this.TBCorreo.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Correo"].Value);
 
-                        ////Se procede Habilitar los campos de Textos y Botones
-                        ////cuando se le realice el evento Clip del Boton Ediatar/Guardar
+                        //
+                        this.TBDireccion01.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Cliente"].Value);
+                        this.TBDireccion02.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Cliente"].Value);
+                        this.TBMercancia.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Cliente"].Value);
+                        this.TBNumeroPC.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Cliente"].Value);
+                        this.TBNumeroCelular.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Cliente"].Value);
+                        this.TBNumeroImpresora.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Cliente"].Value);
+                        this.TBObservacion.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Cliente"].Value);
 
-                        //this.Habilitar();
-                        //this.TBTipo.Focus();
+                        //Se procede Habilitar los campos de Textos y Botones
+                        //cuando se le realice el evento Clip del Boton Editar/Guardar
 
-                        ////Se cambia la imagen del Boton la cual inicialmente es Guardar
-                        ////Y se cambiar por la imagen Editar
+                        this.Habilitar();
+                        this.TBTipo.Focus();
+
+                        //Se cambia la imagen del Boton la cual inicialmente es Guardar
+                        //Y se cambiar por la imagen Editar
                         this.btnGuardar.Image = Properties.Resources.BV_Editar;
                     }
                     else
@@ -514,64 +554,81 @@ namespace CapaPresentacion
         {
             if (Digitar)
             {
-
+                this.btnGuardar.Image = Properties.Resources.BV_Guardar;
             }
-            this.btnGuardar.Image = Properties.Resources.BV_Guardar;
+            else
+            {
+                this.btnGuardar.Image = Properties.Resources.BV_Editar;
+            }
         }
 
         private void BtnGuardar_MouseLeave(object sender, EventArgs e)
         {
-
+            if (Digitar)
+            {
+                this.btnGuardar.Image = Properties.Resources.BV_Guardar;
+            }
+            else
+            {
+                this.btnGuardar.Image = Properties.Resources.BV_Editar;
+            }
         }
 
         private void BtnGuardar_MouseMove(object sender, MouseEventArgs e)
         {
-
+            if (Digitar)
+            {
+                this.btnGuardar.Image = Properties.Resources.BR_Guardar;
+            }
+            else
+            {
+                this.btnGuardar.Image = Properties.Resources.BR_Editar;
+            }
         }
 
         private void BtnEliminar_MouseDown(object sender, MouseEventArgs e)
         {
-
+            this.btnEliminar.Image = Properties.Resources.BV_Eliminar;
         }
 
         private void BtnEliminar_MouseLeave(object sender, EventArgs e)
         {
-
+            this.btnEliminar.Image = Properties.Resources.BV_Eliminar;
         }
 
         private void BtnEliminar_MouseMove(object sender, MouseEventArgs e)
         {
-
+            this.btnEliminar.Image = Properties.Resources.BR_Eliminar;
         }
 
         private void btnCancelar_MouseDown(object sender, MouseEventArgs e)
         {
-
+            this.btnCancelar.Image = Properties.Resources.BV_Cancelar;
         }
 
         private void btnCancelar_MouseLeave(object sender, EventArgs e)
         {
-
+            this.btnCancelar.Image = Properties.Resources.BV_Cancelar;
         }
 
         private void btnCancelar_MouseMove(object sender, MouseEventArgs e)
         {
-
+            this.btnCancelar.Image = Properties.Resources.BR_Cancelar;
         }
 
         private void btnImprimir_MouseDown(object sender, MouseEventArgs e)
         {
-
+            this.btnImprimir.Image = Properties.Resources.BV_Imprimir;
         }
 
         private void btnImprimir_MouseLeave(object sender, EventArgs e)
         {
-
+            this.btnImprimir.Image = Properties.Resources.BV_Imprimir;
         }
 
         private void btnImprimir_MouseMove(object sender, MouseEventArgs e)
         {
-
+            this.btnImprimir.Image = Properties.Resources.BR_Imprimir;
         }
         private void TBBodega_KeyUp(object sender, KeyEventArgs e)
         {
@@ -603,10 +660,9 @@ namespace CapaPresentacion
                     {
                         if (Guardar == "1")
                         {
+                            //Clases y Focus
                             this.Guardar_SQL();
-
-                            //Botones Comunes
-                            this.Botones();
+                            this.TBBodega.Focus();
                         }
                     }
                     else if (result == DialogResult.No)
@@ -651,10 +707,9 @@ namespace CapaPresentacion
                     {
                         if (Guardar == "1")
                         {
+                            //Clases y Focus
                             this.Guardar_SQL();
-
-                            //Botones Comunes
-                            this.Botones();
+                            this.TBBodega.Focus();
                         }
                     }
                     else if (result == DialogResult.No)
@@ -711,10 +766,9 @@ namespace CapaPresentacion
                     {
                         if (Guardar == "1")
                         {
+                            //Clases y Focus
                             this.Guardar_SQL();
-
-                            //Botones Comunes
-                            this.Botones();
+                            this.TBBodega.Focus();
                         }
                     }
                     else if (result == DialogResult.No)
@@ -759,10 +813,9 @@ namespace CapaPresentacion
                     {
                         if (Guardar == "1")
                         {
+                            //Clases y Focus
                             this.Guardar_SQL();
-
-                            //Botones Comunes
-                            this.Botones();
+                            this.TBBodega.Focus();
                         }
                     }
                     else if (result == DialogResult.No)
@@ -806,10 +859,9 @@ namespace CapaPresentacion
                     {
                         if (Guardar == "1")
                         {
+                            //Clases y Focus
                             this.Guardar_SQL();
-
-                            //Botones Comunes
-                            this.Botones();
+                            this.TBBodega.Focus();
                         }
                     }
                     else if (result == DialogResult.No)
@@ -854,10 +906,9 @@ namespace CapaPresentacion
                     {
                         if (Guardar == "1")
                         {
+                            //Clases y Focus
                             this.Guardar_SQL();
-
-                            //Botones Comunes
-                            this.Botones();
+                            this.TBBodega.Focus();
                         }
                     }
                     else if (result == DialogResult.No)
@@ -903,10 +954,9 @@ namespace CapaPresentacion
                     {
                         if (Guardar == "1")
                         {
+                            //Clases y Focus
                             this.Guardar_SQL();
-
-                            //Botones Comunes
-                            this.Botones();
+                            this.TBBodega.Focus();
                         }
                     }
                     else if (result == DialogResult.No)
@@ -951,10 +1001,9 @@ namespace CapaPresentacion
                     {
                         if (Guardar == "1")
                         {
+                            //Clases y Focus
                             this.Guardar_SQL();
-
-                            //Botones Comunes
-                            this.Botones();
+                            this.TBBodega.Focus();
                         }
                     }
                     else if (result == DialogResult.No)
@@ -999,10 +1048,9 @@ namespace CapaPresentacion
                     {
                         if (Guardar == "1")
                         {
+                            //Clases y Focus
                             this.Guardar_SQL();
-
-                            //Botones Comunes
-                            this.Botones();
+                            this.TBBodega.Focus();
                         }
                     }
                     else if (result == DialogResult.No)
@@ -1047,10 +1095,9 @@ namespace CapaPresentacion
                     {
                         if (Guardar == "1")
                         {
+                            //Clases y Focus
                             this.Guardar_SQL();
-
-                            //Botones Comunes
-                            this.Botones();
+                            this.TBBodega.Focus();
                         }
                     }
                     else if (result == DialogResult.No)
@@ -1095,10 +1142,9 @@ namespace CapaPresentacion
                     {
                         if (Guardar == "1")
                         {
+                            //Clases y Focus
                             this.Guardar_SQL();
-
-                            //Botones Comunes
-                            this.Botones();
+                            this.TBBodega.Focus();
                         }
                     }
                     else if (result == DialogResult.No)
@@ -1143,10 +1189,9 @@ namespace CapaPresentacion
                     {
                         if (Guardar == "1")
                         {
+                            //Clases y Focus
                             this.Guardar_SQL();
-
-                            //Botones Comunes
-                            this.Botones();
+                            this.TBBodega.Focus();
                         }
                     }
                     else if (result == DialogResult.No)
@@ -1191,10 +1236,9 @@ namespace CapaPresentacion
                     {
                         if (Guardar == "1")
                         {
+                            //Clases y Focus
                             this.Guardar_SQL();
-
-                            //Botones Comunes
-                            this.Botones();
+                            this.TBBodega.Focus();
                         }
                     }
                     else if (result == DialogResult.No)
@@ -1239,10 +1283,9 @@ namespace CapaPresentacion
                     {
                         if (Guardar == "1")
                         {
+                            //Clases y Focus
                             this.Guardar_SQL();
-
-                            //Botones Comunes
-                            this.Botones();
+                            this.TBBodega.Focus();
                         }
                     }
                     else if (result == DialogResult.No)
@@ -1295,5 +1338,34 @@ namespace CapaPresentacion
             }
         }
 
+        private void TBNumeroPC_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void TBNumeroCelular_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void TBNumeroImpresora_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
     }
 }

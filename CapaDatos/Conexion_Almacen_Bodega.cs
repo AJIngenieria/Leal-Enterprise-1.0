@@ -30,14 +30,13 @@ namespace CapaDatos
         private string _Direccion01;
         private string _Direccion02;
         private string _Mercancia;
-        private string _NumeroPC;
-        private string _NumeroImpresora;
-        private string _NumeroCelulares;
+        private int _NumeroPC;
+        private int _NumeroImpresora;
+        private int _NumeroCelulares;
         private string _Observacion;
 
         //Datos Auxiliares
         private int _Auto;
-        private int _Estado;
         private string _Filtro;
         
         public int Idbodega { get => _Idbodega; set => _Idbodega = value; }
@@ -52,12 +51,11 @@ namespace CapaDatos
         public string Direccion01 { get => _Direccion01; set => _Direccion01 = value; }
         public string Direccion02 { get => _Direccion02; set => _Direccion02 = value; }
         public string Mercancia { get => _Mercancia; set => _Mercancia = value; }
-        public string NumeroPC { get => _NumeroPC; set => _NumeroPC = value; }
-        public string NumeroImpresora { get => _NumeroImpresora; set => _NumeroImpresora = value; }
-        public string NumeroCelulares { get => _NumeroCelulares; set => _NumeroCelulares = value; }
+        public int NumeroPC { get => _NumeroPC; set => _NumeroPC = value; }
+        public int NumeroImpresora { get => _NumeroImpresora; set => _NumeroImpresora = value; }
+        public int NumeroCelulares { get => _NumeroCelulares; set => _NumeroCelulares = value; }
         public string Observacion { get => _Observacion; set => _Observacion = value; }
         public int Auto { get => _Auto; set => _Auto = value; }
-        public int Estado { get => _Estado; set => _Estado = value; }
         public string Filtro { get => _Filtro; set => _Filtro = value; }
 
         public Conexion_Almacen_Bodega()
@@ -80,11 +78,11 @@ namespace CapaDatos
 
                 //Otros Datos
                 string direccion01, string direccion02, string mercancia,
-                string numeroPC, string numeroimpresora, string numerocelulares,
+                int numeroPC, int numeroimpresora, int numerocelulares,
                 string observacion,
 
                 //Datos Auxiliares
-                int auto, int estado, string filtro
+                int auto, string filtro
             )
         {
                 //Llave primaria
@@ -112,10 +110,6 @@ namespace CapaDatos
                 this.Observacion = observacion;
 
                 //Datos Auxiliares
-                this.Auto = auto;
-                this.Estado = estado;
-                this.Filtro = filtro;
-
                 this.Auto = auto;
                 this.Filtro = filtro;
         }
@@ -149,6 +143,12 @@ namespace CapaDatos
                 ParAuto.SqlDbType = SqlDbType.Int;
                 ParAuto.Value = Bodega.Auto;
                 SqlCmd.Parameters.Add(ParAuto);
+
+                SqlParameter ParIdsucurzal = new SqlParameter();
+                ParIdsucurzal.ParameterName = "@Idsucurzal";
+                ParIdsucurzal.SqlDbType = SqlDbType.Int;
+                ParIdsucurzal.Value = Bodega.Idsucurzal;
+                SqlCmd.Parameters.Add(ParIdsucurzal);
 
                 SqlParameter ParBodega = new SqlParameter();
                 ParBodega.ParameterName = "@Nombre";
@@ -293,6 +293,12 @@ namespace CapaDatos
                 ParIdbodega.Value = Bodega.Idbodega;
                 SqlCmd.Parameters.Add(ParIdbodega);
 
+                SqlParameter ParIdsucurzal = new SqlParameter();
+                ParIdsucurzal.ParameterName = "@Idsucurzal";
+                ParIdsucurzal.SqlDbType = SqlDbType.Int;
+                ParIdsucurzal.Value = Bodega.Idsucurzal;
+                SqlCmd.Parameters.Add(ParIdsucurzal);
+
                 SqlParameter ParAuto = new SqlParameter();
                 ParAuto.ParameterName = "@Auto";
                 ParAuto.SqlDbType = SqlDbType.Int;
@@ -432,11 +438,11 @@ namespace CapaDatos
 
                 //Comienzo a mandar a la base de datos
 
-                SqlParameter ParAuto = new SqlParameter();
-                ParAuto.ParameterName = "@Auto";
-                ParAuto.SqlDbType = SqlDbType.Int;
-                ParAuto.Value = Bodega.Auto;
-                SqlCmd.Parameters.Add(ParAuto);
+                //SqlParameter ParAuto = new SqlParameter();
+                //ParAuto.ParameterName = "@Auto";
+                //ParAuto.SqlDbType = SqlDbType.Int;
+                //ParAuto.Value = Bodega.Auto;
+                //SqlCmd.Parameters.Add(ParAuto);
 
                 SqlParameter ParIdbodega = new SqlParameter();
                 ParIdbodega.ParameterName = "@Idbodega";
@@ -464,15 +470,21 @@ namespace CapaDatos
 
         public DataTable Buscar_Bodega(Conexion_Almacen_Bodega Bodega)
         {
-            DataTable DtResultado = new DataTable("Seguridad.Equipo");
+            DataTable DtResultado = new DataTable("Historico.Bodega");
             SqlConnection SqlCon = new SqlConnection();
             try
             {
                 SqlCon.ConnectionString = Conexion_BaseDeDatos.Conexion_SQL;
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "Consulta.Equipo";
+                SqlCmd.CommandText = "Consulta.Bodega";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParAuto = new SqlParameter();
+                ParAuto.ParameterName = "@Auto";
+                ParAuto.SqlDbType = SqlDbType.Int;
+                ParAuto.Value = Bodega.Auto;
+                SqlCmd.Parameters.Add(ParAuto);
 
                 SqlParameter ParTextoBuscar = new SqlParameter();
                 ParTextoBuscar.ParameterName = "@Filtro";

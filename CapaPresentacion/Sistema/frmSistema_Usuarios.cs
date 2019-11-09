@@ -324,9 +324,9 @@ namespace CapaPresentacion
 
                     if (this.TBBuscar.Text != "")
                     {
-                        this.DGResultados.DataSource = fSistema_Usuarios.Buscar_Usuario(this.TBBuscar.Text);
-                        //this.DGResultado.Columns[0].Visible = false;
-                        this.lblTotal.Text = "Datos Registrados: " + Convert.ToString(DGResultados.Rows.Count);
+                        this.DGResultadoss.DataSource = fSistema_Usuarios.Buscar_Usuario(this.TBBuscar.Text);
+                        //this.DGResultados.Columns[0].Visible = false;
+                        this.lblTotal.Text = "Datos Registrados: " + Convert.ToString(DGResultadoss.Rows.Count);
 
 
                         this.Limpiar();
@@ -349,7 +349,7 @@ namespace CapaPresentacion
                         this.btnEliminar.Enabled = true;
 
                         //Se Limpian las Filas y Columnas de la tabla
-                        this.DGResultados.DataSource = null;
+                        this.DGResultadoss.DataSource = null;
                         this.lblTotal.Text = "Datos Registrados: 0";
 
                         //Variables de Procedimientos iniciadas en False
