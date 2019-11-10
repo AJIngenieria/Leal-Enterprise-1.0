@@ -99,6 +99,7 @@
             this.TBIdbodega.Name = "TBIdbodega";
             this.TBIdbodega.Size = new System.Drawing.Size(53, 21);
             this.TBIdbodega.TabIndex = 19;
+            this.TBIdbodega.TextChanged += new System.EventHandler(this.TBIdbodega_TextChanged);
             // 
             // TCPrincipal
             // 

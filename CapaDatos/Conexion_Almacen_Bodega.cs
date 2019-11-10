@@ -283,7 +283,7 @@ namespace CapaDatos
                 //Establecer la conexion para mandar a la base de datos
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "Seguridad.LI_Bodega";
+                SqlCmd.CommandText = "Almacen.LI_Bodega";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 //Comienzo a mandar a la base de datos
@@ -404,7 +404,7 @@ namespace CapaDatos
 
                 //ejecutamos el envio de datos
 
-                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "Error al Registrar";
+                rpta = SqlCmd.ExecuteNonQuery() != 1 ? "OK" : "Error al Registrar";
             }
             catch (Exception ex)
             {
@@ -433,22 +433,20 @@ namespace CapaDatos
                 //Establecer la conexion para mandar a la base de datos
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "Seguridad.LI_Bodega";
+                SqlCmd.CommandText = "Consulta.Bodega";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
-
-                //Comienzo a mandar a la base de datos
-
-                //SqlParameter ParAuto = new SqlParameter();
-                //ParAuto.ParameterName = "@Auto";
-                //ParAuto.SqlDbType = SqlDbType.Int;
-                //ParAuto.Value = Bodega.Auto;
-                //SqlCmd.Parameters.Add(ParAuto);
-
+                
                 SqlParameter ParIdbodega = new SqlParameter();
                 ParIdbodega.ParameterName = "@Idbodega";
                 ParIdbodega.SqlDbType = SqlDbType.Int;
                 ParIdbodega.Value = Bodega.Idbodega;
                 SqlCmd.Parameters.Add(ParIdbodega);
+
+                SqlParameter ParAuto = new SqlParameter();
+                ParAuto.ParameterName = "@Eliminar";
+                ParAuto.SqlDbType = SqlDbType.Int;
+                ParAuto.Value = Bodega.Auto;
+                SqlCmd.Parameters.Add(ParAuto);
 
                 //ejecutamos el envio de datos
 

@@ -113,9 +113,10 @@ namespace CapaNegocio
 
         //Metodo eliminar
 
-        public static string Eliminar_DatosBasicos(int idbodega)
+        public static string Eliminar_DatosBasicos(int auto, int idbodega)
         {
             Conexion_Almacen_Bodega Obj = new Conexion_Almacen_Bodega();
+            Obj.Auto = auto;
             Obj.Idbodega = idbodega;
             return Obj.Eliminar_DatosBasicos(Obj);
         }

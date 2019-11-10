@@ -31,15 +31,14 @@ namespace CapaPresentacion
             this.TBUsuario.BackColor = Color.FromArgb(32, 178, 170);
             this.TBContraseña.ReadOnly = false;
             this.TBContraseña.BackColor = Color.FromArgb(32, 178, 170);
-                        
 
             //Informe de Sesion
-            this.TBInicioDeSesion.ReadOnly = true;
-            this.TBInicioDeSesion.BackColor = Color.FromArgb(255, 255, 255);
-            this.TBCopyrigth.ReadOnly = true;
-            this.TBCopyrigth.BackColor = Color.FromArgb(255, 255, 255);
-            this.TBDesarrollo.ReadOnly = true;
-            this.TBDesarrollo.BackColor = Color.FromArgb(255, 255, 255);
+            this.TBInicioDeSesion.Enabled = false;
+            this.TBInicioDeSesion.BackColor = Color.FromArgb(253, 254, 254);
+            this.TBCopyrigth.Enabled = false;
+            this.TBCopyrigth.BackColor = Color.FromArgb(253, 254, 254);
+            this.TBDesarrollo.Enabled = false;
+            this.TBDesarrollo.BackColor = Color.FromArgb(253, 254, 254);
 
             //Datos de Seguridad
             this.Seguridad_SQL();

@@ -29,6 +29,29 @@ namespace CapaPresentacion
         public string Eliminar = "";
         public string Imprimir = "";
 
+        //Parametros para AutoCompletar los Texboxt
+
+        //Panel Datos Basicos
+        public string Idbodega = "";
+        public string Idsucurzal = "";
+        public string Nombre = "";
+        public string Tipo = "";
+        public string Ciudad = "";
+        public string Telefono = "";
+        public string Movil = "";
+        public string Correo = "";
+        public string Responsable = "";
+
+        //Panel Otros Datos
+        public string Direccion01 = "";
+        public string Direccion02 = "";
+        public string Mercancia = "";
+        public string PC = "";
+        public string Celular = "";
+        public string Impresora = "";
+        public string Observacion = "";
+
+
         public frmAlmacen_Bodega()
         {
             InitializeComponent();
@@ -171,7 +194,7 @@ namespace CapaPresentacion
                     MensajeError("Por favor ingrese el nombre de la persona responsable de la bodega");
                     TBResponsable.BackColor = Color.FromArgb(250, 235, 215);
                 }
-                
+
 
                 // <<<<<<------ Panel Datos Basicos ------>>>>>
 
@@ -206,8 +229,8 @@ namespace CapaPresentacion
                                  //Panel Datos Basicos
                                  Convert.ToInt32(this.CBSucurzal.SelectedValue), this.TBBodega.Text, this.TBTipo.Text,
                                  this.TBCiudad.Text, this.TBTelefono.Text, this.TBMovil.Text, this.TBResponsable.Text,
-                                 this.TBCorreo.Text, 
-                                 
+                                 this.TBCorreo.Text,
+
                                  //Panel Otros Datos
                                  this.TBDireccion01.Text, this.TBDireccion02.Text, this.TBMercancia.Text, Convert.ToInt32(this.TBNumeroPC.Text),
                                   Convert.ToInt32(this.TBNumeroImpresora.Text), Convert.ToInt32(this.TBNumeroCelular.Text), this.TBObservacion.Text, 1
@@ -220,7 +243,7 @@ namespace CapaPresentacion
 
                             (
                                  //Panel Datos Basicos
-                                 Convert.ToInt32(this.TBIdbodega.Text), Convert.ToInt32(this.CBSucurzal.Text), this.TBBodega.Text, this.TBTipo.Text,
+                                 Convert.ToInt32(this.TBIdbodega.Text), Convert.ToInt32(this.CBSucurzal.SelectedValue), this.TBBodega.Text, this.TBTipo.Text,
                                  this.TBCiudad.Text, this.TBTelefono.Text, this.TBMovil.Text, this.TBResponsable.Text,
                                  this.TBCorreo.Text,
 
@@ -328,37 +351,40 @@ namespace CapaPresentacion
 
                     DialogResult Opcion;
                     string Respuesta = "";
+                    int Eliminacion;
 
                     Opcion = MessageBox.Show("Desea Eliminar el Registro Seleccionado", "Leal Enterprise", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
                     if (Opcion == DialogResult.OK)
                     {
-                        //if (DGResultadoss.SelectedRows.Count > 0)
-                        //{
-                        //    Eliminacion = DGResultadoss.CurrentRow.Cells["Codigo"].Value.ToString();
-                        //    Respuesta = CapaNegocio.fClientes_Vehiculos.Eliminar_DatosBasicos(Eliminacion);
-                        //}
+                        if (DGResultados.SelectedRows.Count > 0)
+                        {
+                            Eliminacion = Convert.ToInt32(DGResultados.CurrentRow.Cells["Codigo"].Value.ToString());
+                            Respuesta = CapaNegocio.fAlmacen_Bodega.Eliminar_DatosBasicos(0, Eliminacion);
+                        }
 
-                        //if (Respuesta.Equals("OK"))
-                        //{
-                        //    this.MensajeOk("Registro Eliminado Correctamente");
-                        //}
-                        //else
-                        //{
-                        //    this.MensajeError(Respuesta);
-                        //}
+                        if (Respuesta.Equals("OK"))
+                        {
+                            this.MensajeOk("Registro Eliminado Correctamente");
+                        }
+                        else
+                        {
+                            this.MensajeError(Respuesta);
+                        }
 
-                        ////Botones Comunes
-                        //this.Digitar = true;
-                        //this.Botones();
+                        //Botones Comunes
+                        this.Digitar = true;
+                        this.TBBuscar.Clear();
+                        this.Botones();
 
-                        ////Se regresa el focus al campo principal
-                        this.TBBodega.Focus();
+                        //Se regresa el focus al campo principal
+                        this.TCPrincipal.SelectedIndex = 0;
+                        this.TBBodega.Select();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Acceso Denegado Para Realizar Eliminaciones en el Sistema", "Servi Lavado - Las Brisas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Acceso Denegado Para Realizar Eliminaciones en el Sistema", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 
             }
@@ -407,10 +433,7 @@ namespace CapaPresentacion
                     if (TBBuscar.Text != "")
                     {
                         this.DGResultados.DataSource = fAlmacen_Bodega.Buscar_Bodega(1, this.TBBuscar.Text);
-                        this.DGResultados.Columns[0].Visible = false;
                         //this.DGResultados.Columns[1].Visible = false;
-                        //this.DGResultados.Columns[6].Visible = false;
-                        //this.DGResultados.Columns[7].Visible = false;
 
                         lblTotal.Text = "Datos Registrados: " + Convert.ToString(DGResultados.Rows.Count);
 
@@ -443,6 +466,72 @@ namespace CapaPresentacion
             }
         }
 
+        private void TBIdbodega_TextChanged(object sender, EventArgs e)
+        {
+            try
+            //SE REALIZA LA CONSULTA A LA BASE DE DATOS POR MEDIO DEL IDBODEGA
+            //Y ASI AUTOCOMPLETAR LOS CAMPOS DE TEXTOS NECESARIOS O CONSULTADOS
+            {
+
+                // ENVIAN LOS DATOS A LA BASE DE DATOS Y SE EVALUAN QUE EXISTEN O ESTEN REGISTRADOS
+
+                DataTable Datos = CapaNegocio.fAlmacen_Bodega.Buscar_Bodega(2, this.TBIdbodega.Text);
+                //Evaluamos si  existen los Datos
+                if (Datos.Rows.Count == 0)
+                {
+                    MessageBox.Show("No se encontraron registros en la base de datos", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+
+                    //Panel Datos Basicos
+                    Idsucurzal = Datos.Rows[0][0].ToString();
+                    Nombre = Datos.Rows[0][1].ToString();
+                    Tipo = Datos.Rows[0][2].ToString();
+                    Ciudad = Datos.Rows[0][3].ToString();
+                    Telefono = Datos.Rows[0][4].ToString();
+                    Movil = Datos.Rows[0][5].ToString();
+                    Correo = Datos.Rows[0][6].ToString();
+                    Responsable = Datos.Rows[0][7].ToString();
+
+                    //Panel Otros Datos
+                    Direccion01 = Datos.Rows[0][8].ToString();
+                    Direccion02 = Datos.Rows[0][9].ToString();
+                    Mercancia = Datos.Rows[0][10].ToString();
+                    PC = Datos.Rows[0][11].ToString();
+                    Celular = Datos.Rows[0][12].ToString();
+                    Impresora = Datos.Rows[0][13].ToString();
+                    Observacion = Datos.Rows[0][14].ToString();
+
+                    //SE PROCEDE A LLENAR LOS CAMPOS DE TEXTO SEGUN LA CONSULTA REALIZADA
+
+                    this.CBSucurzal.Text = Idsucurzal;
+                    this.TBBodega.Text = Nombre;
+                    this.TBTipo.Text = Tipo;
+                    this.TBCiudad.Text = Ciudad;
+                    this.TBTelefono.Text = Telefono;
+                    this.TBMovil.Text = Movil;
+                    this.TBResponsable.Text = Correo;
+                    this.TBResponsable.Text = Responsable;
+                    
+                    //
+                    this.TBDireccion01.Text = Direccion01;
+                    this.TBDireccion02.Text = Direccion02;
+                    this.TBMercancia.Text = Mercancia;
+                    this.TBNumeroPC.Text = PC;
+                    this.TBNumeroCelular.Text = Celular;
+                    this.TBNumeroImpresora.Text = Impresora;
+                    this.TBObservacion.Text = Observacion;
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
         private void DGResultados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -456,23 +545,7 @@ namespace CapaPresentacion
 
                     //
                     this.TBIdbodega.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Codigo"].Value);
-                    this.TBBodega.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Bodega"].Value);
-                    this.TBTipo.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Tipo"].Value);
-                    this.CBSucurzal.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Idsucurzal"].Value);
-                    this.TBCiudad.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Ciudad"].Value);
-                    this.TBTelefono.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Telefono"].Value);
-                    this.TBMovil.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Movil"].Value);
-                    this.TBResponsable.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Responsable"].Value);
-                    this.TBCorreo.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Correo"].Value);
-
-                    //
-                    this.TBDireccion01.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Cliente"].Value);
-                    this.TBDireccion02.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Cliente"].Value);
-                    this.TBMercancia.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Cliente"].Value);
-                    this.TBNumeroPC.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Cliente"].Value);
-                    this.TBNumeroCelular.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Cliente"].Value);
-                    this.TBNumeroImpresora.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Cliente"].Value);
-                    this.TBObservacion.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Cliente"].Value);
+                    this.TBBodega.Select();
 
                     //Se procede Habilitar los campos de Textos y Botones
                     //cuando se le realice el evento Clip del Boton Ediatar/Guardar
@@ -510,23 +583,7 @@ namespace CapaPresentacion
 
                         //
                         this.TBIdbodega.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Codigo"].Value);
-                        this.TBBodega.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Bodega"].Value);
-                        this.TBTipo.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Tipo"].Value);
-                        this.CBSucurzal.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Idsucurzal"].Value);
-                        this.TBCiudad.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Ciudad"].Value);
-                        this.TBTelefono.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Telefono"].Value);
-                        this.TBMovil.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Movil"].Value);
-                        this.TBResponsable.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Responsable"].Value);
-                        this.TBCorreo.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Correo"].Value);
-
-                        //
-                        this.TBDireccion01.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Cliente"].Value);
-                        this.TBDireccion02.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Cliente"].Value);
-                        this.TBMercancia.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Cliente"].Value);
-                        this.TBNumeroPC.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Cliente"].Value);
-                        this.TBNumeroCelular.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Cliente"].Value);
-                        this.TBNumeroImpresora.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Cliente"].Value);
-                        this.TBObservacion.Text = Convert.ToString(this.DGResultados.CurrentRow.Cells["Cliente"].Value);
+                        this.TBBodega.Select();
 
                         //Se procede Habilitar los campos de Textos y Botones
                         //cuando se le realice el evento Clip del Boton Editar/Guardar
@@ -654,21 +711,43 @@ namespace CapaPresentacion
                     //Al precionar las teclas Control+Enter se realizara el registro en la base de datos
                     //Y se realizara las validaciones en el sistema
 
-                    DialogResult result = MessageBox.Show("¿Desea registrar los campos digitados?", "Leal Enterprise", MessageBoxButtons.YesNo);
-
-                    if (result == DialogResult.Yes)
+                    if (Digitar)
                     {
-                        if (Guardar == "1")
+                        DialogResult result = MessageBox.Show("¿Desea registrar los campos digitados?", "Leal Enterprise", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            if (Guardar == "1")
+                            {
+                                //Clases y Focus
+                                this.Guardar_SQL();
+                                this.TBBodega.Focus();
+                            }
+                            else
+                            {
+                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar", "Leal Enterprise", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                            }
+                        }
+                        else if (result == DialogResult.No)
+                        {
+                            this.TBBodega.Select();
+                        }
+                    }
+                    else
+                    {
+                        DialogResult result = MessageBox.Show("¿Desea Actualizar los campos consultados?", "Leal Enterprise", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
                         {
                             //Clases y Focus
                             this.Guardar_SQL();
                             this.TBBodega.Focus();
                         }
-                    }
-                    else if (result == DialogResult.No)
-                    {
-                        this.TBBodega.Select();
-                    }
+                        else if (result == DialogResult.No)
+                        {
+                            this.TBBodega.Select();
+                        }
+                    }                    
                 }
             }
             catch (Exception ex)
@@ -701,20 +780,42 @@ namespace CapaPresentacion
                     //Al precionar las teclas Control+Enter se realizara el registro en la base de datos
                     //Y se realizara las validaciones en el sistema
 
-                    DialogResult result = MessageBox.Show("¿Desea registrar los campos digitados?", "Leal Enterprise", MessageBoxButtons.YesNo);
-
-                    if (result == DialogResult.Yes)
+                    if (Digitar)
                     {
-                        if (Guardar == "1")
+                        DialogResult result = MessageBox.Show("¿Desea registrar los campos digitados?", "Leal Enterprise", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            if (Guardar == "1")
+                            {
+                                //Clases y Focus
+                                this.Guardar_SQL();
+                                this.TBBodega.Focus();
+                            }
+                            else
+                            {
+                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            }
+                        }
+                        else if (result == DialogResult.No)
+                        {
+                            this.TBBodega.Select();
+                        }
+                    }
+                    else
+                    {
+                        DialogResult result = MessageBox.Show("¿Desea Actualizar los campos consultados?", "Leal Enterprise", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
                         {
                             //Clases y Focus
                             this.Guardar_SQL();
                             this.TBBodega.Focus();
                         }
-                    }
-                    else if (result == DialogResult.No)
-                    {
-                        this.TBTipo.Select();
+                        else if (result == DialogResult.No)
+                        {
+                            this.TBBodega.Select();
+                        }
                     }
                 }
             }
@@ -760,20 +861,42 @@ namespace CapaPresentacion
                     //Al precionar las teclas Control+Enter se realizara el registro en la base de datos
                     //Y se realizara las validaciones en el sistema
 
-                    DialogResult result = MessageBox.Show("¿Desea registrar los campos digitados?", "Leal Enterprise", MessageBoxButtons.YesNo);
-
-                    if (result == DialogResult.Yes)
+                    if (Digitar)
                     {
-                        if (Guardar == "1")
+                        DialogResult result = MessageBox.Show("¿Desea registrar los campos digitados?", "Leal Enterprise", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            if (Guardar == "1")
+                            {
+                                //Clases y Focus
+                                this.Guardar_SQL();
+                                this.TBBodega.Focus();
+                            }
+                            else
+                            {
+                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            }
+                        }
+                        else if (result == DialogResult.No)
+                        {
+                            this.TBBodega.Select();
+                        }
+                    }
+                    else
+                    {
+                        DialogResult result = MessageBox.Show("¿Desea Actualizar los campos consultados?", "Leal Enterprise", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
                         {
                             //Clases y Focus
                             this.Guardar_SQL();
                             this.TBBodega.Focus();
                         }
-                    }
-                    else if (result == DialogResult.No)
-                    {
-                        this.TBCiudad.Select();
+                        else if (result == DialogResult.No)
+                        {
+                            this.TBBodega.Select();
+                        }
                     }
                 }
             }
@@ -807,20 +930,42 @@ namespace CapaPresentacion
                     //Al precionar las teclas Control+Enter se realizara el registro en la base de datos
                     //Y se realizara las validaciones en el sistema
 
-                    DialogResult result = MessageBox.Show("¿Desea registrar los campos digitados?", "Leal Enterprise", MessageBoxButtons.YesNo);
-
-                    if (result == DialogResult.Yes)
+                    if (Digitar)
                     {
-                        if (Guardar == "1")
+                        DialogResult result = MessageBox.Show("¿Desea registrar los campos digitados?", "Leal Enterprise", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            if (Guardar == "1")
+                            {
+                                //Clases y Focus
+                                this.Guardar_SQL();
+                                this.TBBodega.Focus();
+                            }
+                            else
+                            {
+                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            }
+                        }
+                        else if (result == DialogResult.No)
+                        {
+                            this.TBBodega.Select();
+                        }
+                    }
+                    else
+                    {
+                        DialogResult result = MessageBox.Show("¿Desea Actualizar los campos consultados?", "Leal Enterprise", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
                         {
                             //Clases y Focus
                             this.Guardar_SQL();
                             this.TBBodega.Focus();
                         }
-                    }
-                    else if (result == DialogResult.No)
-                    {
-                        this.TBTelefono.Select();
+                        else if (result == DialogResult.No)
+                        {
+                            this.TBBodega.Select();
+                        }
                     }
                 }
             }
@@ -853,20 +998,42 @@ namespace CapaPresentacion
                     //Al precionar las teclas Control+Enter se realizara el registro en la base de datos
                     //Y se realizara las validaciones en el sistema
 
-                    DialogResult result = MessageBox.Show("¿Desea registrar los campos digitados?", "Leal Enterprise", MessageBoxButtons.YesNo);
-
-                    if (result == DialogResult.Yes)
+                    if (Digitar)
                     {
-                        if (Guardar == "1")
+                        DialogResult result = MessageBox.Show("¿Desea registrar los campos digitados?", "Leal Enterprise", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            if (Guardar == "1")
+                            {
+                                //Clases y Focus
+                                this.Guardar_SQL();
+                                this.TBBodega.Focus();
+                            }
+                            else
+                            {
+                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            }
+                        }
+                        else if (result == DialogResult.No)
+                        {
+                            this.TBBodega.Select();
+                        }
+                    }
+                    else
+                    {
+                        DialogResult result = MessageBox.Show("¿Desea Actualizar los campos consultados?", "Leal Enterprise", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
                         {
                             //Clases y Focus
                             this.Guardar_SQL();
                             this.TBBodega.Focus();
                         }
-                    }
-                    else if (result == DialogResult.No)
-                    {
-                        this.TBMovil.Select();
+                        else if (result == DialogResult.No)
+                        {
+                            this.TBBodega.Select();
+                        }
                     }
                 }
             }
@@ -900,20 +1067,42 @@ namespace CapaPresentacion
                     //Al precionar las teclas Control+Enter se realizara el registro en la base de datos
                     //Y se realizara las validaciones en el sistema
 
-                    DialogResult result = MessageBox.Show("¿Desea registrar los campos digitados?", "Leal Enterprise", MessageBoxButtons.YesNo);
-
-                    if (result == DialogResult.Yes)
+                    if (Digitar)
                     {
-                        if (Guardar == "1")
+                        DialogResult result = MessageBox.Show("¿Desea registrar los campos digitados?", "Leal Enterprise", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            if (Guardar == "1")
+                            {
+                                //Clases y Focus
+                                this.Guardar_SQL();
+                                this.TBBodega.Focus();
+                            }
+                            else
+                            {
+                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            }
+                        }
+                        else if (result == DialogResult.No)
+                        {
+                            this.TBBodega.Select();
+                        }
+                    }
+                    else
+                    {
+                        DialogResult result = MessageBox.Show("¿Desea Actualizar los campos consultados?", "Leal Enterprise", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
                         {
                             //Clases y Focus
                             this.Guardar_SQL();
                             this.TBBodega.Focus();
                         }
-                    }
-                    else if (result == DialogResult.No)
-                    {
-                        this.TBResponsable.Select();
+                        else if (result == DialogResult.No)
+                        {
+                            this.TBBodega.Select();
+                        }
                     }
                 }
             }
@@ -948,20 +1137,42 @@ namespace CapaPresentacion
                     //Al precionar las teclas Control+Enter se realizara el registro en la base de datos
                     //Y se realizara las validaciones en el sistema
 
-                    DialogResult result = MessageBox.Show("¿Desea registrar los campos digitados?", "Leal Enterprise", MessageBoxButtons.YesNo);
-
-                    if (result == DialogResult.Yes)
+                    if (Digitar)
                     {
-                        if (Guardar == "1")
+                        DialogResult result = MessageBox.Show("¿Desea registrar los campos digitados?", "Leal Enterprise", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            if (Guardar == "1")
+                            {
+                                //Clases y Focus
+                                this.Guardar_SQL();
+                                this.TBBodega.Focus();
+                            }
+                            else
+                            {
+                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            }
+                        }
+                        else if (result == DialogResult.No)
+                        {
+                            this.TBBodega.Select();
+                        }
+                    }
+                    else
+                    {
+                        DialogResult result = MessageBox.Show("¿Desea Actualizar los campos consultados?", "Leal Enterprise", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
                         {
                             //Clases y Focus
                             this.Guardar_SQL();
                             this.TBBodega.Focus();
                         }
-                    }
-                    else if (result == DialogResult.No)
-                    {
-                        this.TBCorreo.Select();
+                        else if (result == DialogResult.No)
+                        {
+                            this.TBBodega.Select();
+                        }
                     }
                 }
             }
@@ -970,7 +1181,7 @@ namespace CapaPresentacion
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
-        
+
         private void TBDireccion01_KeyUp(object sender, KeyEventArgs e)
         {
             try
@@ -995,20 +1206,42 @@ namespace CapaPresentacion
                     //Al precionar las teclas Control+Enter se realizara el registro en la base de datos
                     //Y se realizara las validaciones en el sistema
 
-                    DialogResult result = MessageBox.Show("¿Desea registrar los campos digitados?", "Leal Enterprise", MessageBoxButtons.YesNo);
-
-                    if (result == DialogResult.Yes)
+                    if (Digitar)
                     {
-                        if (Guardar == "1")
+                        DialogResult result = MessageBox.Show("¿Desea registrar los campos digitados?", "Leal Enterprise", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            if (Guardar == "1")
+                            {
+                                //Clases y Focus
+                                this.Guardar_SQL();
+                                this.TBBodega.Focus();
+                            }
+                            else
+                            {
+                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            }
+                        }
+                        else if (result == DialogResult.No)
+                        {
+                            this.TBBodega.Select();
+                        }
+                    }
+                    else
+                    {
+                        DialogResult result = MessageBox.Show("¿Desea Actualizar los campos consultados?", "Leal Enterprise", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
                         {
                             //Clases y Focus
                             this.Guardar_SQL();
                             this.TBBodega.Focus();
                         }
-                    }
-                    else if (result == DialogResult.No)
-                    {
-                        this.TBDireccion01.Select();
+                        else if (result == DialogResult.No)
+                        {
+                            this.TBBodega.Select();
+                        }
                     }
                 }
             }
@@ -1042,20 +1275,42 @@ namespace CapaPresentacion
                     //Al precionar las teclas Control+Enter se realizara el registro en la base de datos
                     //Y se realizara las validaciones en el sistema
 
-                    DialogResult result = MessageBox.Show("¿Desea registrar los campos digitados?", "Leal Enterprise", MessageBoxButtons.YesNo);
-
-                    if (result == DialogResult.Yes)
+                    if (Digitar)
                     {
-                        if (Guardar == "1")
+                        DialogResult result = MessageBox.Show("¿Desea registrar los campos digitados?", "Leal Enterprise", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            if (Guardar == "1")
+                            {
+                                //Clases y Focus
+                                this.Guardar_SQL();
+                                this.TBBodega.Focus();
+                            }
+                            else
+                            {
+                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            }
+                        }
+                        else if (result == DialogResult.No)
+                        {
+                            this.TBBodega.Select();
+                        }
+                    }
+                    else
+                    {
+                        DialogResult result = MessageBox.Show("¿Desea Actualizar los campos consultados?", "Leal Enterprise", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
                         {
                             //Clases y Focus
                             this.Guardar_SQL();
                             this.TBBodega.Focus();
                         }
-                    }
-                    else if (result == DialogResult.No)
-                    {
-                        this.TBDireccion02.Select();
+                        else if (result == DialogResult.No)
+                        {
+                            this.TBBodega.Select();
+                        }
                     }
                 }
             }
@@ -1089,20 +1344,42 @@ namespace CapaPresentacion
                     //Al precionar las teclas Control+Enter se realizara el registro en la base de datos
                     //Y se realizara las validaciones en el sistema
 
-                    DialogResult result = MessageBox.Show("¿Desea registrar los campos digitados?", "Leal Enterprise", MessageBoxButtons.YesNo);
-
-                    if (result == DialogResult.Yes)
+                    if (Digitar)
                     {
-                        if (Guardar == "1")
+                        DialogResult result = MessageBox.Show("¿Desea registrar los campos digitados?", "Leal Enterprise", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            if (Guardar == "1")
+                            {
+                                //Clases y Focus
+                                this.Guardar_SQL();
+                                this.TBBodega.Focus();
+                            }
+                            else
+                            {
+                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            }
+                        }
+                        else if (result == DialogResult.No)
+                        {
+                            this.TBBodega.Select();
+                        }
+                    }
+                    else
+                    {
+                        DialogResult result = MessageBox.Show("¿Desea Actualizar los campos consultados?", "Leal Enterprise", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
                         {
                             //Clases y Focus
                             this.Guardar_SQL();
                             this.TBBodega.Focus();
                         }
-                    }
-                    else if (result == DialogResult.No)
-                    {
-                        this.TBMercancia.Select();
+                        else if (result == DialogResult.No)
+                        {
+                            this.TBBodega.Select();
+                        }
                     }
                 }
             }
@@ -1136,20 +1413,42 @@ namespace CapaPresentacion
                     //Al precionar las teclas Control+Enter se realizara el registro en la base de datos
                     //Y se realizara las validaciones en el sistema
 
-                    DialogResult result = MessageBox.Show("¿Desea registrar los campos digitados?", "Leal Enterprise", MessageBoxButtons.YesNo);
-
-                    if (result == DialogResult.Yes)
+                    if (Digitar)
                     {
-                        if (Guardar == "1")
+                        DialogResult result = MessageBox.Show("¿Desea registrar los campos digitados?", "Leal Enterprise", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            if (Guardar == "1")
+                            {
+                                //Clases y Focus
+                                this.Guardar_SQL();
+                                this.TBBodega.Focus();
+                            }
+                            else
+                            {
+                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            }
+                        }
+                        else if (result == DialogResult.No)
+                        {
+                            this.TBBodega.Select();
+                        }
+                    }
+                    else
+                    {
+                        DialogResult result = MessageBox.Show("¿Desea Actualizar los campos consultados?", "Leal Enterprise", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
                         {
                             //Clases y Focus
                             this.Guardar_SQL();
                             this.TBBodega.Focus();
                         }
-                    }
-                    else if (result == DialogResult.No)
-                    {
-                        this.TBNumeroPC.Select();
+                        else if (result == DialogResult.No)
+                        {
+                            this.TBBodega.Select();
+                        }
                     }
                 }
             }
@@ -1183,20 +1482,42 @@ namespace CapaPresentacion
                     //Al precionar las teclas Control+Enter se realizara el registro en la base de datos
                     //Y se realizara las validaciones en el sistema
 
-                    DialogResult result = MessageBox.Show("¿Desea registrar los campos digitados?", "Leal Enterprise", MessageBoxButtons.YesNo);
-
-                    if (result == DialogResult.Yes)
+                    if (Digitar)
                     {
-                        if (Guardar == "1")
+                        DialogResult result = MessageBox.Show("¿Desea registrar los campos digitados?", "Leal Enterprise", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            if (Guardar == "1")
+                            {
+                                //Clases y Focus
+                                this.Guardar_SQL();
+                                this.TBBodega.Focus();
+                            }
+                            else
+                            {
+                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            }
+                        }
+                        else if (result == DialogResult.No)
+                        {
+                            this.TBBodega.Select();
+                        }
+                    }
+                    else
+                    {
+                        DialogResult result = MessageBox.Show("¿Desea Actualizar los campos consultados?", "Leal Enterprise", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
                         {
                             //Clases y Focus
                             this.Guardar_SQL();
                             this.TBBodega.Focus();
                         }
-                    }
-                    else if (result == DialogResult.No)
-                    {
-                        this.TBNumeroCelular.Select();
+                        else if (result == DialogResult.No)
+                        {
+                            this.TBBodega.Select();
+                        }
                     }
                 }
             }
@@ -1230,20 +1551,42 @@ namespace CapaPresentacion
                     //Al precionar las teclas Control+Enter se realizara el registro en la base de datos
                     //Y se realizara las validaciones en el sistema
 
-                    DialogResult result = MessageBox.Show("¿Desea registrar los campos digitados?", "Leal Enterprise", MessageBoxButtons.YesNo);
-
-                    if (result == DialogResult.Yes)
+                    if (Digitar)
                     {
-                        if (Guardar == "1")
+                        DialogResult result = MessageBox.Show("¿Desea registrar los campos digitados?", "Leal Enterprise", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            if (Guardar == "1")
+                            {
+                                //Clases y Focus
+                                this.Guardar_SQL();
+                                this.TBBodega.Focus();
+                            }
+                            else
+                            {
+                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            }
+                        }
+                        else if (result == DialogResult.No)
+                        {
+                            this.TBBodega.Select();
+                        }
+                    }
+                    else
+                    {
+                        DialogResult result = MessageBox.Show("¿Desea Actualizar los campos consultados?", "Leal Enterprise", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
                         {
                             //Clases y Focus
                             this.Guardar_SQL();
                             this.TBBodega.Focus();
                         }
-                    }
-                    else if (result == DialogResult.No)
-                    {
-                        this.TBNumeroImpresora.Select();
+                        else if (result == DialogResult.No)
+                        {
+                            this.TBBodega.Select();
+                        }
                     }
                 }
             }
@@ -1277,20 +1620,42 @@ namespace CapaPresentacion
                     //Al precionar las teclas Control+Enter se realizara el registro en la base de datos
                     //Y se realizara las validaciones en el sistema
 
-                    DialogResult result = MessageBox.Show("¿Desea registrar los campos digitados?", "Leal Enterprise", MessageBoxButtons.YesNo);
-
-                    if (result == DialogResult.Yes)
+                    if (Digitar)
                     {
-                        if (Guardar == "1")
+                        DialogResult result = MessageBox.Show("¿Desea registrar los campos digitados?", "Leal Enterprise", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            if (Guardar == "1")
+                            {
+                                //Clases y Focus
+                                this.Guardar_SQL();
+                                this.TBBodega.Focus();
+                            }
+                            else
+                            {
+                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            }
+                        }
+                        else if (result == DialogResult.No)
+                        {
+                            this.TBBodega.Select();
+                        }
+                    }
+                    else
+                    {
+                        DialogResult result = MessageBox.Show("¿Desea Actualizar los campos consultados?", "Leal Enterprise", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
                         {
                             //Clases y Focus
                             this.Guardar_SQL();
                             this.TBBodega.Focus();
                         }
-                    }
-                    else if (result == DialogResult.No)
-                    {
-                        this.TBObservacion.Select();
+                        else if (result == DialogResult.No)
+                        {
+                            this.TBBodega.Select();
+                        }
                     }
                 }
             }
@@ -1367,5 +1732,6 @@ namespace CapaPresentacion
                 return;
             }
         }
+
     }
 }
