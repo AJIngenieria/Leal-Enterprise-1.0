@@ -117,39 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="MP_Ventas.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAA6FJREFUWEftlH9MlHUcxz9399zzfMvErYzVmq2tuVb8gyunqz+k/rAcHDWC4aHC
-        /MXh5LgWjKWzuEJACU9G/JiInJ6kiAoKA3+LymMtJVlGVP6VTU2zFUT+QMB33+fu+xDIIXdXbrbx2l57
-        7vN5vvu8v8+ze740wQT/O6KioqTU1NRZTqdTFi2y2+1hsbGxM0T54EhISJBtNluDw+FAUlJSumhTSkqK
-        OysrC3wTTtH67xkebrVau6Ojo18UtygmJsaSnJw8OGwTpmeeo8jIN2lZxByyTgmn530rQ+TecIvFMlPc
-        GoIHz9c2kZ2zBNk7pvySf5qw/gyhkJvXRohfTbsmT6YnxPLACSRc593EuSs+bDGj6BxhQ8dIPz1LSC2n
-        b/gys2/1fQDIiFaSNjlffjQtzbZPD0+Mmzdb64+lu4ka8/nTrvtipCVnw73X3FbCTAtliRj/oE0pQhvr
-        Hzj5CCrWzoMWvjQlHhfqwsH7fr17imGAu7qB8Mlxn7mtRu+19rwFt/t74FKf9taL8ugrETUa/hSP9R1l
-        0PzaM90bvoSHd9aE4/ZhNsJbh0Z6qVlB5i7CmmZC1ZdzcLm7HXUdVtwZuIHdHQu8fc30KuoVcaPhr97Q
-        28ja/2xk+LU+DDV5M9Dpnoqe/WzI7n332MDwB/d6PUOGm5C9h7CqXkbXlSYM3h3AzjMLvD1d68f0nYjz
-        z1UPTTpRaO7qKJV+H/Kz0Z7z46pSAxwewnvbCZmfyyg78ob3t27GVsKsONooosbmtMt08UKVCcF6tMyA
-        tPJ/AoerbWxhAV2nMHpcxIyNWq6o/v5s49l3XMaBbYSVZQR7tS84Q6u38NpFfVOn0Ssi4v6cKlXUwRMM
-        un8dUnBpjxxQ3dMioZ2HVxUTikoILn71uAiNOQbtDAiMk8WKeod/CboNH5mwcTnh2l4loHrvGqO3bi8x
-        4Dx/Gz9UGrEt01Qrxo/PsQ2KevMgg67nfSNcywg/uuWQas3CNHOxGD8+RwoVtbeJQbfabsT6ZEJXpRxS
-        rblueRAbOFCgqNq3rbtphRFr5xO+rZBDqjULlgaxgeZcRf1tN4Nupc2InDjfwFBqzbzFQWxgs8Ncd20n
-        g24nH9SSI+FqbWi1ZnqslC3Gj8/bs02Jlz0Muldq+NHMh4VaX9zK+l96liLE+IAwfBAv5f+0hQ3+XM3w
-        b/y+gvXGvWpaJOYGx5OT6KmoCOmtuZGmd0LxtRek1/m5GybGTTDBwwjR3y+ty34qZlFkAAAAAElFTkSu
-        QmCC
-</value>
-  </data>
-  <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>223, 17</value>
-  </metadata>
-  <metadata name="toolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>125, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>51</value>
-  </metadata>
 </root>

@@ -216,5 +216,18 @@ namespace CapaPresentacion
             frmSistema_Sucurzal.Consultar = Convert.ToString(this.SQL_Consultar);
             frmSistema_Sucurzal.Imprimir = Convert.ToString(this.SQL_Imprimir);
         }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAlmacen_Cliente frmAlmacen_Cliente = new frmAlmacen_Cliente();
+            frmAlmacen_Cliente.MdiParent = this;
+            frmAlmacen_Cliente.Show();
+
+            frmAlmacen_Cliente.Guardar = Convert.ToString(this.SQL_Guardar);
+            frmAlmacen_Cliente.Editar = Convert.ToString(this.SQL_Editar);
+            frmAlmacen_Cliente.Eliminar = Convert.ToString(this.SQL_Eliminar);
+            frmAlmacen_Cliente.Consultar = Convert.ToString(this.SQL_Consultar);
+            frmAlmacen_Cliente.Imprimir = Convert.ToString(this.SQL_Imprimir);
+        }
     }
 }

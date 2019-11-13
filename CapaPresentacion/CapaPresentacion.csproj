@@ -226,6 +226,9 @@
     <EmbeddedResource Include="Almacen\frmAlmacen_Bodega.resx">
       <DependentUpon>frmAlmacen_Bodega.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Almacen\frmAlmacen_Cliente.resx">
+      <DependentUpon>frmAlmacen_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Filtros\frmExaminar_Empleado.resx">
       <DependentUpon>frmExaminar_Empleado.cs</DependentUpon>
     </EmbeddedResource>
