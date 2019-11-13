@@ -456,7 +456,7 @@ namespace CapaPresentacion
                             this.TBNombre.Focus();
                         }
                     }
-                    else if (result == DialogResult.No)
+                    else
                     {
                         this.TBNombre.Select();
                     }
@@ -494,7 +494,7 @@ namespace CapaPresentacion
                             this.TBNombre.Focus();
                         }
                     }
-                    else if (result == DialogResult.No)
+                    else
                     {
                         this.TBCiudad.Select();
                     }
@@ -532,7 +532,7 @@ namespace CapaPresentacion
                             this.TBNombre.Focus();
                         }
                     }
-                    else if (result == DialogResult.No)
+                    else
                     {
                         this.TBUbicacion.Select();
                     }
@@ -570,7 +570,7 @@ namespace CapaPresentacion
                             this.TBNombre.Focus();
                         }
                     }
-                    else if (result == DialogResult.No)
+                    else
                     {
                         this.TBDireccion.Select();
                     }

@@ -37,8 +37,9 @@ namespace CapaDatos
 
         //Datos Auxiliares
         private int _Auto;
+        private int _Eliminar;
         private string _Filtro;
-        
+
         public int Idbodega { get => _Idbodega; set => _Idbodega = value; }
         public int Idsucurzal { get => _Idsucurzal; set => _Idsucurzal = value; }
         public string Bodega { get => _Bodega; set => _Bodega = value; }
@@ -57,6 +58,7 @@ namespace CapaDatos
         public string Observacion { get => _Observacion; set => _Observacion = value; }
         public int Auto { get => _Auto; set => _Auto = value; }
         public string Filtro { get => _Filtro; set => _Filtro = value; }
+        public int Eliminar { get => _Eliminar; set => _Eliminar = value; }
 
         public Conexion_Almacen_Bodega()
         {
@@ -65,7 +67,7 @@ namespace CapaDatos
 
         public Conexion_Almacen_Bodega
             (
-                                
+
                 //Llave primaria
                 int idbodega,
 
@@ -82,36 +84,37 @@ namespace CapaDatos
                 string observacion,
 
                 //Datos Auxiliares
-                int auto, string filtro
+                int auto, int eliminar, string filtro
             )
         {
-                //Llave primaria
-                this.Idbodega = idbodega;
+            //Llave primaria
+            this.Idbodega = idbodega;
 
-                //Llaves Auxiliares
-                this.Idsucurzal = idsucurzal;
+            //Llaves Auxiliares
+            this.Idsucurzal = idsucurzal;
 
-                //Datos Basicos
-                this.Bodega = bodega;
-                this.Tipo = tipo;
-                this.Ciudad = ciudad;
-                this.Telefono = telefono;
-                this.Movil = movil;
-                this.Responsable = responsable;
-                this.Correo = correo;
+            //Datos Basicos
+            this.Bodega = bodega;
+            this.Tipo = tipo;
+            this.Ciudad = ciudad;
+            this.Telefono = telefono;
+            this.Movil = movil;
+            this.Responsable = responsable;
+            this.Correo = correo;
 
-                //Otros Datos
-                this.Direccion01 = direccion01;
-                this.Direccion02 = direccion02;
-                this.Mercancia = mercancia;
-                this.NumeroPC = numeroPC;
-                this.NumeroImpresora = numeroimpresora;
-                this.NumeroCelulares = numerocelulares;
-                this.Observacion = observacion;
+            //Otros Datos
+            this.Direccion01 = direccion01;
+            this.Direccion02 = direccion02;
+            this.Mercancia = mercancia;
+            this.NumeroPC = numeroPC;
+            this.NumeroImpresora = numeroimpresora;
+            this.NumeroCelulares = numerocelulares;
+            this.Observacion = observacion;
 
-                //Datos Auxiliares
-                this.Auto = auto;
-                this.Filtro = filtro;
+            //Datos Auxiliares
+            this.Auto = auto;
+            this.Eliminar = eliminar;
+            this.Filtro = filtro;
         }
 
         //Metodo Insertar
@@ -128,7 +131,7 @@ namespace CapaDatos
                 //Establecer la conexion para mandar a la base de datos
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "Almacen.LI_Bodega";
+                SqlCmd.CommandText = "Bodega.LI_Bodega";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 //Comienzo a mandar a la base de datos
@@ -283,7 +286,7 @@ namespace CapaDatos
                 //Establecer la conexion para mandar a la base de datos
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "Almacen.LI_Bodega";
+                SqlCmd.CommandText = "Bodega.LI_Bodega";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 //Comienzo a mandar a la base de datos
@@ -435,18 +438,18 @@ namespace CapaDatos
                 SqlCmd.Connection = SqlCon;
                 SqlCmd.CommandText = "Consulta.Bodega";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
-                
+
                 SqlParameter ParIdbodega = new SqlParameter();
                 ParIdbodega.ParameterName = "@Idbodega";
                 ParIdbodega.SqlDbType = SqlDbType.Int;
                 ParIdbodega.Value = Bodega.Idbodega;
                 SqlCmd.Parameters.Add(ParIdbodega);
 
-                SqlParameter ParAuto = new SqlParameter();
-                ParAuto.ParameterName = "@Eliminar";
-                ParAuto.SqlDbType = SqlDbType.Int;
-                ParAuto.Value = Bodega.Auto;
-                SqlCmd.Parameters.Add(ParAuto);
+                SqlParameter ParEliminar = new SqlParameter();
+                ParEliminar.ParameterName = "@Eliminar";
+                ParEliminar.SqlDbType = SqlDbType.Int;
+                ParEliminar.Value = Bodega.Eliminar;
+                SqlCmd.Parameters.Add(ParEliminar);
 
                 //ejecutamos el envio de datos
 

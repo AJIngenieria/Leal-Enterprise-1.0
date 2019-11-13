@@ -418,7 +418,7 @@ namespace CapaPresentacion
                     {
                         this.Guardar_SQL();
                     }
-                    else if (result == DialogResult.No)
+                    else
                     {
                         this.TBMacseguridad.Focus();
                     }
@@ -432,7 +432,7 @@ namespace CapaPresentacion
                     {
                         this.Guardar_SQL();
                     }
-                    else if (result == DialogResult.No)
+                    else
                     {
                         this.TBEquipo.Focus();
                     }

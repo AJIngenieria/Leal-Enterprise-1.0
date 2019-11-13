@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TBIdcliente = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.TCPrincipal = new System.Windows.Forms.TabControl();
@@ -92,7 +93,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.DGResultados = new System.Windows.Forms.DataGridView();
-            this.TBIdcliente = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.TCPrincipal.SuspendLayout();
             this.TPDatosBasicos.SuspendLayout();
@@ -115,6 +115,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Leal Enterprise - Registro de Clientes";
             // 
+            // TBIdcliente
+            // 
+            this.TBIdcliente.Location = new System.Drawing.Point(111, 306);
+            this.TBIdcliente.Name = "TBIdcliente";
+            this.TBIdcliente.Size = new System.Drawing.Size(100, 21);
+            this.TBIdcliente.TabIndex = 3;
+            this.TBIdcliente.TextChanged += new System.EventHandler(this.TBIdcliente_TextChanged);
+            // 
             // btnCancelar
             // 
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -127,6 +135,9 @@
             this.btnCancelar.TabIndex = 2;
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.btnCancelar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnCancelar_MouseDown);
+            this.btnCancelar.MouseLeave += new System.EventHandler(this.btnCancelar_MouseLeave);
+            this.btnCancelar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCancelar_MouseMove);
             // 
             // btnGuardar
             // 
@@ -140,6 +151,9 @@
             this.btnGuardar.TabIndex = 1;
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.btnGuardar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnGuardar_MouseDown);
+            this.btnGuardar.MouseLeave += new System.EventHandler(this.btnGuardar_MouseLeave);
+            this.btnGuardar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnGuardar_MouseMove);
             // 
             // TCPrincipal
             // 
@@ -186,6 +200,7 @@
             this.TBDepartamento.Name = "TBDepartamento";
             this.TBDepartamento.Size = new System.Drawing.Size(250, 21);
             this.TBDepartamento.TabIndex = 19;
+            this.TBDepartamento.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBDepartamento_KeyUp);
             // 
             // TBCiudad
             // 
@@ -193,6 +208,7 @@
             this.TBCiudad.Name = "TBCiudad";
             this.TBCiudad.Size = new System.Drawing.Size(250, 21);
             this.TBCiudad.TabIndex = 18;
+            this.TBCiudad.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBCiudad_KeyUp);
             // 
             // label9
             // 
@@ -218,6 +234,7 @@
             this.TBPais.Name = "TBPais";
             this.TBPais.Size = new System.Drawing.Size(250, 21);
             this.TBPais.TabIndex = 13;
+            this.TBPais.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBPais_KeyUp);
             // 
             // TBCorreo
             // 
@@ -225,6 +242,7 @@
             this.TBCorreo.Name = "TBCorreo";
             this.TBCorreo.Size = new System.Drawing.Size(250, 21);
             this.TBCorreo.TabIndex = 12;
+            this.TBCorreo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBCorreo_KeyUp);
             // 
             // TBMovil
             // 
@@ -232,6 +250,7 @@
             this.TBMovil.Name = "TBMovil";
             this.TBMovil.Size = new System.Drawing.Size(250, 21);
             this.TBMovil.TabIndex = 11;
+            this.TBMovil.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBMovil_KeyUp);
             // 
             // TBTelefono
             // 
@@ -239,6 +258,7 @@
             this.TBTelefono.Name = "TBTelefono";
             this.TBTelefono.Size = new System.Drawing.Size(250, 21);
             this.TBTelefono.TabIndex = 10;
+            this.TBTelefono.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBTelefono_KeyUp);
             // 
             // TBDocumento
             // 
@@ -246,6 +266,7 @@
             this.TBDocumento.Name = "TBDocumento";
             this.TBDocumento.Size = new System.Drawing.Size(250, 21);
             this.TBDocumento.TabIndex = 9;
+            this.TBDocumento.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBDocumento_KeyUp);
             // 
             // TBNombre
             // 
@@ -253,6 +274,7 @@
             this.TBNombre.Name = "TBNombre";
             this.TBNombre.Size = new System.Drawing.Size(250, 21);
             this.TBNombre.TabIndex = 8;
+            this.TBNombre.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBNombre_KeyUp);
             // 
             // TBCodigo
             // 
@@ -355,6 +377,7 @@
             this.TBDescripcion.Name = "TBDescripcion";
             this.TBDescripcion.Size = new System.Drawing.Size(250, 75);
             this.TBDescripcion.TabIndex = 13;
+            this.TBDescripcion.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBDescripcion_KeyUp);
             // 
             // label18
             // 
@@ -371,6 +394,7 @@
             this.TBReceptor.Name = "TBReceptor";
             this.TBReceptor.Size = new System.Drawing.Size(250, 21);
             this.TBReceptor.TabIndex = 11;
+            this.TBReceptor.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBReceptor_KeyUp);
             // 
             // label17
             // 
@@ -387,6 +411,7 @@
             this.TBCiudad_01.Name = "TBCiudad_01";
             this.TBCiudad_01.Size = new System.Drawing.Size(250, 21);
             this.TBCiudad_01.TabIndex = 9;
+            this.TBCiudad_01.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBCiudad_01_KeyUp);
             // 
             // label16
             // 
@@ -403,6 +428,7 @@
             this.TBPais_01.Name = "TBPais_01";
             this.TBPais_01.Size = new System.Drawing.Size(250, 21);
             this.TBPais_01.TabIndex = 7;
+            this.TBPais_01.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBPais_01_KeyUp);
             // 
             // label15
             // 
@@ -419,6 +445,7 @@
             this.TBDireccion02.Name = "TBDireccion02";
             this.TBDireccion02.Size = new System.Drawing.Size(250, 21);
             this.TBDireccion02.TabIndex = 5;
+            this.TBDireccion02.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBDireccion02_KeyUp);
             // 
             // TBDireccion01
             // 
@@ -426,6 +453,7 @@
             this.TBDireccion01.Name = "TBDireccion01";
             this.TBDireccion01.Size = new System.Drawing.Size(250, 21);
             this.TBDireccion01.TabIndex = 4;
+            this.TBDireccion01.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBDireccion01_KeyUp);
             // 
             // label14
             // 
@@ -442,6 +470,7 @@
             this.TBDireccionPrincipal.Name = "TBDireccionPrincipal";
             this.TBDireccionPrincipal.Size = new System.Drawing.Size(250, 21);
             this.TBDireccionPrincipal.TabIndex = 2;
+            this.TBDireccionPrincipal.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBDireccionPrincipal_KeyUp);
             // 
             // label13
             // 
@@ -503,6 +532,7 @@
             this.TBCreditoMora.Name = "TBCreditoMora";
             this.TBCreditoMora.Size = new System.Drawing.Size(197, 21);
             this.TBCreditoMora.TabIndex = 16;
+            this.TBCreditoMora.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBCreditoMora_KeyUp);
             // 
             // label26
             // 
@@ -519,6 +549,7 @@
             this.TBCreditoTotal.Name = "TBCreditoTotal";
             this.TBCreditoTotal.Size = new System.Drawing.Size(197, 21);
             this.TBCreditoTotal.TabIndex = 14;
+            this.TBCreditoTotal.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBCreditoTotal_KeyUp);
             // 
             // TBUltimoCredito
             // 
@@ -526,6 +557,7 @@
             this.TBUltimoCredito.Name = "TBUltimoCredito";
             this.TBUltimoCredito.Size = new System.Drawing.Size(197, 21);
             this.TBUltimoCredito.TabIndex = 13;
+            this.TBUltimoCredito.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBUltimoCredito_KeyUp);
             // 
             // label25
             // 
@@ -542,6 +574,7 @@
             this.TBCreditoMaximo.Name = "TBCreditoMaximo";
             this.TBCreditoMaximo.Size = new System.Drawing.Size(240, 21);
             this.TBCreditoMaximo.TabIndex = 11;
+            this.TBCreditoMaximo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBCreditoMaximo_KeyUp);
             // 
             // label24
             // 
@@ -558,6 +591,7 @@
             this.TBCreditoMinimo.Name = "TBCreditoMinimo";
             this.TBCreditoMinimo.Size = new System.Drawing.Size(240, 21);
             this.TBCreditoMinimo.TabIndex = 9;
+            this.TBCreditoMinimo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBCreditoMinimo_KeyUp);
             // 
             // label23
             // 
@@ -574,6 +608,7 @@
             this.TBCuenta02.Name = "TBCuenta02";
             this.TBCuenta02.Size = new System.Drawing.Size(240, 21);
             this.TBCuenta02.TabIndex = 7;
+            this.TBCuenta02.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBCuenta02_KeyUp);
             // 
             // TBCuenta01
             // 
@@ -581,6 +616,7 @@
             this.TBCuenta01.Name = "TBCuenta01";
             this.TBCuenta01.Size = new System.Drawing.Size(240, 21);
             this.TBCuenta01.TabIndex = 6;
+            this.TBCuenta01.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBCuenta01_KeyUp);
             // 
             // label22
             // 
@@ -624,6 +660,7 @@
             this.TBBancoAuxiliar.Name = "TBBancoAuxiliar";
             this.TBBancoAuxiliar.Size = new System.Drawing.Size(240, 21);
             this.TBBancoAuxiliar.TabIndex = 1;
+            this.TBBancoAuxiliar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBBancoAuxiliar_KeyUp);
             // 
             // TBBancoPrincipal
             // 
@@ -631,6 +668,7 @@
             this.TBBancoPrincipal.Name = "TBBancoPrincipal";
             this.TBBancoPrincipal.Size = new System.Drawing.Size(240, 21);
             this.TBBancoPrincipal.TabIndex = 0;
+            this.TBBancoPrincipal.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBBancoPrincipal_KeyUp);
             // 
             // btnEliminar
             // 
@@ -644,6 +682,9 @@
             this.btnEliminar.TabIndex = 3;
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            this.btnEliminar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnEliminar_MouseDown);
+            this.btnEliminar.MouseLeave += new System.EventHandler(this.btnEliminar_MouseLeave);
+            this.btnEliminar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnEliminar_MouseMove);
             // 
             // btnImprimir
             // 
@@ -657,6 +698,9 @@
             this.btnImprimir.TabIndex = 4;
             this.btnImprimir.UseVisualStyleBackColor = true;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            this.btnImprimir.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnImprimir_MouseDown);
+            this.btnImprimir.MouseLeave += new System.EventHandler(this.btnImprimir_MouseLeave);
+            this.btnImprimir.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnImprimir_MouseMove);
             // 
             // groupBox2
             // 
@@ -679,6 +723,7 @@
             this.TBBuscar.Name = "TBBuscar";
             this.TBBuscar.Size = new System.Drawing.Size(381, 21);
             this.TBBuscar.TabIndex = 7;
+            this.TBBuscar.TextChanged += new System.EventHandler(this.TBBuscar_TextChanged);
             // 
             // label12
             // 
@@ -700,22 +745,20 @@
             // 
             // DGResultados
             // 
-            this.DGResultados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DGResultados.AllowUserToAddRows = false;
+            this.DGResultados.AllowUserToDeleteRows = false;
+            this.DGResultados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGResultados.BackgroundColor = System.Drawing.Color.White;
             this.DGResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGResultados.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DGResultados.Location = new System.Drawing.Point(6, 47);
             this.DGResultados.Name = "DGResultados";
+            this.DGResultados.ReadOnly = true;
             this.DGResultados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGResultados.Size = new System.Drawing.Size(500, 246);
+            this.DGResultados.Size = new System.Drawing.Size(500, 253);
             this.DGResultados.TabIndex = 0;
-            // 
-            // TBIdcliente
-            // 
-            this.TBIdcliente.Location = new System.Drawing.Point(111, 306);
-            this.TBIdcliente.Name = "TBIdcliente";
-            this.TBIdcliente.Size = new System.Drawing.Size(100, 21);
-            this.TBIdcliente.TabIndex = 3;
+            this.DGResultados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGResultados_CellDoubleClick);
+            this.DGResultados.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DGResultados_KeyPress);
             // 
             // frmAlmacen_Cliente
             // 
@@ -726,7 +769,9 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaximizeBox = false;
             this.Name = "frmAlmacen_Cliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Almacen - Cliente";
             this.Load += new System.EventHandler(this.frmAlmacen_Cliente_Load);
             this.groupBox1.ResumeLayout(false);

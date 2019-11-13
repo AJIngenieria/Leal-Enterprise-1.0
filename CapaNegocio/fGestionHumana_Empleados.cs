@@ -21,7 +21,7 @@ namespace CapaNegocio
 
             )
         {
-            Conexion_GestionHumana_Empleados Obj = new Conexion_GestionHumana_Empleados();
+            Conexion_Gestion_Empleados Obj = new Conexion_Gestion_Empleados();
             Obj.Empleado = empleado;
             Obj.Documento = documento;
             Obj.Movil = movil;
@@ -47,7 +47,7 @@ namespace CapaNegocio
                 int auto
             )
         {
-            Conexion_GestionHumana_Empleados Obj = new Conexion_GestionHumana_Empleados();
+            Conexion_Gestion_Empleados Obj = new Conexion_Gestion_Empleados();
 
             Obj.Idempleado = idempleado;
             Obj.Empleado = empleado;
@@ -64,14 +64,14 @@ namespace CapaNegocio
 
         public static string Eliminar_DatosBasicos(int idempleado)
         {
-            Conexion_GestionHumana_Empleados Obj = new Conexion_GestionHumana_Empleados();
+            Conexion_Gestion_Empleados Obj = new Conexion_Gestion_Empleados();
             Obj.Idempleado = idempleado;
             return Obj.Eliminar_DatosBasicos(Obj);
         }
 
         public static DataTable Buscar_Empleado(string filtro)
         {
-            Conexion_GestionHumana_Empleados Obj = new Conexion_GestionHumana_Empleados();
+            Conexion_Gestion_Empleados Obj = new Conexion_Gestion_Empleados();
             Obj.Filtro = filtro;
             return Obj.Buscar_Empleado(Obj);
         }

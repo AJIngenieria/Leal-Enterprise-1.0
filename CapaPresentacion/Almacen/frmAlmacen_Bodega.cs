@@ -725,10 +725,10 @@ namespace CapaPresentacion
                             }
                             else
                             {
-                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar", "Leal Enterprise", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar datos en el sistema", "Leal Enterprise", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                             }
                         }
-                        else if (result == DialogResult.No)
+                        else
                         {
                             this.TBBodega.Select();
                         }
@@ -743,7 +743,7 @@ namespace CapaPresentacion
                             this.Guardar_SQL();
                             this.TBBodega.Focus();
                         }
-                        else if (result == DialogResult.No)
+                        else
                         {
                             this.TBBodega.Select();
                         }
@@ -794,10 +794,10 @@ namespace CapaPresentacion
                             }
                             else
                             {
-                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar datos en el sistema", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             }
                         }
-                        else if (result == DialogResult.No)
+                        else
                         {
                             this.TBBodega.Select();
                         }
@@ -812,7 +812,7 @@ namespace CapaPresentacion
                             this.Guardar_SQL();
                             this.TBBodega.Focus();
                         }
-                        else if (result == DialogResult.No)
+                        else
                         {
                             this.TBBodega.Select();
                         }
@@ -875,10 +875,10 @@ namespace CapaPresentacion
                             }
                             else
                             {
-                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar datos en el sistema", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             }
                         }
-                        else if (result == DialogResult.No)
+                        else
                         {
                             this.TBBodega.Select();
                         }
@@ -893,7 +893,7 @@ namespace CapaPresentacion
                             this.Guardar_SQL();
                             this.TBBodega.Focus();
                         }
-                        else if (result == DialogResult.No)
+                        else
                         {
                             this.TBBodega.Select();
                         }
@@ -944,10 +944,10 @@ namespace CapaPresentacion
                             }
                             else
                             {
-                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar datos en el sistema", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             }
                         }
-                        else if (result == DialogResult.No)
+                        else
                         {
                             this.TBBodega.Select();
                         }
@@ -962,7 +962,7 @@ namespace CapaPresentacion
                             this.Guardar_SQL();
                             this.TBBodega.Focus();
                         }
-                        else if (result == DialogResult.No)
+                        else
                         {
                             this.TBBodega.Select();
                         }
@@ -1012,10 +1012,10 @@ namespace CapaPresentacion
                             }
                             else
                             {
-                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar datos en el sistema", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             }
                         }
-                        else if (result == DialogResult.No)
+                        else
                         {
                             this.TBBodega.Select();
                         }
@@ -1030,7 +1030,7 @@ namespace CapaPresentacion
                             this.Guardar_SQL();
                             this.TBBodega.Focus();
                         }
-                        else if (result == DialogResult.No)
+                        else
                         {
                             this.TBBodega.Select();
                         }
@@ -1081,10 +1081,10 @@ namespace CapaPresentacion
                             }
                             else
                             {
-                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar datos en el sistema", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             }
                         }
-                        else if (result == DialogResult.No)
+                        else
                         {
                             this.TBBodega.Select();
                         }
@@ -1099,7 +1099,7 @@ namespace CapaPresentacion
                             this.Guardar_SQL();
                             this.TBBodega.Focus();
                         }
-                        else if (result == DialogResult.No)
+                        else
                         {
                             this.TBBodega.Select();
                         }
@@ -1151,10 +1151,10 @@ namespace CapaPresentacion
                             }
                             else
                             {
-                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar datos en el sistema", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             }
                         }
-                        else if (result == DialogResult.No)
+                        else
                         {
                             this.TBBodega.Select();
                         }
@@ -1169,7 +1169,7 @@ namespace CapaPresentacion
                             this.Guardar_SQL();
                             this.TBBodega.Focus();
                         }
-                        else if (result == DialogResult.No)
+                        else
                         {
                             this.TBBodega.Select();
                         }
@@ -1220,10 +1220,10 @@ namespace CapaPresentacion
                             }
                             else
                             {
-                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar datos en el sistema", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             }
                         }
-                        else if (result == DialogResult.No)
+                        else
                         {
                             this.TBBodega.Select();
                         }
@@ -1238,7 +1238,7 @@ namespace CapaPresentacion
                             this.Guardar_SQL();
                             this.TBBodega.Focus();
                         }
-                        else if (result == DialogResult.No)
+                        else
                         {
                             this.TBBodega.Select();
                         }
@@ -1289,10 +1289,10 @@ namespace CapaPresentacion
                             }
                             else
                             {
-                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar datos en el sistema", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             }
                         }
-                        else if (result == DialogResult.No)
+                        else
                         {
                             this.TBBodega.Select();
                         }
@@ -1307,7 +1307,7 @@ namespace CapaPresentacion
                             this.Guardar_SQL();
                             this.TBBodega.Focus();
                         }
-                        else if (result == DialogResult.No)
+                        else
                         {
                             this.TBBodega.Select();
                         }
@@ -1358,10 +1358,10 @@ namespace CapaPresentacion
                             }
                             else
                             {
-                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar datos en el sistema", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             }
                         }
-                        else if (result == DialogResult.No)
+                        else
                         {
                             this.TBBodega.Select();
                         }
@@ -1376,7 +1376,7 @@ namespace CapaPresentacion
                             this.Guardar_SQL();
                             this.TBBodega.Focus();
                         }
-                        else if (result == DialogResult.No)
+                        else
                         {
                             this.TBBodega.Select();
                         }
@@ -1427,10 +1427,10 @@ namespace CapaPresentacion
                             }
                             else
                             {
-                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar datos en el sistema", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             }
                         }
-                        else if (result == DialogResult.No)
+                        else
                         {
                             this.TBBodega.Select();
                         }
@@ -1445,7 +1445,7 @@ namespace CapaPresentacion
                             this.Guardar_SQL();
                             this.TBBodega.Focus();
                         }
-                        else if (result == DialogResult.No)
+                        else
                         {
                             this.TBBodega.Select();
                         }
@@ -1496,10 +1496,10 @@ namespace CapaPresentacion
                             }
                             else
                             {
-                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar datos en el sistema", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             }
                         }
-                        else if (result == DialogResult.No)
+                        else
                         {
                             this.TBBodega.Select();
                         }
@@ -1514,7 +1514,7 @@ namespace CapaPresentacion
                             this.Guardar_SQL();
                             this.TBBodega.Focus();
                         }
-                        else if (result == DialogResult.No)
+                        else
                         {
                             this.TBBodega.Select();
                         }
@@ -1565,10 +1565,10 @@ namespace CapaPresentacion
                             }
                             else
                             {
-                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar datos en el sistema", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             }
                         }
-                        else if (result == DialogResult.No)
+                        else
                         {
                             this.TBBodega.Select();
                         }
@@ -1583,7 +1583,7 @@ namespace CapaPresentacion
                             this.Guardar_SQL();
                             this.TBBodega.Focus();
                         }
-                        else if (result == DialogResult.No)
+                        else
                         {
                             this.TBBodega.Select();
                         }
@@ -1634,10 +1634,10 @@ namespace CapaPresentacion
                             }
                             else
                             {
-                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show("El usuario iniciado no contiene permisos para Guardar datos en el sistema", "Leal Enterprise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             }
                         }
-                        else if (result == DialogResult.No)
+                        else
                         {
                             this.TBBodega.Select();
                         }
@@ -1652,7 +1652,7 @@ namespace CapaPresentacion
                             this.Guardar_SQL();
                             this.TBBodega.Focus();
                         }
-                        else if (result == DialogResult.No)
+                        else
                         {
                             this.TBBodega.Select();
                         }

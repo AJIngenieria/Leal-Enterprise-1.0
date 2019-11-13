@@ -493,7 +493,7 @@ namespace CapaPresentacion
                     {
                         this.Guardar_SQL();
                     }
-                    else if (result == DialogResult.No)
+                    else
                     {
                         this.TBDireccion.Focus();
                     }
@@ -507,7 +507,7 @@ namespace CapaPresentacion
                     {
                         this.Guardar_SQL();
                     }
-                    else if (result == DialogResult.No)
+                    else
                     {
                         this.TBDireccion.Focus();
                     }

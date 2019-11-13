@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="fAlmacen_Bodega.cs" />
+    <Compile Include="fAlmacen_Cliente.cs" />
     <Compile Include="fGestionHumana_Empleados.cs" />
     <Compile Include="fSistema_Empresa.cs" />
     <Compile Include="fSistema_Equipos.cs" />

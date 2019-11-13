@@ -196,7 +196,7 @@ namespace CapaPresentacion
                     this.Close();
 
                 }
-                else if (result == DialogResult.No)
+                else
                 {
                     this.Refresh();
                 }
