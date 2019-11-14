@@ -167,11 +167,11 @@
     <Compile Include="Productos\frmProductos_Marca.Designer.cs">
       <DependentUpon>frmProductos_Marca.cs</DependentUpon>
     </Compile>
-    <Compile Include="Productos\frmProductos_Proveedor.cs">
+    <Compile Include="Almacen\frmAlmacen_Proveedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Productos\frmProductos_Proveedor.Designer.cs">
-      <DependentUpon>frmProductos_Proveedor.cs</DependentUpon>
+    <Compile Include="Almacen\frmAlmacen_Proveedor.Designer.cs">
+      <DependentUpon>frmAlmacen_Proveedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Productos\frmProductos_Tipo.cs">
       <SubType>Form</SubType>
@@ -228,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Almacen\frmAlmacen_Cliente.resx">
       <DependentUpon>frmAlmacen_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Almacen\frmAlmacen_Proveedor.resx">
+      <DependentUpon>frmAlmacen_Proveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Filtros\frmExaminar_Empleado.resx">
       <DependentUpon>frmExaminar_Empleado.cs</DependentUpon>

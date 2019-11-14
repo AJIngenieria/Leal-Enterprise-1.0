@@ -2373,11 +2373,11 @@ namespace CapaPresentacion
         {
             if (Digitar)
             {
-                this.btnGuardar.Image = Properties.Resources.BR_Guardar;
+                this.btnGuardar.Image = Properties.Resources.BV_Guardar;
             }
             else
             {
-                this.btnGuardar.Image = Properties.Resources.BR_Editar;
+                this.btnGuardar.Image = Properties.Resources.BV_Editar;
             }
         }
 
@@ -2385,11 +2385,11 @@ namespace CapaPresentacion
         {
             if (Digitar)
             {
-                this.btnGuardar.Image = Properties.Resources.BR_Guardar;
+                this.btnGuardar.Image = Properties.Resources.BV_Guardar;
             }
             else
             {
-                this.btnGuardar.Image = Properties.Resources.BR_Editar;
+                this.btnGuardar.Image = Properties.Resources.BV_Editar;
             }
         }
 
