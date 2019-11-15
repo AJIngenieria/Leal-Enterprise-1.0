@@ -28,15 +28,17 @@ namespace CapaPresentacion
         //Parametros para AutoCompletar los Texboxt
 
         //Panel Datos Basicos
-        public string Idcliente = "";
-        public string Cliente = "";
+        public string Idproveedor = "";
+        public string Proveedor = "";
         public string Documento = "";
+        public string Representante = "";
         public string Telefono = "";
         public string Movil = "";
         public string Correo = "";
         public string Pais = "";
         public string Ciudad = "";
-        public string Departamento = "";
+        public string Nacionalidad = "";
+        public string FechaDeInicio = "";
 
         //Panel Datos de Envio
         public string Pais_DE = "";
@@ -45,9 +47,12 @@ namespace CapaPresentacion
         public string Direccion01 = "";
         public string Direccion02 = "";
         public string Receptor = "";
-        public string Descripcion = "";
+        public string Observacion = "";
 
         //Panel Datos Financiero
+        public string Retencion = "";
+        public string Valor_Retencion = "";
+        public string Moneda = "";
         public string BancoPrincipal = "";
         public string BancoAuxiliar = "";
         public string Cuenta01 = "";
@@ -57,6 +62,9 @@ namespace CapaPresentacion
         public string UltimoCredito = "";
         public string Mora = "";
         public string TotalCredito = "";
+        public string Prorroga = "";
+
+
         public frmAlmacen_Proveedor()
         {
             InitializeComponent();
@@ -608,14 +616,14 @@ namespace CapaPresentacion
                 {
 
                     //Panel Datos Basicos
-                    Cliente = Datos.Rows[0][0].ToString();
+                    Proveedor = Datos.Rows[0][0].ToString();
                     Documento = Datos.Rows[0][0].ToString();
                     Telefono = Datos.Rows[0][0].ToString();
                     Movil = Datos.Rows[0][0].ToString();
                     Correo = Datos.Rows[0][0].ToString();
                     Pais = Datos.Rows[0][0].ToString();
                     Ciudad = Datos.Rows[0][0].ToString();
-                    Departamento = Datos.Rows[0][0].ToString();
+                    Nacionalidad = Datos.Rows[0][0].ToString();
 
                     //Panel Datos de Envio
                     Pais_DE = Datos.Rows[0][0].ToString();
@@ -624,7 +632,7 @@ namespace CapaPresentacion
                     Direccion01 = Datos.Rows[0][0].ToString();
                     Direccion02 = Datos.Rows[0][0].ToString();
                     Receptor = Datos.Rows[0][0].ToString();
-                    Descripcion = Datos.Rows[0][0].ToString();
+                    Observacion = Datos.Rows[0][0].ToString();
 
                     //Panel Datos Financiero
                     BancoPrincipal = Datos.Rows[0][0].ToString();
@@ -640,14 +648,14 @@ namespace CapaPresentacion
 
                     //SE PROCEDE A LLENAR LOS CAMPOS DE TEXTO SEGUN LA CONSULTA REALIZADA
 
-                    this.TBNombre.Text = Cliente;
+                    this.TBNombre.Text = Proveedor;
                     this.TBDocumento.Text = Documento;
                     this.TBTelefono.Text = Telefono;
                     this.TBMovil.Text = Movil;
                     this.TBCorreo.Text = Correo;
                     this.TBPais.Text = Pais;
                     this.TBCiudad.Text = Ciudad;
-                    this.TBRepresentante.Text = Departamento;
+                    this.TBRepresentante.Text = Representante;
 
                     //
                     this.TBPais_01.Text = Pais_DE;
@@ -655,7 +663,7 @@ namespace CapaPresentacion
                     this.TBDireccion01.Text = Direccion01;
                     this.TBDireccion02.Text = Direccion02;
                     this.TBReceptor.Text = Receptor;
-                    this.TBObservacion.Text = Descripcion;
+                    this.TBObservacion.Text = Observacion;
 
                     //
                     this.TBBancoPrincipal.Text = BancoPrincipal;
