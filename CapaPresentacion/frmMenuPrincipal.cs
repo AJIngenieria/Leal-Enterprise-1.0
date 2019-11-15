@@ -229,5 +229,18 @@ namespace CapaPresentacion
             frmAlmacen_Cliente.Consultar = Convert.ToString(this.SQL_Consultar);
             frmAlmacen_Cliente.Imprimir = Convert.ToString(this.SQL_Imprimir);
         }
+
+        private void proveedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAlmacen_Proveedor frmAlmacen_Proveedor = new frmAlmacen_Proveedor();
+            frmAlmacen_Proveedor.MdiParent = this;
+            frmAlmacen_Proveedor.Show();
+
+            frmAlmacen_Proveedor.Guardar = Convert.ToString(this.SQL_Guardar);
+            frmAlmacen_Proveedor.Editar = Convert.ToString(this.SQL_Editar);
+            frmAlmacen_Proveedor.Eliminar = Convert.ToString(this.SQL_Eliminar);
+            frmAlmacen_Proveedor.Consultar = Convert.ToString(this.SQL_Consultar);
+            frmAlmacen_Proveedor.Imprimir = Convert.ToString(this.SQL_Imprimir);
+        }
     }
 }

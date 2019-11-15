@@ -45,6 +45,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Conexion_Almacen_Bodega.cs" />
     <Compile Include="Conexion_Almacen_Clientes.cs" />
+    <Compile Include="Conexion_Almacen_Proveedor.cs" />
     <Compile Include="Conexion_BaseDeDatos.cs" />
     <Compile Include="Conexion_Gestion_Empleados.cs" />
     <Compile Include="Conexion_Sistema_Configuracion.cs" />

@@ -48,7 +48,7 @@
             this.TBNacionalidad = new System.Windows.Forms.TextBox();
             this.TBCiudad = new System.Windows.Forms.TextBox();
             this.TBPais = new System.Windows.Forms.TextBox();
-            this.TBResponsable = new System.Windows.Forms.TextBox();
+            this.TBRepresentante = new System.Windows.Forms.TextBox();
             this.TBDocumento = new System.Windows.Forms.TextBox();
             this.TBNombre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -57,7 +57,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.TPDatosDeEnvio = new System.Windows.Forms.TabPage();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.TBObservacion = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.TBReceptor = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -193,7 +193,7 @@
             this.TPDatosBasicos.Controls.Add(this.TBNacionalidad);
             this.TPDatosBasicos.Controls.Add(this.TBCiudad);
             this.TPDatosBasicos.Controls.Add(this.TBPais);
-            this.TPDatosBasicos.Controls.Add(this.TBResponsable);
+            this.TPDatosBasicos.Controls.Add(this.TBRepresentante);
             this.TPDatosBasicos.Controls.Add(this.TBDocumento);
             this.TPDatosBasicos.Controls.Add(this.TBNombre);
             this.TPDatosBasicos.Controls.Add(this.label5);
@@ -335,13 +335,13 @@
             this.TBPais.TabIndex = 8;
             this.TBPais.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBPais_KeyUp);
             // 
-            // TBResponsable
+            // TBRepresentante
             // 
-            this.TBResponsable.Location = new System.Drawing.Point(100, 87);
-            this.TBResponsable.Name = "TBResponsable";
-            this.TBResponsable.Size = new System.Drawing.Size(250, 21);
-            this.TBResponsable.TabIndex = 7;
-            this.TBResponsable.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBResponsable_KeyUp);
+            this.TBRepresentante.Location = new System.Drawing.Point(100, 87);
+            this.TBRepresentante.Name = "TBRepresentante";
+            this.TBRepresentante.Size = new System.Drawing.Size(250, 21);
+            this.TBRepresentante.TabIndex = 7;
+            this.TBRepresentante.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBResponsable_KeyUp);
             // 
             // TBDocumento
             // 
@@ -406,7 +406,7 @@
             // 
             // TPDatosDeEnvio
             // 
-            this.TPDatosDeEnvio.Controls.Add(this.textBox12);
+            this.TPDatosDeEnvio.Controls.Add(this.TBObservacion);
             this.TPDatosDeEnvio.Controls.Add(this.label30);
             this.TPDatosDeEnvio.Controls.Add(this.TBReceptor);
             this.TPDatosDeEnvio.Controls.Add(this.label17);
@@ -428,13 +428,13 @@
             this.TPDatosDeEnvio.Text = "Datos de Envio";
             this.TPDatosDeEnvio.UseVisualStyleBackColor = true;
             // 
-            // textBox12
+            // TBObservacion
             // 
-            this.textBox12.Location = new System.Drawing.Point(101, 168);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(250, 21);
-            this.textBox12.TabIndex = 25;
-            this.textBox12.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox12_KeyUp);
+            this.TBObservacion.Location = new System.Drawing.Point(101, 168);
+            this.TBObservacion.Name = "TBObservacion";
+            this.TBObservacion.Size = new System.Drawing.Size(250, 21);
+            this.TBObservacion.TabIndex = 25;
+            this.TBObservacion.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox12_KeyUp);
             // 
             // label30
             // 
@@ -954,7 +954,7 @@
         private System.Windows.Forms.TextBox TBNacionalidad;
         private System.Windows.Forms.TextBox TBCiudad;
         private System.Windows.Forms.TextBox TBPais;
-        private System.Windows.Forms.TextBox TBResponsable;
+        private System.Windows.Forms.TextBox TBRepresentante;
         private System.Windows.Forms.TextBox TBDocumento;
         private System.Windows.Forms.TextBox TBNombre;
         private System.Windows.Forms.ComboBox CBTipo;
@@ -1006,7 +1006,7 @@
         private System.Windows.Forms.TextBox TBDireccionPrincipal;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox TBObservacion;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label31;

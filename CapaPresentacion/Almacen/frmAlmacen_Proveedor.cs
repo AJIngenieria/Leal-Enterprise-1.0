@@ -67,6 +67,10 @@ namespace CapaPresentacion
             //Inicio de Clase y Botones
             this.Botones();
             this.Habilitar();
+            this.CBTipo.SelectedIndex = 0;
+            this.CBMoneda.SelectedIndex = 0;
+            this.CBRetencion.SelectedIndex = 0;
+
 
             //Focus a Texboxt
             this.TBNombre.Select();
@@ -88,20 +92,20 @@ namespace CapaPresentacion
             this.TBNombre.BackColor = Color.FromArgb(32, 178, 170);
             this.TBDocumento.ReadOnly = false;
             this.TBDocumento.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBRepresentante.ReadOnly = false;
+            this.TBRepresentante.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBPais.ReadOnly = false;
+            this.TBPais.BackColor = Color.FromArgb(32, 178, 170);
             this.TBCiudad.ReadOnly = false;
             this.TBCiudad.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBNacionalidad.ReadOnly = false;
+            this.TBNacionalidad.BackColor = Color.FromArgb(32, 178, 170);
             this.TBTelefono.ReadOnly = false;
             this.TBTelefono.BackColor = Color.FromArgb(32, 178, 170);
             this.TBMovil.ReadOnly = false;
             this.TBMovil.BackColor = Color.FromArgb(32, 178, 170);
             this.TBCorreo.ReadOnly = false;
             this.TBCorreo.BackColor = Color.FromArgb(32, 178, 170);
-            this.TBDepartamento.ReadOnly = false;
-            this.TBDepartamento.BackColor = Color.FromArgb(32, 178, 170);
-
-            this.TBPais.ReadOnly = false;
-            this.TBPais.BackColor = Color.FromArgb(32, 178, 170);
-
 
             //Panel - Otros Datos
             this.TBPais_01.ReadOnly = false;
@@ -116,10 +120,12 @@ namespace CapaPresentacion
             this.TBDireccion02.BackColor = Color.FromArgb(32, 178, 170);
             this.TBReceptor.ReadOnly = false;
             this.TBReceptor.BackColor = Color.FromArgb(32, 178, 170);
-            this.TBDescripcion.ReadOnly = false;
-            this.TBDescripcion.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBObservacion.ReadOnly = false;
+            this.TBObservacion.BackColor = Color.FromArgb(32, 178, 170);
 
             //
+            this.TBValorRetencion.ReadOnly = false;
+            this.TBValorRetencion.BackColor = Color.FromArgb(32, 178, 170);
             this.TBBancoPrincipal.ReadOnly = false;
             this.TBBancoPrincipal.BackColor = Color.FromArgb(32, 178, 170);
             this.TBCuenta01.ReadOnly = false;
@@ -138,29 +144,39 @@ namespace CapaPresentacion
             this.TBCreditoMora.BackColor = Color.FromArgb(32, 178, 170);
             this.TBCreditoTotal.ReadOnly = false;
             this.TBCreditoTotal.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBDiasProrroga.ReadOnly = false;
+            this.TBDiasProrroga.BackColor = Color.FromArgb(32, 178, 170);
         }
 
         private void Limpiar()
         {
             //Panel - Datos Basicos
             this.TBIdproveedor.Clear();
+            this.CBTipo.SelectedIndex = 0;
             this.TBNombre.Clear();
             this.TBDocumento.Clear();
+            this.TBRepresentante.Clear();
             this.TBCiudad.Clear();
             this.TBTelefono.Clear();
             this.TBMovil.Clear();
             this.TBPais.Clear();
+            this.TBNacionalidad.Clear();
             this.TBCorreo.Clear();
 
-            //Panel - Otros Datos
-            this.TBDireccion01.Clear();
-            this.TBDireccion02.Clear();
+            //Panel - Datos de Envio
+            this.TBPais_01.Clear();
+            this.TBCiudad_01.Clear();
             this.TBDireccionPrincipal.Clear();
+            this.TBDireccion02.Clear();
+            this.TBDireccion01.Clear();
             this.TBReceptor.Clear();
-            this.TBDescripcion.Clear();
+            this.TBObservacion.Clear();
 
 
-            //
+            //Datos Financieros
+            this.CBMoneda.SelectedIndex = 0;
+            this.CBRetencion.SelectedIndex = 0;
+            this.TBValorRetencion.Clear();
             this.TBBancoPrincipal.Clear();
             this.TBCuenta01.Clear();
             this.TBCuenta02.Clear();
@@ -171,6 +187,7 @@ namespace CapaPresentacion
             this.TBUltimoCredito.Clear();
             this.TBCreditoMora.Clear();
             this.TBCreditoTotal.Clear();
+            this.TBDiasProrroga.Clear();
         }
 
         private void Botones()
@@ -195,9 +212,9 @@ namespace CapaPresentacion
         //{
         //    try
         //    {
-        //        this.TBDepartamento.DataSource = fSistema_Sucurzal.Mostrar();
-        //        this.TBDepartamento.ValueMember = "Cliente";
-        //        this.TBDepartamento.DisplayMember = "Nombre";
+        //        this.TBRepresentante.DataSource = fSistema_Sucurzal.Mostrar();
+        //        this.TBRepresentante.ValueMember = "Cliente";
+        //        this.TBRepresentante.DisplayMember = "Nombre";
         //    }
         //    catch (Exception ex)
         //    {
@@ -215,42 +232,37 @@ namespace CapaPresentacion
 
                 if (this.TBNombre.Text == string.Empty)
                 {
-                    MensajeError("Debe ingresar el nombre del cliente a registrar");
+                    MensajeError("Debe ingresar el nombre del proveedor");
                     TBNombre.BackColor = Color.FromArgb(250, 235, 215);
                 }
                 else if (this.TBDocumento.Text == string.Empty)
                 {
-                    MensajeError("Por favor el numero de documento del cliente a registrar");
+                    MensajeError("Por favor el numero de documento del proveedor");
                     TBDocumento.BackColor = Color.FromArgb(250, 235, 215);
                 }
-                else if (this.TBCiudad.Text == string.Empty)
+                else if (this.TBRepresentante.Text == string.Empty)
                 {
-                    MensajeError("Por favor ingrese una Ciudad");
-                    TBCiudad.BackColor = Color.FromArgb(250, 235, 215);
-                }
-                else if (this.TBPais.Text == string.Empty)
-                {
-                    MensajeError("Por favor ingrese un Pais");
-                    TBPais.BackColor = Color.FromArgb(250, 235, 215);
+                    MensajeError("Por favor ingrese el nombre del representante del Proveedor");
+                    TBRepresentante.BackColor = Color.FromArgb(250, 235, 215);
                 }
 
                 else
                 {
                     if (this.Digitar)
                     {
-                        rptaDatosBasicos = fAlmacen_Cliente.Guardar_DatosBasicos
+                        rptaDatosBasicos = fAlmacen_Proveedor.Guardar_DatosBasicos
 
                             (
                                  //Panel Datos Basicos
-                                 this.TBNombre.Text, this.TBDocumento.Text, this.TBTelefono.Text, this.TBMovil.Text,
-                                 this.TBCorreo.Text, this.TBPais.Text, this.TBCiudad.Text, this.TBDepartamento.Text,
+                                 this.CBTipo.Text,this.TBNombre.Text, this.TBDocumento.Text, this.TBRepresentante.Text,this.TBPais.Text,
+                                 this.TBCiudad.Text,this.TBNacionalidad.Text, this.TBTelefono.Text, this.TBMovil.Text, this.TBCorreo.Text, this.DTFechadeinicio.Value,
 
                                  //Panel Datos De Envio
                                  this.TBPais_01.Text, this.TBCiudad_01.Text, this.TBDireccionPrincipal.Text, this.TBDireccion01.Text,
-                                 this.TBDireccion02.Text, this.TBReceptor.Text, this.TBDescripcion.Text,
+                                 this.TBDireccion02.Text, this.TBReceptor.Text, this.TBObservacion.Text,
 
                                 //Panel Datos Financieros
-                                this.TBBancoPrincipal.Text, this.TBBancoAuxiliar.Text, this.TBCuenta01.Text, this.TBCuenta02.Text,
+                                this.CBRetencion.Text,this.TBValorRetencion.Text,this.TBBancoPrincipal.Text, this.TBBancoAuxiliar.Text, this.TBCuenta01.Text, this.TBCuenta02.Text,
                                 this.TBCreditoMinimo.Text, this.TBCreditoMaximo.Text, this.TBUltimoCredito.Text, this.TBCreditoMora.Text,
                                 this.TBCreditoTotal.Text, 1
                             );
@@ -258,19 +270,22 @@ namespace CapaPresentacion
 
                     else
                     {
-                        rptaDatosBasicos = fAlmacen_Cliente.Editar_DatosBasicos
+                        rptaDatosBasicos = fAlmacen_Proveedor.Editar_DatosBasicos
 
                             (
+                                 //Panel llave principal
+                                 Convert.ToInt32(this.TBIdproveedor.Text), 
+                                 
                                  //Panel Datos Basicos
-                                 Convert.ToInt32(this.TBIdproveedor.Text), this.TBNombre.Text, this.TBDocumento.Text, this.TBTelefono.Text, this.TBMovil.Text,
-                                 this.TBCorreo.Text, this.TBPais.Text, this.TBCiudad.Text, this.TBDepartamento.Text,
+                                 this.CBTipo.Text, this.TBNombre.Text, this.TBDocumento.Text, this.TBRepresentante.Text, this.TBPais.Text,
+                                 this.TBCiudad.Text, this.TBNacionalidad.Text, this.TBTelefono.Text, this.TBMovil.Text, this.TBCorreo.Text, this.DTFechadeinicio.Value,
 
                                  //Panel Datos De Envio
                                  this.TBPais_01.Text, this.TBCiudad_01.Text, this.TBDireccionPrincipal.Text, this.TBDireccion01.Text,
-                                 this.TBDireccion02.Text, this.TBReceptor.Text, this.TBDescripcion.Text,
+                                 this.TBDireccion02.Text, this.TBReceptor.Text, this.TBObservacion.Text,
 
                                 //Panel Datos Financieros
-                                this.TBBancoPrincipal.Text, this.TBBancoAuxiliar.Text, this.TBCuenta01.Text, this.TBCuenta02.Text,
+                                this.CBRetencion.Text, this.TBValorRetencion.Text, this.TBBancoPrincipal.Text, this.TBBancoAuxiliar.Text, this.TBCuenta01.Text, this.TBCuenta02.Text,
                                 this.TBCreditoMinimo.Text, this.TBCreditoMaximo.Text, this.TBUltimoCredito.Text, this.TBCreditoMora.Text,
                                 this.TBCreditoTotal.Text, 2
                             );
@@ -407,7 +422,7 @@ namespace CapaPresentacion
                         if (DGResultados.SelectedRows.Count > 0)
                         {
                             Eliminacion = Convert.ToInt32(DGResultados.CurrentRow.Cells["Codigo"].Value.ToString());
-                            Respuesta = CapaNegocio.fAlmacen_Cliente.Eliminar_DatosBasicos(0, Eliminacion);
+                            Respuesta = CapaNegocio.fAlmacen_Proveedor.Eliminar_DatosBasicos(0, Eliminacion);
                         }
 
                         if (Respuesta.Equals("OK"))
@@ -454,7 +469,7 @@ namespace CapaPresentacion
                 {
                     if (TBBuscar.Text != "")
                     {
-                        this.DGResultados.DataSource = fAlmacen_Cliente.Buscar_Cliente(1, this.TBBuscar.Text);
+                        this.DGResultados.DataSource = fAlmacen_Proveedor.Buscar_Proveedor(1, this.TBBuscar.Text);
                         //this.DGResultados.Columns[1].Visible = false;
 
                         lblTotal.Text = "Datos Registrados: " + Convert.ToString(DGResultados.Rows.Count);
@@ -583,7 +598,7 @@ namespace CapaPresentacion
 
                 // ENVIAN LOS DATOS A LA BASE DE DATOS Y SE EVALUAN QUE EXISTEN O ESTEN REGISTRADOS
 
-                DataTable Datos = CapaNegocio.fAlmacen_Cliente.Buscar_Cliente(2, this.TBIdproveedor.Text);
+                DataTable Datos = CapaNegocio.fAlmacen_Proveedor.Buscar_Proveedor(2, this.TBIdproveedor.Text);
                 //Evaluamos si  existen los Datos
                 if (Datos.Rows.Count == 0)
                 {
@@ -632,7 +647,7 @@ namespace CapaPresentacion
                     this.TBCorreo.Text = Correo;
                     this.TBPais.Text = Pais;
                     this.TBCiudad.Text = Ciudad;
-                    this.TBDepartamento.Text = Departamento;
+                    this.TBRepresentante.Text = Departamento;
 
                     //
                     this.TBPais_01.Text = Pais_DE;
@@ -640,7 +655,7 @@ namespace CapaPresentacion
                     this.TBDireccion01.Text = Direccion01;
                     this.TBDireccion02.Text = Direccion02;
                     this.TBReceptor.Text = Receptor;
-                    this.TBDescripcion.Text = Descripcion;
+                    this.TBObservacion.Text = Descripcion;
 
                     //
                     this.TBBancoPrincipal.Text = BancoPrincipal;
