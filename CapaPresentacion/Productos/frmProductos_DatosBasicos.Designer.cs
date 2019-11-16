@@ -29,105 +29,107 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TBIdproducto = new System.Windows.Forms.TextBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.TCPanelPrincipal = new System.Windows.Forms.TabControl();
             this.TPDatosBasicos = new System.Windows.Forms.TabPage();
-            this.TPImpuesto = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TBCodigo = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.TBNombre = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.CBMarca = new System.Windows.Forms.ComboBox();
-            this.TBReferencia = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.TBDescripcion01 = new System.Windows.Forms.TextBox();
-            this.TBDescripcion02 = new System.Windows.Forms.TextBox();
-            this.TBIdproducto = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.CBBalanza = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.CBVence = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.DTFechadevencimiento = new System.Windows.Forms.DateTimePicker();
-            this.label10 = new System.Windows.Forms.Label();
-            this.CBTipo = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.TBLotedeingreso = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.TBPresentacion = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.CBGrupo = new System.Windows.Forms.ComboBox();
-            this.TPProveedor = new System.Windows.Forms.TabPage();
+            this.label13 = new System.Windows.Forms.Label();
+            this.TBLotedeingreso = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.CBTipo = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.DTFechadevencimiento = new System.Windows.Forms.DateTimePicker();
+            this.label9 = new System.Windows.Forms.Label();
+            this.CBVence = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.CBBalanza = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.TBDescripcion02 = new System.Windows.Forms.TextBox();
+            this.TBDescripcion01 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.TBReferencia = new System.Windows.Forms.TextBox();
+            this.CBMarca = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.TBNombre = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TBCodigo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.TPCostosyprecios = new System.Windows.Forms.TabPage();
-            this.TPOtrosDatos = new System.Windows.Forms.TabPage();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnImprimir = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.TBBuscar = new System.Windows.Forms.TextBox();
-            this.DGResultados = new System.Windows.Forms.DataGridView();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.TBBuscar_Proveedor = new System.Windows.Forms.TextBox();
-            this.lblTotalProveedor = new System.Windows.Forms.Label();
-            this.DGProveedor = new System.Windows.Forms.DataGridView();
+            this.TBValorFinal = new System.Windows.Forms.TextBox();
+            this.TBOferta02 = new System.Windows.Forms.TextBox();
+            this.TBOferta01 = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.CBVentaPublico = new System.Windows.Forms.ComboBox();
+            this.TBValorPromedio = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.CBUnidad = new System.Windows.Forms.ComboBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.TBValor03 = new System.Windows.Forms.TextBox();
+            this.TBValor02 = new System.Windows.Forms.TextBox();
+            this.TBValor01 = new System.Windows.Forms.TextBox();
+            this.TBUltimovalor = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.TPImpuesto = new System.Windows.Forms.TabPage();
+            this.btnEliminar_Impuesto = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label15 = new System.Windows.Forms.Label();
             this.TBBuscar_Impuesto = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.TBEstante = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.TBNivel = new System.Windows.Forms.TextBox();
-            this.CBOrigen = new System.Windows.Forms.ComboBox();
-            this.TBUbicacion = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.CBEmpaque = new System.Windows.Forms.ComboBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.TBPresentacion = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.TBUltimovalor = new System.Windows.Forms.TextBox();
-            this.TBValor01 = new System.Windows.Forms.TextBox();
-            this.TBValor02 = new System.Windows.Forms.TextBox();
-            this.TBValor03 = new System.Windows.Forms.TextBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.CBUnidad = new System.Windows.Forms.ComboBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.TBValorPromedio = new System.Windows.Forms.TextBox();
-            this.CBVentaPublico = new System.Windows.Forms.ComboBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.TBOferta01 = new System.Windows.Forms.TextBox();
-            this.TBOferta02 = new System.Windows.Forms.TextBox();
-            this.TBValorFinal = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.TBComision = new System.Windows.Forms.TextBox();
+            this.TPProveedor = new System.Windows.Forms.TabPage();
+            this.btnEliminar_Proveedor = new System.Windows.Forms.Button();
+            this.DGProveedor = new System.Windows.Forms.DataGridView();
+            this.lblTotalProveedor = new System.Windows.Forms.Label();
+            this.TBBuscar_Proveedor = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.TPOtrosDatos = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.PB_Imagen = new System.Windows.Forms.PictureBox();
-            this.btnEliminar_Impuesto = new System.Windows.Forms.Button();
-            this.btnEliminar_Proveedor = new System.Windows.Forms.Button();
+            this.TBComision = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.CBEmpaque = new System.Windows.Forms.ComboBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.TBUbicacion = new System.Windows.Forms.TextBox();
+            this.CBOrigen = new System.Windows.Forms.ComboBox();
+            this.TBNivel = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.TBEstante = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.DGResultados = new System.Windows.Forms.DataGridView();
+            this.TBBuscar = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.CBBodega = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.TCPanelPrincipal.SuspendLayout();
             this.TPDatosBasicos.SuspendLayout();
-            this.TPImpuesto.SuspendLayout();
-            this.TPProveedor.SuspendLayout();
             this.TPCostosyprecios.SuspendLayout();
-            this.TPOtrosDatos.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGResultados)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DGProveedor)).BeginInit();
+            this.TPImpuesto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.TPProveedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGProveedor)).BeginInit();
+            this.TPOtrosDatos.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Imagen)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGResultados)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -142,6 +144,30 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Leal Enterprise - Registro de Productos";
+            // 
+            // TBIdproducto
+            // 
+            this.TBIdproducto.Location = new System.Drawing.Point(152, 365);
+            this.TBIdproducto.Name = "TBIdproducto";
+            this.TBIdproducto.Size = new System.Drawing.Size(100, 21);
+            this.TBIdproducto.TabIndex = 12;
+            this.TBIdproducto.TextChanged += new System.EventHandler(this.TBIdproducto_TextChanged);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Image = global::CapaPresentacion.Properties.Resources.BV_Cancelar;
+            this.btnCancelar.Location = new System.Drawing.Point(292, 365);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(76, 26);
+            this.btnCancelar.TabIndex = 7;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
+            this.btnCancelar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BtnCancelar_MouseDown);
+            this.btnCancelar.MouseLeave += new System.EventHandler(this.BtnCancelar_MouseLeave);
+            this.btnCancelar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BtnCancelar_MouseMove);
             // 
             // TCPanelPrincipal
             // 
@@ -192,207 +218,66 @@
             this.TPDatosBasicos.Text = "Datos";
             this.TPDatosBasicos.UseVisualStyleBackColor = true;
             // 
-            // TPImpuesto
+            // TBPresentacion
             // 
-            this.TPImpuesto.Controls.Add(this.btnEliminar_Impuesto);
-            this.TPImpuesto.Controls.Add(this.dataGridView1);
-            this.TPImpuesto.Controls.Add(this.label15);
-            this.TPImpuesto.Controls.Add(this.TBBuscar_Impuesto);
-            this.TPImpuesto.Controls.Add(this.label17);
-            this.TPImpuesto.Location = new System.Drawing.Point(4, 24);
-            this.TPImpuesto.Name = "TPImpuesto";
-            this.TPImpuesto.Padding = new System.Windows.Forms.Padding(3);
-            this.TPImpuesto.Size = new System.Drawing.Size(358, 311);
-            this.TPImpuesto.TabIndex = 1;
-            this.TPImpuesto.Text = "Impuesto";
-            this.TPImpuesto.UseVisualStyleBackColor = true;
+            this.TBPresentacion.Location = new System.Drawing.Point(101, 168);
+            this.TBPresentacion.Name = "TBPresentacion";
+            this.TBPresentacion.Size = new System.Drawing.Size(250, 21);
+            this.TBPresentacion.TabIndex = 27;
+            this.TBPresentacion.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBPresentacion_KeyUp);
             // 
-            // label1
+            // label25
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Codigo";
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(6, 169);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(79, 15);
+            this.label25.TabIndex = 26;
+            this.label25.Text = "Presentacion";
             // 
-            // TBCodigo
+            // CBGrupo
             // 
-            this.TBCodigo.Location = new System.Drawing.Point(101, 6);
-            this.TBCodigo.Name = "TBCodigo";
-            this.TBCodigo.Size = new System.Drawing.Size(250, 21);
-            this.TBCodigo.TabIndex = 1;
-            this.TBCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TBCodigo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBCodigo_KeyUp);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 33);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Nombre";
-            // 
-            // TBNombre
-            // 
-            this.TBNombre.Location = new System.Drawing.Point(101, 33);
-            this.TBNombre.Name = "TBNombre";
-            this.TBNombre.Size = new System.Drawing.Size(250, 21);
-            this.TBNombre.TabIndex = 3;
-            this.TBNombre.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBNombre_KeyUp);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 60);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 15);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Referencia";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 195);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 15);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Marca";
-            // 
-            // CBMarca
-            // 
-            this.CBMarca.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CBMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CBMarca.FormattingEnabled = true;
-            this.CBMarca.Location = new System.Drawing.Point(101, 195);
-            this.CBMarca.Name = "CBMarca";
-            this.CBMarca.Size = new System.Drawing.Size(250, 23);
-            this.CBMarca.Sorted = true;
-            this.CBMarca.TabIndex = 6;
-            // 
-            // TBReferencia
-            // 
-            this.TBReferencia.Location = new System.Drawing.Point(101, 60);
-            this.TBReferencia.Name = "TBReferencia";
-            this.TBReferencia.Size = new System.Drawing.Size(250, 21);
-            this.TBReferencia.TabIndex = 7;
-            this.TBReferencia.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBReferencia_KeyUp);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 87);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 15);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Descripcion 01";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 114);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 15);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Descripcion 02";
-            // 
-            // TBDescripcion01
-            // 
-            this.TBDescripcion01.Location = new System.Drawing.Point(101, 87);
-            this.TBDescripcion01.Name = "TBDescripcion01";
-            this.TBDescripcion01.Size = new System.Drawing.Size(250, 21);
-            this.TBDescripcion01.TabIndex = 10;
-            this.TBDescripcion01.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBDescripcion01_KeyUp);
-            // 
-            // TBDescripcion02
-            // 
-            this.TBDescripcion02.Location = new System.Drawing.Point(101, 114);
-            this.TBDescripcion02.Name = "TBDescripcion02";
-            this.TBDescripcion02.Size = new System.Drawing.Size(250, 21);
-            this.TBDescripcion02.TabIndex = 11;
-            this.TBDescripcion02.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBDescripcion02_KeyUp);
-            // 
-            // TBIdproducto
-            // 
-            this.TBIdproducto.Location = new System.Drawing.Point(132, 365);
-            this.TBIdproducto.Name = "TBIdproducto";
-            this.TBIdproducto.Size = new System.Drawing.Size(100, 21);
-            this.TBIdproducto.TabIndex = 12;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 254);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 15);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Usa Balanza";
-            // 
-            // CBBalanza
-            // 
-            this.CBBalanza.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CBBalanza.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CBBalanza.FormattingEnabled = true;
-            this.CBBalanza.Items.AddRange(new object[] {
+            this.CBGrupo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CBGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBGrupo.FormattingEnabled = true;
+            this.CBGrupo.Items.AddRange(new object[] {
             "-",
-            "No",
-            "Si"});
-            this.CBBalanza.Location = new System.Drawing.Point(101, 254);
-            this.CBBalanza.Name = "CBBalanza";
-            this.CBBalanza.Size = new System.Drawing.Size(100, 23);
-            this.CBBalanza.Sorted = true;
-            this.CBBalanza.TabIndex = 14;
+            "Dotacion",
+            "Inventario",
+            "Servicio"});
+            this.CBGrupo.Location = new System.Drawing.Point(101, 225);
+            this.CBGrupo.Name = "CBGrupo";
+            this.CBGrupo.Size = new System.Drawing.Size(100, 23);
+            this.CBGrupo.Sorted = true;
+            this.CBGrupo.TabIndex = 25;
+            this.CBGrupo.SelectionChangeCommitted += new System.EventHandler(this.CBGrupo_SelectionChangeCommitted);
             // 
-            // label8
+            // label13
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(207, 254);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(41, 15);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Vence";
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 225);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(41, 15);
+            this.label13.TabIndex = 24;
+            this.label13.Text = "Grupo";
             // 
-            // CBVence
+            // TBLotedeingreso
             // 
-            this.CBVence.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CBVence.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CBVence.FormattingEnabled = true;
-            this.CBVence.Items.AddRange(new object[] {
-            "-",
-            "No",
-            "Si"});
-            this.CBVence.Location = new System.Drawing.Point(250, 254);
-            this.CBVence.Name = "CBVence";
-            this.CBVence.Size = new System.Drawing.Size(100, 23);
-            this.CBVence.Sorted = true;
-            this.CBVence.TabIndex = 16;
+            this.TBLotedeingreso.Location = new System.Drawing.Point(101, 141);
+            this.TBLotedeingreso.Name = "TBLotedeingreso";
+            this.TBLotedeingreso.Size = new System.Drawing.Size(250, 21);
+            this.TBLotedeingreso.TabIndex = 13;
+            this.TBLotedeingreso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TBLotedeingreso.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBLotedeingreso_KeyUp);
             // 
-            // label9
+            // label12
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 283);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 15);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "Vencimiento";
-            // 
-            // DTFechadevencimiento
-            // 
-            this.DTFechadevencimiento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DTFechadevencimiento.Location = new System.Drawing.Point(101, 283);
-            this.DTFechadevencimiento.Name = "DTFechadevencimiento";
-            this.DTFechadevencimiento.Size = new System.Drawing.Size(249, 21);
-            this.DTFechadevencimiento.TabIndex = 18;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(207, 225);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(31, 15);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "Tipo";
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 141);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(92, 15);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "Lote de Ingreso";
             // 
             // CBTipo
             // 
@@ -410,64 +295,190 @@
             this.CBTipo.Size = new System.Drawing.Size(100, 23);
             this.CBTipo.Sorted = true;
             this.CBTipo.TabIndex = 20;
+            this.CBTipo.SelectionChangeCommitted += new System.EventHandler(this.CBTipo_SelectionChangeCommitted);
             // 
-            // label12
+            // label10
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 141);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(92, 15);
-            this.label12.TabIndex = 23;
-            this.label12.Text = "Lote de Ingreso";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(207, 225);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(31, 15);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "Tipo";
             // 
-            // TBLotedeingreso
+            // DTFechadevencimiento
             // 
-            this.TBLotedeingreso.Location = new System.Drawing.Point(101, 141);
-            this.TBLotedeingreso.Name = "TBLotedeingreso";
-            this.TBLotedeingreso.Size = new System.Drawing.Size(250, 21);
-            this.TBLotedeingreso.TabIndex = 13;
-            this.TBLotedeingreso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TBLotedeingreso.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBLotedeingreso_KeyUp);
+            this.DTFechadevencimiento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DTFechadevencimiento.Location = new System.Drawing.Point(101, 283);
+            this.DTFechadevencimiento.Name = "DTFechadevencimiento";
+            this.DTFechadevencimiento.Size = new System.Drawing.Size(249, 21);
+            this.DTFechadevencimiento.TabIndex = 18;
             // 
-            // label13
+            // label9
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 225);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(41, 15);
-            this.label13.TabIndex = 24;
-            this.label13.Text = "Grupo";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 283);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(75, 15);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "Vencimiento";
             // 
-            // CBGrupo
+            // CBVence
             // 
-            this.CBGrupo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CBGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CBGrupo.FormattingEnabled = true;
-            this.CBGrupo.Items.AddRange(new object[] {
+            this.CBVence.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CBVence.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBVence.FormattingEnabled = true;
+            this.CBVence.Items.AddRange(new object[] {
             "-",
-            "Dotacion",
-            "Inventario",
-            "Servicio"});
-            this.CBGrupo.Location = new System.Drawing.Point(101, 225);
-            this.CBGrupo.Name = "CBGrupo";
-            this.CBGrupo.Size = new System.Drawing.Size(100, 23);
-            this.CBGrupo.Sorted = true;
-            this.CBGrupo.TabIndex = 25;
+            "No",
+            "Si"});
+            this.CBVence.Location = new System.Drawing.Point(250, 254);
+            this.CBVence.Name = "CBVence";
+            this.CBVence.Size = new System.Drawing.Size(100, 23);
+            this.CBVence.Sorted = true;
+            this.CBVence.TabIndex = 16;
+            this.CBVence.SelectionChangeCommitted += new System.EventHandler(this.CBVence_SelectionChangeCommitted);
             // 
-            // TPProveedor
+            // label8
             // 
-            this.TPProveedor.Controls.Add(this.btnEliminar_Proveedor);
-            this.TPProveedor.Controls.Add(this.DGProveedor);
-            this.TPProveedor.Controls.Add(this.lblTotalProveedor);
-            this.TPProveedor.Controls.Add(this.TBBuscar_Proveedor);
-            this.TPProveedor.Controls.Add(this.label16);
-            this.TPProveedor.Location = new System.Drawing.Point(4, 24);
-            this.TPProveedor.Name = "TPProveedor";
-            this.TPProveedor.Padding = new System.Windows.Forms.Padding(3);
-            this.TPProveedor.Size = new System.Drawing.Size(358, 311);
-            this.TPProveedor.TabIndex = 2;
-            this.TPProveedor.Text = "Proveedor";
-            this.TPProveedor.UseVisualStyleBackColor = true;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(207, 254);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(41, 15);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Vence";
+            // 
+            // CBBalanza
+            // 
+            this.CBBalanza.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CBBalanza.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBBalanza.FormattingEnabled = true;
+            this.CBBalanza.Items.AddRange(new object[] {
+            "-",
+            "No",
+            "Si"});
+            this.CBBalanza.Location = new System.Drawing.Point(101, 254);
+            this.CBBalanza.Name = "CBBalanza";
+            this.CBBalanza.Size = new System.Drawing.Size(100, 23);
+            this.CBBalanza.Sorted = true;
+            this.CBBalanza.TabIndex = 14;
+            this.CBBalanza.SelectionChangeCommitted += new System.EventHandler(this.CBBalanza_SelectionChangeCommitted);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 254);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(77, 15);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Usa Balanza";
+            // 
+            // TBDescripcion02
+            // 
+            this.TBDescripcion02.Location = new System.Drawing.Point(101, 114);
+            this.TBDescripcion02.Name = "TBDescripcion02";
+            this.TBDescripcion02.Size = new System.Drawing.Size(250, 21);
+            this.TBDescripcion02.TabIndex = 11;
+            this.TBDescripcion02.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBDescripcion02_KeyUp);
+            // 
+            // TBDescripcion01
+            // 
+            this.TBDescripcion01.Location = new System.Drawing.Point(101, 87);
+            this.TBDescripcion01.Name = "TBDescripcion01";
+            this.TBDescripcion01.Size = new System.Drawing.Size(250, 21);
+            this.TBDescripcion01.TabIndex = 10;
+            this.TBDescripcion01.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBDescripcion01_KeyUp);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 114);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(89, 15);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Descripcion 02";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 87);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 15);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Descripcion 01";
+            // 
+            // TBReferencia
+            // 
+            this.TBReferencia.Location = new System.Drawing.Point(101, 60);
+            this.TBReferencia.Name = "TBReferencia";
+            this.TBReferencia.Size = new System.Drawing.Size(250, 21);
+            this.TBReferencia.TabIndex = 7;
+            this.TBReferencia.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBReferencia_KeyUp);
+            // 
+            // CBMarca
+            // 
+            this.CBMarca.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CBMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBMarca.FormattingEnabled = true;
+            this.CBMarca.Location = new System.Drawing.Point(101, 195);
+            this.CBMarca.Name = "CBMarca";
+            this.CBMarca.Size = new System.Drawing.Size(250, 23);
+            this.CBMarca.Sorted = true;
+            this.CBMarca.TabIndex = 6;
+            this.CBMarca.SelectionChangeCommitted += new System.EventHandler(this.CBMarca_SelectionChangeCommitted);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 195);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 15);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Marca";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 60);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 15);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Referencia";
+            // 
+            // TBNombre
+            // 
+            this.TBNombre.Location = new System.Drawing.Point(101, 33);
+            this.TBNombre.Name = "TBNombre";
+            this.TBNombre.Size = new System.Drawing.Size(250, 21);
+            this.TBNombre.TabIndex = 3;
+            this.TBNombre.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBNombre_KeyUp);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 15);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Nombre";
+            // 
+            // TBCodigo
+            // 
+            this.TBCodigo.Location = new System.Drawing.Point(101, 6);
+            this.TBCodigo.Name = "TBCodigo";
+            this.TBCodigo.Size = new System.Drawing.Size(250, 21);
+            this.TBCodigo.TabIndex = 1;
+            this.TBCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TBCodigo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBCodigo_KeyUp);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Codigo";
             // 
             // TPCostosyprecios
             // 
@@ -498,180 +509,227 @@
             this.TPCostosyprecios.Text = "Valores";
             this.TPCostosyprecios.UseVisualStyleBackColor = true;
             // 
-            // TPOtrosDatos
+            // TBValorFinal
             // 
-            this.TPOtrosDatos.Controls.Add(this.groupBox3);
-            this.TPOtrosDatos.Controls.Add(this.TBComision);
-            this.TPOtrosDatos.Controls.Add(this.label11);
-            this.TPOtrosDatos.Controls.Add(this.CBEmpaque);
-            this.TPOtrosDatos.Controls.Add(this.label22);
-            this.TPOtrosDatos.Controls.Add(this.label21);
-            this.TPOtrosDatos.Controls.Add(this.TBUbicacion);
-            this.TPOtrosDatos.Controls.Add(this.CBOrigen);
-            this.TPOtrosDatos.Controls.Add(this.TBNivel);
-            this.TPOtrosDatos.Controls.Add(this.label20);
-            this.TPOtrosDatos.Controls.Add(this.TBEstante);
-            this.TPOtrosDatos.Controls.Add(this.label19);
-            this.TPOtrosDatos.Controls.Add(this.label18);
-            this.TPOtrosDatos.Location = new System.Drawing.Point(4, 24);
-            this.TPOtrosDatos.Name = "TPOtrosDatos";
-            this.TPOtrosDatos.Padding = new System.Windows.Forms.Padding(3);
-            this.TPOtrosDatos.Size = new System.Drawing.Size(358, 311);
-            this.TPOtrosDatos.TabIndex = 4;
-            this.TPOtrosDatos.Text = "Otros Datos - Imagen";
-            this.TPOtrosDatos.UseVisualStyleBackColor = true;
+            this.TBValorFinal.Location = new System.Drawing.Point(152, 33);
+            this.TBValorFinal.Name = "TBValorFinal";
+            this.TBValorFinal.Size = new System.Drawing.Size(203, 21);
+            this.TBValorFinal.TabIndex = 19;
+            this.TBValorFinal.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBValorFinal_KeyUp);
             // 
-            // btnCancelar
+            // TBOferta02
             // 
-            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Image = global::CapaPresentacion.Properties.Resources.BV_Cancelar;
-            this.btnCancelar.Location = new System.Drawing.Point(292, 365);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(76, 26);
-            this.btnCancelar.TabIndex = 7;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
+            this.TBOferta02.Location = new System.Drawing.Point(112, 196);
+            this.TBOferta02.Name = "TBOferta02";
+            this.TBOferta02.Size = new System.Drawing.Size(243, 21);
+            this.TBOferta02.TabIndex = 18;
+            this.TBOferta02.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBOferta02_KeyUp);
             // 
-            // btnGuardar
+            // TBOferta01
             // 
-            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGuardar.FlatAppearance.BorderSize = 0;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Image = global::CapaPresentacion.Properties.Resources.BV_Guardar;
-            this.btnGuardar.Location = new System.Drawing.Point(10, 365);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(76, 26);
-            this.btnGuardar.TabIndex = 5;
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
+            this.TBOferta01.Location = new System.Drawing.Point(112, 169);
+            this.TBOferta01.Name = "TBOferta01";
+            this.TBOferta01.Size = new System.Drawing.Size(243, 21);
+            this.TBOferta01.TabIndex = 17;
+            this.TBOferta01.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBOferta01_KeyUp);
             // 
-            // btnImprimir
+            // label34
             // 
-            this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnImprimir.FlatAppearance.BorderSize = 0;
-            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImprimir.Image = global::CapaPresentacion.Properties.Resources.BV_Imprimir;
-            this.btnImprimir.Location = new System.Drawing.Point(430, 365);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(76, 26);
-            this.btnImprimir.TabIndex = 6;
-            this.btnImprimir.UseVisualStyleBackColor = true;
-            this.btnImprimir.Click += new System.EventHandler(this.BtnImprimir_Click);
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(3, 169);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(105, 15);
+            this.label34.TabIndex = 16;
+            this.label34.Text = "Valor en Oferta 01";
             // 
-            // btnEliminar
+            // CBVentaPublico
             // 
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Image = global::CapaPresentacion.Properties.Resources.BV_Eliminar;
-            this.btnEliminar.Location = new System.Drawing.Point(348, 365);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(76, 26);
-            this.btnEliminar.TabIndex = 4;
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
+            this.CBVentaPublico.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CBVentaPublico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBVentaPublico.FormattingEnabled = true;
+            this.CBVentaPublico.Items.AddRange(new object[] {
+            "-",
+            "Valor 01",
+            "Valor 02",
+            "Valor 03",
+            "Oferta 01",
+            "Oferta 02"});
+            this.CBVentaPublico.Location = new System.Drawing.Point(152, 254);
+            this.CBVentaPublico.Name = "CBVentaPublico";
+            this.CBVentaPublico.Size = new System.Drawing.Size(203, 23);
+            this.CBVentaPublico.TabIndex = 15;
+            this.CBVentaPublico.SelectionChangeCommitted += new System.EventHandler(this.CBVentaPublico_SelectionChangeCommitted);
             // 
-            // groupBox2
+            // TBValorPromedio
             // 
-            this.groupBox2.Controls.Add(this.lblTotal);
-            this.groupBox2.Controls.Add(this.DGResultados);
-            this.groupBox2.Controls.Add(this.TBBuscar);
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.btnEliminar);
-            this.groupBox2.Controls.Add(this.btnImprimir);
-            this.groupBox2.Location = new System.Drawing.Point(396, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(513, 398);
-            this.groupBox2.TabIndex = 7;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Leal Enterprise - Consulta de Proveedores ";
+            this.TBValorPromedio.Location = new System.Drawing.Point(112, 61);
+            this.TBValorPromedio.Name = "TBValorPromedio";
+            this.TBValorPromedio.Size = new System.Drawing.Size(243, 21);
+            this.TBValorPromedio.TabIndex = 14;
+            this.TBValorPromedio.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBValorPromedio_KeyUp);
             // 
-            // label14
+            // label33
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 20);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(128, 15);
-            this.label14.TabIndex = 7;
-            this.label14.Text = "Proveedor a Consultar";
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(3, 61);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(92, 15);
+            this.label33.TabIndex = 13;
+            this.label33.Text = "Valor Promedio";
             // 
-            // TBBuscar
+            // CBUnidad
             // 
-            this.TBBuscar.Location = new System.Drawing.Point(140, 20);
-            this.TBBuscar.Name = "TBBuscar";
-            this.TBBuscar.Size = new System.Drawing.Size(366, 21);
-            this.TBBuscar.TabIndex = 8;
-            this.TBBuscar.TextChanged += new System.EventHandler(this.TBBuscar_TextChanged);
+            this.CBUnidad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CBUnidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBUnidad.FormattingEnabled = true;
+            this.CBUnidad.Items.AddRange(new object[] {
+            "-",
+            "GRA",
+            "KG",
+            "LIB",
+            "TON",
+            "UNI"});
+            this.CBUnidad.Location = new System.Drawing.Point(112, 225);
+            this.CBUnidad.Name = "CBUnidad";
+            this.CBUnidad.Size = new System.Drawing.Size(243, 23);
+            this.CBUnidad.Sorted = true;
+            this.CBUnidad.TabIndex = 12;
+            this.CBUnidad.SelectedValueChanged += new System.EventHandler(this.CBUnidad_SelectedValueChanged);
             // 
-            // DGResultados
+            // label32
             // 
-            this.DGResultados.AllowUserToAddRows = false;
-            this.DGResultados.AllowUserToDeleteRows = false;
-            this.DGResultados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.DGResultados.BackgroundColor = System.Drawing.Color.White;
-            this.DGResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGResultados.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DGResultados.Location = new System.Drawing.Point(6, 47);
-            this.DGResultados.Name = "DGResultados";
-            this.DGResultados.ReadOnly = true;
-            this.DGResultados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGResultados.Size = new System.Drawing.Size(500, 312);
-            this.DGResultados.TabIndex = 9;
-            this.DGResultados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGResultados_CellDoubleClick);
-            this.DGResultados.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DGResultados_KeyPress);
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(3, 142);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(103, 15);
+            this.label32.TabIndex = 11;
+            this.label32.Text = "Valor de Venta 03";
             // 
-            // lblTotal
+            // label31
             // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(6, 365);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(31, 15);
-            this.lblTotal.TabIndex = 10;
-            this.lblTotal.Text = "------";
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(3, 115);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(103, 15);
+            this.label31.TabIndex = 10;
+            this.label31.Text = "Valor de Venta 02";
             // 
-            // label16
+            // TBValor03
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 6);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(63, 15);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "Proveedor";
+            this.TBValor03.Location = new System.Drawing.Point(112, 142);
+            this.TBValor03.Name = "TBValor03";
+            this.TBValor03.Size = new System.Drawing.Size(243, 21);
+            this.TBValor03.TabIndex = 9;
+            this.TBValor03.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBValor03_KeyUp);
             // 
-            // TBBuscar_Proveedor
+            // TBValor02
             // 
-            this.TBBuscar_Proveedor.Location = new System.Drawing.Point(75, 6);
-            this.TBBuscar_Proveedor.Name = "TBBuscar_Proveedor";
-            this.TBBuscar_Proveedor.Size = new System.Drawing.Size(277, 21);
-            this.TBBuscar_Proveedor.TabIndex = 1;
-            this.TBBuscar_Proveedor.TextChanged += new System.EventHandler(this.TBBuscar_Proveedor_TextChanged);
-            this.TBBuscar_Proveedor.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBBuscar_Proveedor_KeyUp);
+            this.TBValor02.Location = new System.Drawing.Point(112, 115);
+            this.TBValor02.Name = "TBValor02";
+            this.TBValor02.Size = new System.Drawing.Size(243, 21);
+            this.TBValor02.TabIndex = 8;
+            this.TBValor02.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBValor02_KeyUp);
             // 
-            // lblTotalProveedor
+            // TBValor01
             // 
-            this.lblTotalProveedor.AutoSize = true;
-            this.lblTotalProveedor.Location = new System.Drawing.Point(6, 279);
-            this.lblTotalProveedor.Name = "lblTotalProveedor";
-            this.lblTotalProveedor.Size = new System.Drawing.Size(31, 15);
-            this.lblTotalProveedor.TabIndex = 2;
-            this.lblTotalProveedor.Text = "------";
+            this.TBValor01.Location = new System.Drawing.Point(112, 88);
+            this.TBValor01.Name = "TBValor01";
+            this.TBValor01.Size = new System.Drawing.Size(243, 21);
+            this.TBValor01.TabIndex = 7;
+            this.TBValor01.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBValor01_KeyUp);
             // 
-            // DGProveedor
+            // TBUltimovalor
             // 
-            this.DGProveedor.AllowUserToAddRows = false;
-            this.DGProveedor.AllowUserToDeleteRows = false;
-            this.DGProveedor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.DGProveedor.BackgroundColor = System.Drawing.Color.White;
-            this.DGProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGProveedor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DGProveedor.Location = new System.Drawing.Point(6, 33);
-            this.DGProveedor.Name = "DGProveedor";
-            this.DGProveedor.ReadOnly = true;
-            this.DGProveedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGProveedor.Size = new System.Drawing.Size(346, 240);
-            this.DGProveedor.TabIndex = 3;
+            this.TBUltimovalor.Location = new System.Drawing.Point(152, 6);
+            this.TBUltimovalor.Name = "TBUltimovalor";
+            this.TBUltimovalor.Size = new System.Drawing.Size(203, 21);
+            this.TBUltimovalor.TabIndex = 6;
+            this.TBUltimovalor.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBUltimovalor_KeyUp);
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(3, 33);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(129, 15);
+            this.label30.TabIndex = 5;
+            this.label30.Text = "Valor de Compra Final";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(3, 196);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(105, 15);
+            this.label29.TabIndex = 4;
+            this.label29.Text = "Valor en Oferta 02";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(3, 254);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(143, 15);
+            this.label28.TabIndex = 3;
+            this.label28.Text = "Valor de Venta al Publico";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(3, 225);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(98, 15);
+            this.label27.TabIndex = 2;
+            this.label27.Text = "Unidad de Venta";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(3, 88);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(103, 15);
+            this.label26.TabIndex = 1;
+            this.label26.Text = "Valor de Venta 01";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(3, 6);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(138, 15);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Ultimo Valor de Compra";
+            // 
+            // TPImpuesto
+            // 
+            this.TPImpuesto.Controls.Add(this.btnEliminar_Impuesto);
+            this.TPImpuesto.Controls.Add(this.dataGridView1);
+            this.TPImpuesto.Controls.Add(this.label15);
+            this.TPImpuesto.Controls.Add(this.TBBuscar_Impuesto);
+            this.TPImpuesto.Controls.Add(this.label17);
+            this.TPImpuesto.Location = new System.Drawing.Point(4, 24);
+            this.TPImpuesto.Name = "TPImpuesto";
+            this.TPImpuesto.Padding = new System.Windows.Forms.Padding(3);
+            this.TPImpuesto.Size = new System.Drawing.Size(358, 311);
+            this.TPImpuesto.TabIndex = 1;
+            this.TPImpuesto.Text = "Impuesto";
+            this.TPImpuesto.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminar_Impuesto
+            // 
+            this.btnEliminar_Impuesto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar_Impuesto.FlatAppearance.BorderSize = 0;
+            this.btnEliminar_Impuesto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar_Impuesto.Image = global::CapaPresentacion.Properties.Resources.BV_Eliminar;
+            this.btnEliminar_Impuesto.Location = new System.Drawing.Point(276, 279);
+            this.btnEliminar_Impuesto.Name = "btnEliminar_Impuesto";
+            this.btnEliminar_Impuesto.Size = new System.Drawing.Size(76, 26);
+            this.btnEliminar_Impuesto.TabIndex = 8;
+            this.btnEliminar_Impuesto.UseVisualStyleBackColor = true;
+            this.btnEliminar_Impuesto.Click += new System.EventHandler(this.BtnEliminar_Impuesto_Click);
+            this.btnEliminar_Impuesto.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BtnEliminar_Impuesto_MouseDown);
+            this.btnEliminar_Impuesto.MouseLeave += new System.EventHandler(this.BtnEliminar_Impuesto_MouseLeave);
+            this.btnEliminar_Impuesto.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BtnEliminar_Impuesto_MouseMove);
             // 
             // dataGridView1
             // 
@@ -715,331 +773,103 @@
             this.label17.TabIndex = 4;
             this.label17.Text = "Impuesto";
             // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(6, 6);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(62, 15);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "Ubicacion";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(6, 33);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(48, 15);
-            this.label19.TabIndex = 2;
-            this.label19.Text = "Estante";
-            // 
-            // TBEstante
-            // 
-            this.TBEstante.Location = new System.Drawing.Point(74, 33);
-            this.TBEstante.Name = "TBEstante";
-            this.TBEstante.Size = new System.Drawing.Size(277, 21);
-            this.TBEstante.TabIndex = 3;
-            this.TBEstante.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBEstante_KeyUp);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(6, 60);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(34, 15);
-            this.label20.TabIndex = 4;
-            this.label20.Text = "Nivel";
-            // 
-            // TBNivel
-            // 
-            this.TBNivel.Location = new System.Drawing.Point(74, 60);
-            this.TBNivel.Name = "TBNivel";
-            this.TBNivel.Size = new System.Drawing.Size(277, 21);
-            this.TBNivel.TabIndex = 5;
-            this.TBNivel.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBNivel_KeyUp);
-            // 
-            // CBOrigen
-            // 
-            this.CBOrigen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CBOrigen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CBOrigen.FormattingEnabled = true;
-            this.CBOrigen.Items.AddRange(new object[] {
-            "-",
-            "Exterior",
-            "Local",
-            "Nacional"});
-            this.CBOrigen.Location = new System.Drawing.Point(74, 87);
-            this.CBOrigen.Name = "CBOrigen";
-            this.CBOrigen.Size = new System.Drawing.Size(168, 23);
-            this.CBOrigen.Sorted = true;
-            this.CBOrigen.TabIndex = 24;
-            // 
-            // TBUbicacion
-            // 
-            this.TBUbicacion.Location = new System.Drawing.Point(74, 6);
-            this.TBUbicacion.Name = "TBUbicacion";
-            this.TBUbicacion.Size = new System.Drawing.Size(277, 21);
-            this.TBUbicacion.TabIndex = 25;
-            this.TBUbicacion.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBUbicacion_KeyUp);
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(5, 87);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(44, 15);
-            this.label21.TabIndex = 26;
-            this.label21.Text = "Origen";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(5, 119);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(61, 15);
-            this.label22.TabIndex = 28;
-            this.label22.Text = "Empaque";
-            // 
-            // CBEmpaque
-            // 
-            this.CBEmpaque.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CBEmpaque.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CBEmpaque.FormattingEnabled = true;
-            this.CBEmpaque.Items.AddRange(new object[] {
-            "-",
-            "Aluminio",
-            "Icopor",
-            "Madera",
-            "Otro",
-            "Plastico"});
-            this.CBEmpaque.Location = new System.Drawing.Point(74, 116);
-            this.CBEmpaque.Name = "CBEmpaque";
-            this.CBEmpaque.Size = new System.Drawing.Size(168, 23);
-            this.CBEmpaque.Sorted = true;
-            this.CBEmpaque.TabIndex = 29;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(6, 169);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(79, 15);
-            this.label25.TabIndex = 26;
-            this.label25.Text = "Presentacion";
-            // 
-            // TBPresentacion
-            // 
-            this.TBPresentacion.Location = new System.Drawing.Point(101, 168);
-            this.TBPresentacion.Name = "TBPresentacion";
-            this.TBPresentacion.Size = new System.Drawing.Size(250, 21);
-            this.TBPresentacion.TabIndex = 27;
-            this.TBPresentacion.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBPresentacion_KeyUp);
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(3, 6);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(138, 15);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "Ultimo Valor de Compra";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(3, 88);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(103, 15);
-            this.label26.TabIndex = 1;
-            this.label26.Text = "Valor de Venta 01";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(3, 225);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(98, 15);
-            this.label27.TabIndex = 2;
-            this.label27.Text = "Unidad de Venta";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(3, 254);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(143, 15);
-            this.label28.TabIndex = 3;
-            this.label28.Text = "Valor de Venta al Publico";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(3, 196);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(105, 15);
-            this.label29.TabIndex = 4;
-            this.label29.Text = "Valor en Oferta 02";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(3, 33);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(129, 15);
-            this.label30.TabIndex = 5;
-            this.label30.Text = "Valor de Compra Final";
-            // 
-            // TBUltimovalor
-            // 
-            this.TBUltimovalor.Location = new System.Drawing.Point(152, 6);
-            this.TBUltimovalor.Name = "TBUltimovalor";
-            this.TBUltimovalor.Size = new System.Drawing.Size(203, 21);
-            this.TBUltimovalor.TabIndex = 6;
-            this.TBUltimovalor.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBUltimovalor_KeyUp);
-            // 
-            // TBValor01
-            // 
-            this.TBValor01.Location = new System.Drawing.Point(112, 88);
-            this.TBValor01.Name = "TBValor01";
-            this.TBValor01.Size = new System.Drawing.Size(243, 21);
-            this.TBValor01.TabIndex = 7;
-            this.TBValor01.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBValor01_KeyUp);
-            // 
-            // TBValor02
-            // 
-            this.TBValor02.Location = new System.Drawing.Point(112, 115);
-            this.TBValor02.Name = "TBValor02";
-            this.TBValor02.Size = new System.Drawing.Size(243, 21);
-            this.TBValor02.TabIndex = 8;
-            this.TBValor02.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBValor02_KeyUp);
-            // 
-            // TBValor03
-            // 
-            this.TBValor03.Location = new System.Drawing.Point(112, 142);
-            this.TBValor03.Name = "TBValor03";
-            this.TBValor03.Size = new System.Drawing.Size(243, 21);
-            this.TBValor03.TabIndex = 9;
-            this.TBValor03.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBValor03_KeyUp);
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(3, 115);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(103, 15);
-            this.label31.TabIndex = 10;
-            this.label31.Text = "Valor de Venta 02";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(3, 142);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(103, 15);
-            this.label32.TabIndex = 11;
-            this.label32.Text = "Valor de Venta 03";
-            // 
-            // CBUnidad
-            // 
-            this.CBUnidad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CBUnidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CBUnidad.FormattingEnabled = true;
-            this.CBUnidad.Items.AddRange(new object[] {
-            "-",
-            "GRA",
-            "KG",
-            "LIB",
-            "TON",
-            "UNI"});
-            this.CBUnidad.Location = new System.Drawing.Point(112, 225);
-            this.CBUnidad.Name = "CBUnidad";
-            this.CBUnidad.Size = new System.Drawing.Size(243, 23);
-            this.CBUnidad.Sorted = true;
-            this.CBUnidad.TabIndex = 12;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(3, 61);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(92, 15);
-            this.label33.TabIndex = 13;
-            this.label33.Text = "Valor Promedio";
-            // 
-            // TBValorPromedio
-            // 
-            this.TBValorPromedio.Location = new System.Drawing.Point(112, 61);
-            this.TBValorPromedio.Name = "TBValorPromedio";
-            this.TBValorPromedio.Size = new System.Drawing.Size(243, 21);
-            this.TBValorPromedio.TabIndex = 14;
-            this.TBValorPromedio.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBValorPromedio_KeyUp);
-            // 
-            // CBVentaPublico
-            // 
-            this.CBVentaPublico.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CBVentaPublico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CBVentaPublico.FormattingEnabled = true;
-            this.CBVentaPublico.Items.AddRange(new object[] {
-            "-",
-            "Valor 01",
-            "Valor 02",
-            "Valor 03",
-            "Oferta 01",
-            "Oferta 02"});
-            this.CBVentaPublico.Location = new System.Drawing.Point(152, 254);
-            this.CBVentaPublico.Name = "CBVentaPublico";
-            this.CBVentaPublico.Size = new System.Drawing.Size(203, 23);
-            this.CBVentaPublico.TabIndex = 15;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(3, 169);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(105, 15);
-            this.label34.TabIndex = 16;
-            this.label34.Text = "Valor en Oferta 01";
-            // 
-            // TBOferta01
-            // 
-            this.TBOferta01.Location = new System.Drawing.Point(112, 169);
-            this.TBOferta01.Name = "TBOferta01";
-            this.TBOferta01.Size = new System.Drawing.Size(243, 21);
-            this.TBOferta01.TabIndex = 17;
-            this.TBOferta01.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBOferta01_KeyUp);
-            // 
-            // TBOferta02
-            // 
-            this.TBOferta02.Location = new System.Drawing.Point(112, 196);
-            this.TBOferta02.Name = "TBOferta02";
-            this.TBOferta02.Size = new System.Drawing.Size(243, 21);
-            this.TBOferta02.TabIndex = 18;
-            this.TBOferta02.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBOferta02_KeyUp);
-            // 
-            // TBValorFinal
-            // 
-            this.TBValorFinal.Location = new System.Drawing.Point(152, 33);
-            this.TBValorFinal.Name = "TBValorFinal";
-            this.TBValorFinal.Size = new System.Drawing.Size(203, 21);
-            this.TBValorFinal.TabIndex = 19;
-            this.TBValorFinal.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBValorFinal_KeyUp);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(5, 145);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(140, 15);
-            this.label11.TabIndex = 30;
-            this.label11.Text = "Comision por Empleado";
-            // 
-            // TBComision
-            // 
-            this.TBComision.Location = new System.Drawing.Point(151, 145);
-            this.TBComision.Name = "TBComision";
-            this.TBComision.Size = new System.Drawing.Size(91, 21);
-            this.TBComision.TabIndex = 31;
-            this.TBComision.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBComision_KeyUp);
+            // TPProveedor
+            // 
+            this.TPProveedor.Controls.Add(this.btnEliminar_Proveedor);
+            this.TPProveedor.Controls.Add(this.DGProveedor);
+            this.TPProveedor.Controls.Add(this.lblTotalProveedor);
+            this.TPProveedor.Controls.Add(this.TBBuscar_Proveedor);
+            this.TPProveedor.Controls.Add(this.label16);
+            this.TPProveedor.Location = new System.Drawing.Point(4, 24);
+            this.TPProveedor.Name = "TPProveedor";
+            this.TPProveedor.Padding = new System.Windows.Forms.Padding(3);
+            this.TPProveedor.Size = new System.Drawing.Size(358, 311);
+            this.TPProveedor.TabIndex = 2;
+            this.TPProveedor.Text = "Proveedor";
+            this.TPProveedor.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminar_Proveedor
+            // 
+            this.btnEliminar_Proveedor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar_Proveedor.FlatAppearance.BorderSize = 0;
+            this.btnEliminar_Proveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar_Proveedor.Image = global::CapaPresentacion.Properties.Resources.BV_Eliminar;
+            this.btnEliminar_Proveedor.Location = new System.Drawing.Point(276, 279);
+            this.btnEliminar_Proveedor.Name = "btnEliminar_Proveedor";
+            this.btnEliminar_Proveedor.Size = new System.Drawing.Size(76, 26);
+            this.btnEliminar_Proveedor.TabIndex = 5;
+            this.btnEliminar_Proveedor.UseVisualStyleBackColor = true;
+            this.btnEliminar_Proveedor.Click += new System.EventHandler(this.BtnEliminar_Proveedor_Click);
+            this.btnEliminar_Proveedor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BtnEliminar_Proveedor_MouseDown);
+            this.btnEliminar_Proveedor.MouseLeave += new System.EventHandler(this.BtnEliminar_Proveedor_MouseLeave);
+            this.btnEliminar_Proveedor.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BtnEliminar_Proveedor_MouseMove);
+            // 
+            // DGProveedor
+            // 
+            this.DGProveedor.AllowUserToAddRows = false;
+            this.DGProveedor.AllowUserToDeleteRows = false;
+            this.DGProveedor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DGProveedor.BackgroundColor = System.Drawing.Color.White;
+            this.DGProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGProveedor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DGProveedor.Location = new System.Drawing.Point(6, 33);
+            this.DGProveedor.Name = "DGProveedor";
+            this.DGProveedor.ReadOnly = true;
+            this.DGProveedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGProveedor.Size = new System.Drawing.Size(346, 240);
+            this.DGProveedor.TabIndex = 3;
+            // 
+            // lblTotalProveedor
+            // 
+            this.lblTotalProveedor.AutoSize = true;
+            this.lblTotalProveedor.Location = new System.Drawing.Point(6, 279);
+            this.lblTotalProveedor.Name = "lblTotalProveedor";
+            this.lblTotalProveedor.Size = new System.Drawing.Size(31, 15);
+            this.lblTotalProveedor.TabIndex = 2;
+            this.lblTotalProveedor.Text = "------";
+            // 
+            // TBBuscar_Proveedor
+            // 
+            this.TBBuscar_Proveedor.Location = new System.Drawing.Point(75, 6);
+            this.TBBuscar_Proveedor.Name = "TBBuscar_Proveedor";
+            this.TBBuscar_Proveedor.Size = new System.Drawing.Size(277, 21);
+            this.TBBuscar_Proveedor.TabIndex = 1;
+            this.TBBuscar_Proveedor.TextChanged += new System.EventHandler(this.TBBuscar_Proveedor_TextChanged);
+            this.TBBuscar_Proveedor.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBBuscar_Proveedor_KeyUp);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(6, 6);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(63, 15);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Proveedor";
+            // 
+            // TPOtrosDatos
+            // 
+            this.TPOtrosDatos.Controls.Add(this.CBBodega);
+            this.TPOtrosDatos.Controls.Add(this.label24);
+            this.TPOtrosDatos.Controls.Add(this.groupBox3);
+            this.TPOtrosDatos.Controls.Add(this.TBComision);
+            this.TPOtrosDatos.Controls.Add(this.label11);
+            this.TPOtrosDatos.Controls.Add(this.CBEmpaque);
+            this.TPOtrosDatos.Controls.Add(this.label22);
+            this.TPOtrosDatos.Controls.Add(this.label21);
+            this.TPOtrosDatos.Controls.Add(this.TBUbicacion);
+            this.TPOtrosDatos.Controls.Add(this.CBOrigen);
+            this.TPOtrosDatos.Controls.Add(this.TBNivel);
+            this.TPOtrosDatos.Controls.Add(this.label20);
+            this.TPOtrosDatos.Controls.Add(this.TBEstante);
+            this.TPOtrosDatos.Controls.Add(this.label19);
+            this.TPOtrosDatos.Controls.Add(this.label18);
+            this.TPOtrosDatos.Location = new System.Drawing.Point(4, 24);
+            this.TPOtrosDatos.Name = "TPOtrosDatos";
+            this.TPOtrosDatos.Padding = new System.Windows.Forms.Padding(3);
+            this.TPOtrosDatos.Size = new System.Drawing.Size(358, 311);
+            this.TPOtrosDatos.TabIndex = 4;
+            this.TPOtrosDatos.Text = "Otros Datos - Imagen";
+            this.TPOtrosDatos.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -1062,31 +892,254 @@
             this.PB_Imagen.TabStop = false;
             this.PB_Imagen.Click += new System.EventHandler(this.PB_Imagen_Click);
             // 
-            // btnEliminar_Impuesto
+            // TBComision
             // 
-            this.btnEliminar_Impuesto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminar_Impuesto.FlatAppearance.BorderSize = 0;
-            this.btnEliminar_Impuesto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar_Impuesto.Image = global::CapaPresentacion.Properties.Resources.BV_Eliminar;
-            this.btnEliminar_Impuesto.Location = new System.Drawing.Point(276, 279);
-            this.btnEliminar_Impuesto.Name = "btnEliminar_Impuesto";
-            this.btnEliminar_Impuesto.Size = new System.Drawing.Size(76, 26);
-            this.btnEliminar_Impuesto.TabIndex = 8;
-            this.btnEliminar_Impuesto.UseVisualStyleBackColor = true;
-            this.btnEliminar_Impuesto.Click += new System.EventHandler(this.BtnEliminar_Impuesto_Click);
+            this.TBComision.Location = new System.Drawing.Point(151, 145);
+            this.TBComision.Name = "TBComision";
+            this.TBComision.Size = new System.Drawing.Size(91, 21);
+            this.TBComision.TabIndex = 31;
+            this.TBComision.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBComision_KeyUp);
             // 
-            // btnEliminar_Proveedor
+            // label11
             // 
-            this.btnEliminar_Proveedor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminar_Proveedor.FlatAppearance.BorderSize = 0;
-            this.btnEliminar_Proveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar_Proveedor.Image = global::CapaPresentacion.Properties.Resources.BV_Eliminar;
-            this.btnEliminar_Proveedor.Location = new System.Drawing.Point(276, 279);
-            this.btnEliminar_Proveedor.Name = "btnEliminar_Proveedor";
-            this.btnEliminar_Proveedor.Size = new System.Drawing.Size(76, 26);
-            this.btnEliminar_Proveedor.TabIndex = 5;
-            this.btnEliminar_Proveedor.UseVisualStyleBackColor = true;
-            this.btnEliminar_Proveedor.Click += new System.EventHandler(this.BtnEliminar_Proveedor_Click);
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(5, 145);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(140, 15);
+            this.label11.TabIndex = 30;
+            this.label11.Text = "Comision por Empleado";
+            // 
+            // CBEmpaque
+            // 
+            this.CBEmpaque.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CBEmpaque.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBEmpaque.FormattingEnabled = true;
+            this.CBEmpaque.Items.AddRange(new object[] {
+            "-",
+            "Aluminio",
+            "Icopor",
+            "Madera",
+            "Otro",
+            "Plastico"});
+            this.CBEmpaque.Location = new System.Drawing.Point(74, 116);
+            this.CBEmpaque.Name = "CBEmpaque";
+            this.CBEmpaque.Size = new System.Drawing.Size(168, 23);
+            this.CBEmpaque.Sorted = true;
+            this.CBEmpaque.TabIndex = 29;
+            this.CBEmpaque.SelectionChangeCommitted += new System.EventHandler(this.CBEmpaque_SelectionChangeCommitted);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(5, 119);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(61, 15);
+            this.label22.TabIndex = 28;
+            this.label22.Text = "Empaque";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(5, 87);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(44, 15);
+            this.label21.TabIndex = 26;
+            this.label21.Text = "Origen";
+            // 
+            // TBUbicacion
+            // 
+            this.TBUbicacion.Location = new System.Drawing.Point(74, 33);
+            this.TBUbicacion.Name = "TBUbicacion";
+            this.TBUbicacion.Size = new System.Drawing.Size(277, 21);
+            this.TBUbicacion.TabIndex = 25;
+            this.TBUbicacion.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBUbicacion_KeyUp);
+            // 
+            // CBOrigen
+            // 
+            this.CBOrigen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CBOrigen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBOrigen.FormattingEnabled = true;
+            this.CBOrigen.Items.AddRange(new object[] {
+            "-",
+            "Exterior",
+            "Local",
+            "Nacional"});
+            this.CBOrigen.Location = new System.Drawing.Point(74, 87);
+            this.CBOrigen.Name = "CBOrigen";
+            this.CBOrigen.Size = new System.Drawing.Size(168, 23);
+            this.CBOrigen.Sorted = true;
+            this.CBOrigen.TabIndex = 24;
+            this.CBOrigen.SelectionChangeCommitted += new System.EventHandler(this.CBOrigen_SelectionChangeCommitted);
+            // 
+            // TBNivel
+            // 
+            this.TBNivel.Location = new System.Drawing.Point(251, 60);
+            this.TBNivel.Name = "TBNivel";
+            this.TBNivel.Size = new System.Drawing.Size(100, 21);
+            this.TBNivel.TabIndex = 5;
+            this.TBNivel.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBNivel_KeyUp);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(193, 63);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(34, 15);
+            this.label20.TabIndex = 4;
+            this.label20.Text = "Nivel";
+            // 
+            // TBEstante
+            // 
+            this.TBEstante.Location = new System.Drawing.Point(74, 60);
+            this.TBEstante.Name = "TBEstante";
+            this.TBEstante.Size = new System.Drawing.Size(100, 21);
+            this.TBEstante.TabIndex = 3;
+            this.TBEstante.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBEstante_KeyUp);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(6, 60);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(48, 15);
+            this.label19.TabIndex = 2;
+            this.label19.Text = "Estante";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(6, 33);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(62, 15);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Ubicacion";
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Image = global::CapaPresentacion.Properties.Resources.BV_Guardar;
+            this.btnGuardar.Location = new System.Drawing.Point(10, 365);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(76, 26);
+            this.btnGuardar.TabIndex = 5;
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
+            this.btnGuardar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BtnGuardar_MouseDown);
+            this.btnGuardar.MouseLeave += new System.EventHandler(this.BtnGuardar_MouseLeave);
+            this.btnGuardar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BtnGuardar_MouseMove);
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnImprimir.FlatAppearance.BorderSize = 0;
+            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImprimir.Image = global::CapaPresentacion.Properties.Resources.BV_Imprimir;
+            this.btnImprimir.Location = new System.Drawing.Point(430, 365);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(76, 26);
+            this.btnImprimir.TabIndex = 6;
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.BtnImprimir_Click);
+            this.btnImprimir.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BtnImprimir_MouseDown);
+            this.btnImprimir.MouseLeave += new System.EventHandler(this.BtnImprimir_MouseLeave);
+            this.btnImprimir.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BtnImprimir_MouseMove);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Image = global::CapaPresentacion.Properties.Resources.BV_Eliminar;
+            this.btnEliminar.Location = new System.Drawing.Point(348, 365);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(76, 26);
+            this.btnEliminar.TabIndex = 4;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
+            this.btnEliminar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BtnEliminar_MouseDown);
+            this.btnEliminar.MouseLeave += new System.EventHandler(this.BtnEliminar_MouseLeave);
+            this.btnEliminar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BtnEliminar_MouseMove);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.lblTotal);
+            this.groupBox2.Controls.Add(this.DGResultados);
+            this.groupBox2.Controls.Add(this.TBBuscar);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.btnEliminar);
+            this.groupBox2.Controls.Add(this.btnImprimir);
+            this.groupBox2.Location = new System.Drawing.Point(396, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(513, 398);
+            this.groupBox2.TabIndex = 7;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Leal Enterprise - Consulta de Proveedores ";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(6, 365);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(31, 15);
+            this.lblTotal.TabIndex = 10;
+            this.lblTotal.Text = "------";
+            // 
+            // DGResultados
+            // 
+            this.DGResultados.AllowUserToAddRows = false;
+            this.DGResultados.AllowUserToDeleteRows = false;
+            this.DGResultados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DGResultados.BackgroundColor = System.Drawing.Color.White;
+            this.DGResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGResultados.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DGResultados.Location = new System.Drawing.Point(6, 47);
+            this.DGResultados.Name = "DGResultados";
+            this.DGResultados.ReadOnly = true;
+            this.DGResultados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGResultados.Size = new System.Drawing.Size(500, 312);
+            this.DGResultados.TabIndex = 9;
+            this.DGResultados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGResultados_CellDoubleClick);
+            this.DGResultados.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DGResultados_KeyPress);
+            // 
+            // TBBuscar
+            // 
+            this.TBBuscar.Location = new System.Drawing.Point(140, 20);
+            this.TBBuscar.Name = "TBBuscar";
+            this.TBBuscar.Size = new System.Drawing.Size(366, 21);
+            this.TBBuscar.TabIndex = 8;
+            this.TBBuscar.TextChanged += new System.EventHandler(this.TBBuscar_TextChanged);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 20);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(128, 15);
+            this.label14.TabIndex = 7;
+            this.label14.Text = "Proveedor a Consultar";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(6, 6);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(50, 15);
+            this.label24.TabIndex = 34;
+            this.label24.Text = "Bodega";
+            // 
+            // CBBodega
+            // 
+            this.CBBodega.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CBBodega.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBBodega.FormattingEnabled = true;
+            this.CBBodega.Location = new System.Drawing.Point(74, 6);
+            this.CBBodega.Name = "CBBodega";
+            this.CBBodega.Size = new System.Drawing.Size(277, 23);
+            this.CBBodega.Sorted = true;
+            this.CBBodega.TabIndex = 35;
+            this.CBBodega.SelectionChangeCommitted += new System.EventHandler(this.CBBodega_SelectionChangeCommitted);
             // 
             // frmProductos_DatosBasicos
             // 
@@ -1107,21 +1160,21 @@
             this.TCPanelPrincipal.ResumeLayout(false);
             this.TPDatosBasicos.ResumeLayout(false);
             this.TPDatosBasicos.PerformLayout();
-            this.TPImpuesto.ResumeLayout(false);
-            this.TPImpuesto.PerformLayout();
-            this.TPProveedor.ResumeLayout(false);
-            this.TPProveedor.PerformLayout();
             this.TPCostosyprecios.ResumeLayout(false);
             this.TPCostosyprecios.PerformLayout();
+            this.TPImpuesto.ResumeLayout(false);
+            this.TPImpuesto.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.TPProveedor.ResumeLayout(false);
+            this.TPProveedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGProveedor)).EndInit();
             this.TPOtrosDatos.ResumeLayout(false);
             this.TPOtrosDatos.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Imagen)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGResultados)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DGProveedor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Imagen)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1215,5 +1268,7 @@
         private System.Windows.Forms.PictureBox PB_Imagen;
         private System.Windows.Forms.Button btnEliminar_Impuesto;
         private System.Windows.Forms.Button btnEliminar_Proveedor;
+        private System.Windows.Forms.ComboBox CBBodega;
+        private System.Windows.Forms.Label label24;
     }
 }

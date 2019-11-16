@@ -64,7 +64,6 @@ namespace CapaPresentacion
         public string TotalCredito = "";
         public string Prorroga = "";
 
-
         public frmAlmacen_Proveedor()
         {
             InitializeComponent();

@@ -48,6 +48,7 @@
     <Compile Include="Conexion_Almacen_Proveedor.cs" />
     <Compile Include="Conexion_BaseDeDatos.cs" />
     <Compile Include="Conexion_Gestion_Empleados.cs" />
+    <Compile Include="Conexion_Productos_DatosBasicos.cs" />
     <Compile Include="Conexion_Sistema_Configuracion.cs" />
     <Compile Include="Conexion_Sistema_Empresa.cs" />
     <Compile Include="Conexion_Sistema_Equipos.cs" />
