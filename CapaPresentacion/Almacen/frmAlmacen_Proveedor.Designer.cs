@@ -434,7 +434,7 @@
             this.TBObservacion.Name = "TBObservacion";
             this.TBObservacion.Size = new System.Drawing.Size(250, 21);
             this.TBObservacion.TabIndex = 25;
-            this.TBObservacion.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox12_KeyUp);
+            this.TBObservacion.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBObservacion_KeyUp);
             // 
             // label30
             // 

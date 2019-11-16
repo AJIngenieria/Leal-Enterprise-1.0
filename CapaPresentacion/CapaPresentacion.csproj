@@ -244,6 +244,9 @@
     <EmbeddedResource Include="frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Productos\frmProductos_DatosBasicos.resx">
+      <DependentUpon>frmProductos_DatosBasicos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sistema\frmSistema_Equipos.resx">
       <DependentUpon>frmSistema_Equipos.cs</DependentUpon>
     </EmbeddedResource>
