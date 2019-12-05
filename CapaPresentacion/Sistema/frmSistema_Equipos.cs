@@ -43,7 +43,7 @@ namespace CapaPresentacion
             this.TBIdequipo.Visible = false;
 
             //Color para Texboxt Buscar
-            this.TBBuscar.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBBuscar.BackColor = Color.FromArgb(3, 155, 229);
 
             
         }
@@ -53,13 +53,13 @@ namespace CapaPresentacion
             //Panel - Datos Basicos
             // Los Campos de Textos se Habilitaran 
             this.TBEquipo.ReadOnly = false;
-            this.TBEquipo.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBEquipo.BackColor = Color.FromArgb(3, 155, 229);
             this.TBDiscoDuro.ReadOnly = false;
-            this.TBDiscoDuro.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBDiscoDuro.BackColor = Color.FromArgb(3, 155, 229);
             this.CBTipo.Enabled = true;
-            this.CBTipo.BackColor = Color.FromArgb(32, 178, 170);
+            this.CBTipo.BackColor = Color.FromArgb(3, 155, 229);
             this.TBMacseguridad.ReadOnly = false;
-            this.TBMacseguridad.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBMacseguridad.BackColor = Color.FromArgb(3, 155, 229);
         }
 
         private void DesHabilitar()

@@ -72,44 +72,44 @@ namespace CapaPresentacion
             this.DGResultados.Enabled = false;
 
             //Color para Texboxt Buscar
-            this.TBBuscar.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBBuscar.BackColor = Color.FromArgb(3, 155, 229);
         }
 
         private void Habilitar()
         {
             //Panel - Datos Basicos  
             this.TBBodega.ReadOnly = false;
-            this.TBBodega.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBBodega.BackColor = Color.FromArgb(3, 155, 229);
             this.TBTipo.ReadOnly = false;
-            this.TBTipo.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBTipo.BackColor = Color.FromArgb(3, 155, 229);
             this.CBSucurzal.Enabled = true;
-            this.CBSucurzal.BackColor = Color.FromArgb(32, 178, 170);
+            this.CBSucurzal.BackColor = Color.FromArgb(3, 155, 229);
             this.TBCiudad.ReadOnly = false;
-            this.TBCiudad.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBCiudad.BackColor = Color.FromArgb(3, 155, 229);
             this.TBTelefono.ReadOnly = false;
-            this.TBTelefono.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBTelefono.BackColor = Color.FromArgb(3, 155, 229);
             this.TBMovil.ReadOnly = false;
-            this.TBMovil.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBMovil.BackColor = Color.FromArgb(3, 155, 229);
             this.TBResponsable.ReadOnly = false;
-            this.TBResponsable.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBResponsable.BackColor = Color.FromArgb(3, 155, 229);
             this.TBCorreo.ReadOnly = false;
-            this.TBCorreo.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBCorreo.BackColor = Color.FromArgb(3, 155, 229);
 
             //Panel - Otros Datos
             this.TBDireccion01.ReadOnly = false;
-            this.TBDireccion01.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBDireccion01.BackColor = Color.FromArgb(3, 155, 229);
             this.TBDireccion02.ReadOnly = false;
-            this.TBDireccion02.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBDireccion02.BackColor = Color.FromArgb(3, 155, 229);
             this.TBMercancia.ReadOnly = false;
-            this.TBMercancia.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBMercancia.BackColor = Color.FromArgb(3, 155, 229);
             this.TBNumeroCelular.ReadOnly = false;
-            this.TBNumeroCelular.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBNumeroCelular.BackColor = Color.FromArgb(3, 155, 229);
             this.TBNumeroImpresora.ReadOnly = false;
-            this.TBNumeroImpresora.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBNumeroImpresora.BackColor = Color.FromArgb(3, 155, 229);
             this.TBNumeroPC.ReadOnly = false;
-            this.TBNumeroPC.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBNumeroPC.BackColor = Color.FromArgb(3, 155, 229);
             this.TBObservacion.ReadOnly = false;
-            this.TBObservacion.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBObservacion.BackColor = Color.FromArgb(3, 155, 229);
         }
 
         private void Limpiar()

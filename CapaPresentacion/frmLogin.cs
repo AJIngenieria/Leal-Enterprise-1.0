@@ -26,12 +26,8 @@ namespace CapaPresentacion
         private void FrmLogin_Load(object sender, EventArgs e)
         {
             this.TBUsuario.Focus();
-
-            this.TBUsuario.ReadOnly = false;
-            this.TBUsuario.BackColor = Color.FromArgb(32, 178, 170);
-            this.TBContraseña.ReadOnly = false;
-            this.TBContraseña.BackColor = Color.FromArgb(32, 178, 170);
-
+            this.TBContraseña.BackColor = Color.FromArgb(3, 155, 229);
+            
             //Informe de Sesion
             this.TBInicioDeSesion.Enabled = false;
             this.TBInicioDeSesion.BackColor = Color.FromArgb(253, 254, 254);
@@ -68,6 +64,7 @@ namespace CapaPresentacion
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
                 this.TBContraseña.Focus();
+                //this.TBContraseña.BackColor = Color.FromArgb(3, 155, 229);
             }
         }
 
@@ -130,6 +127,26 @@ namespace CapaPresentacion
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
+        }
+
+        private void TBUsuario_Enter(object sender, EventArgs e)
+        {
+            TBUsuario.BackColor = Color.Azure;
+        }
+
+        private void TBUsuario_Leave(object sender, EventArgs e)
+        {
+            this.TBUsuario.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBContraseña_Enter(object sender, EventArgs e)
+        {
+            TBContraseña.BackColor = Color.Azure;
+        }
+
+        private void TBContraseña_Leave(object sender, EventArgs e)
+        {
+            TBContraseña.BackColor = Color.FromArgb(3, 155, 229);
         }
     }
 }

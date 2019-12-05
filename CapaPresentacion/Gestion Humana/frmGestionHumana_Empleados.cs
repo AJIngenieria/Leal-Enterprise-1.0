@@ -61,7 +61,7 @@ namespace CapaPresentacion
             this.TBIdempleado.Visible = false;
 
             //Color para Texboxt Buscar
-            this.TBBuscar.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBBuscar.BackColor = Color.FromArgb(3, 155, 229);
         }
 
         private void Habilitar()
@@ -69,17 +69,17 @@ namespace CapaPresentacion
             //Panel - Datos Basicos
             // Los Campos de Textos se Habilitaran 
             this.TBEmpleado.ReadOnly = false;
-            this.TBEmpleado.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBEmpleado.BackColor = Color.FromArgb(3, 155, 229);
             this.TBDocumento.ReadOnly = false;
-            this.TBDocumento.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBDocumento.BackColor = Color.FromArgb(3, 155, 229);
             this.TBTelefono.ReadOnly = false;
-            this.TBTelefono.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBTelefono.BackColor = Color.FromArgb(3, 155, 229);
             this.TBMovil.ReadOnly = false;
-            this.TBMovil.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBMovil.BackColor = Color.FromArgb(3, 155, 229);
             this.TBEmail.ReadOnly = false;
-            this.TBEmail.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBEmail.BackColor = Color.FromArgb(3, 155, 229);
             this.TBDireccion.ReadOnly = false;
-            this.TBDireccion.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBDireccion.BackColor = Color.FromArgb(3, 155, 229);
 
         }
 

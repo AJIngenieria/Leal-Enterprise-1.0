@@ -17,6 +17,7 @@ namespace CapaPresentacion
         // Variable con la cual se define si el procecimiento 
         // A realizar es Editar, Guardar, Buscar,Eliminar
         private bool Digitar = true;
+        private string Campo = "Campo Obligatorio - Leal Enterprise";
 
         //Variable para Metodo SQL Guardar, Eliminar, Editar, Consultar
         public string Guardar = "";
@@ -77,7 +78,8 @@ namespace CapaPresentacion
             this.DGResultados.Enabled = false;
 
             //Color para Texboxt Buscar
-            this.TBBuscar.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBBuscar.BackColor = Color.FromArgb(3, 155, 229);
+
         }
 
         private void Habilitar()
@@ -86,59 +88,61 @@ namespace CapaPresentacion
             //this.TBCodigo.Enabled = false;
 
             this.TBNombre.ReadOnly = false;
-            this.TBNombre.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBNombre.BackColor = Color.FromArgb(3, 155, 229);
+            this.TBNombre.Text = Campo;
             this.TBDocumento.ReadOnly = false;
-            this.TBDocumento.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBDocumento.BackColor = Color.FromArgb(3, 155, 229);
+            this.TBDocumento.Text = Campo;
             this.TBCiudad.ReadOnly = false;
-            this.TBCiudad.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBCiudad.BackColor = Color.FromArgb(3, 155, 229);
             this.TBTelefono.ReadOnly = false;
-            this.TBTelefono.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBTelefono.BackColor = Color.FromArgb(3, 155, 229);
             this.TBMovil.ReadOnly = false;
-            this.TBMovil.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBMovil.BackColor = Color.FromArgb(3, 155, 229);
             this.TBCorreo.ReadOnly = false;
-            this.TBCorreo.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBCorreo.BackColor = Color.FromArgb(3, 155, 229);
             this.TBDepartamento.ReadOnly = false;
-            this.TBDepartamento.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBDepartamento.BackColor = Color.FromArgb(3, 155, 229);
 
             this.TBPais.ReadOnly = false;
-            this.TBPais.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBPais.BackColor = Color.FromArgb(3, 155, 229);
 
 
             //Panel - Otros Datos
             this.TBPais_01.ReadOnly = false;
-            this.TBPais_01.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBPais_01.BackColor = Color.FromArgb(3, 155, 229);
             this.TBCiudad_01.ReadOnly = false;
-            this.TBCiudad_01.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBCiudad_01.BackColor = Color.FromArgb(3, 155, 229);
             this.TBDireccionPrincipal.ReadOnly = false;
-            this.TBDireccionPrincipal.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBDireccionPrincipal.BackColor = Color.FromArgb(3, 155, 229);
             this.TBDireccion01.ReadOnly = false;
-            this.TBDireccion01.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBDireccion01.BackColor = Color.FromArgb(3, 155, 229);
             this.TBDireccion02.ReadOnly = false;
-            this.TBDireccion02.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBDireccion02.BackColor = Color.FromArgb(3, 155, 229);
             this.TBReceptor.ReadOnly = false;
-            this.TBReceptor.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBReceptor.BackColor = Color.FromArgb(3, 155, 229);
             this.TBDescripcion.ReadOnly = false;
-            this.TBDescripcion.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBDescripcion.BackColor = Color.FromArgb(3, 155, 229);
 
             //
             this.TBBancoPrincipal.ReadOnly = false;
-            this.TBBancoPrincipal.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBBancoPrincipal.BackColor = Color.FromArgb(3, 155, 229);
             this.TBCuenta01.ReadOnly = false;
-            this.TBCuenta01.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBCuenta01.BackColor = Color.FromArgb(3, 155, 229);
             this.TBCuenta02.ReadOnly = false;
-            this.TBCuenta02.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBCuenta02.BackColor = Color.FromArgb(3, 155, 229);
             this.TBBancoAuxiliar.ReadOnly = false;
-            this.TBBancoAuxiliar.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBBancoAuxiliar.BackColor = Color.FromArgb(3, 155, 229);
             this.TBCreditoMinimo.ReadOnly = false;
-            this.TBCreditoMinimo.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBCreditoMinimo.BackColor = Color.FromArgb(3, 155, 229);
             this.TBCreditoMaximo.ReadOnly = false;
-            this.TBCreditoMaximo.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBCreditoMaximo.BackColor = Color.FromArgb(3, 155, 229);
             this.TBUltimoCredito.ReadOnly = false;
-            this.TBUltimoCredito.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBUltimoCredito.BackColor = Color.FromArgb(3, 155, 229);
             this.TBCreditoMora.ReadOnly = false;
-            this.TBCreditoMora.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBCreditoMora.BackColor = Color.FromArgb(3, 155, 229);
             this.TBCreditoTotal.ReadOnly = false;
-            this.TBCreditoTotal.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBCreditoTotal.BackColor = Color.FromArgb(3, 155, 229);
         }
 
         private void Limpiar()
@@ -192,20 +196,6 @@ namespace CapaPresentacion
             }
         }
 
-        //private void Combobox_Sucurzal()
-        //{
-        //    try
-        //    {
-        //        this.TBDepartamento.DataSource = fSistema_Sucurzal.Mostrar();
-        //        this.TBDepartamento.ValueMember = "Cliente";
-        //        this.TBDepartamento.DisplayMember = "Nombre";
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message + ex.StackTrace);
-        //    }
-        //}
-
         private void Guardar_SQL()
         {
             try
@@ -214,25 +204,21 @@ namespace CapaPresentacion
 
                 // <<<<<<------ Panel Datos Basicos ------>>>>>
 
-                if (this.TBNombre.Text == string.Empty)
+                if (this.TBNombre.Text == Campo)
                 {
                     MensajeError("Debe ingresar el nombre del cliente a registrar");
-                    TBNombre.BackColor = Color.FromArgb(250, 235, 215);
                 }
-                else if (this.TBDocumento.Text == string.Empty)
+                else if (this.TBDocumento.Text == Campo)
                 {
                     MensajeError("Por favor el numero de documento del cliente a registrar");
-                    TBDocumento.BackColor = Color.FromArgb(250, 235, 215);
                 }
-                else if (this.TBCiudad.Text == string.Empty)
+                else if (this.TBCiudad.Text == Campo)
                 {
                     MensajeError("Por favor ingrese una Ciudad");
-                    TBCiudad.BackColor = Color.FromArgb(250, 235, 215);
                 }
-                else if (this.TBPais.Text == string.Empty)
+                else if (this.TBPais.Text == Campo)
                 {
                     MensajeError("Por favor ingrese un Pais");
-                    TBPais.BackColor = Color.FromArgb(250, 235, 215);
                 }
 
                 else
@@ -1140,7 +1126,7 @@ namespace CapaPresentacion
                 {
                     //Al precionar la tecla Enter se realiza Focus al Texboxt Siguiente
 
-                    this.TBNombre.Select();
+                    this.TBNombre.Focus();
                 }
 
                 else if (Convert.ToInt32(e.KeyData) == Convert.ToInt32(Keys.Control) + Convert.ToInt32(Keys.Tab))
@@ -2450,5 +2436,120 @@ namespace CapaPresentacion
             this.btnImprimir.Image = Properties.Resources.BR_Imprimir;
         }
 
+        private void TBNombre_Enter(object sender, EventArgs e)
+        {
+            if (TBNombre.Text == Campo)
+            {
+                this.TBNombre.BackColor = Color.Azure;
+                this.TBNombre.ForeColor = Color.FromArgb(0, 0, 0);
+                this.TBNombre.Clear();
+            }
+        }
+
+        private void TBDocumento_Enter(object sender, EventArgs e)
+        {
+            if (TBDocumento.Text == Campo)
+            {
+                this.TBDocumento.BackColor = Color.Azure;
+                this.TBDocumento.ForeColor = Color.FromArgb(0, 0, 0);
+                this.TBDocumento.Clear();
+            }
+        }
+
+        private void TBTelefono_Enter(object sender, EventArgs e)
+        {
+            this.TBTelefono.BackColor = Color.Azure;
+        }
+
+        private void TBMovil_Enter(object sender, EventArgs e)
+        {
+            this.TBMovil.BackColor = Color.Azure;
+        }
+
+        private void TBCorreo_Enter(object sender, EventArgs e)
+        {
+            this.TBCorreo.BackColor = Color.Azure;
+        }
+
+        private void TBPais_Enter(object sender, EventArgs e)
+        {
+            this.TBPais.BackColor = Color.Azure;
+        }
+
+        private void TBCiudad_Enter(object sender, EventArgs e)
+        {
+            this.TBCiudad.BackColor = Color.Azure;
+        }
+
+        private void TBDepartamento_Enter(object sender, EventArgs e)
+        {
+            this.TBDepartamento.BackColor = Color.Azure;
+        }
+
+        private void TBNombre_Leave(object sender, EventArgs e)
+        {
+            this.TBNombre.BackColor = Color.FromArgb(3, 155, 229);
+
+            //Si el campo de texto esta con su valor por defecto "Vacio"
+            //Se realiza la primera validacion de lo contrario "Si esta lleno o digitador"
+            //Se realiza toma estos datos para digitar en la Base de Datos
+            if (TBNombre.Text == Campo)
+            {
+                this.TBNombre.ForeColor = Color.FromArgb(255, 255, 255);
+            }
+            else if (TBNombre.Text == string.Empty)
+            {
+                this.TBNombre.Text = Campo;
+                this.TBNombre.ForeColor = Color.FromArgb(255, 255, 255);
+            }
+        }
+
+        private void TBDocumento_Leave(object sender, EventArgs e)
+        {
+            this.TBDocumento.BackColor = Color.FromArgb(3, 155, 229);
+
+            //Si el campo de texto esta con su valor por defecto "Vacio"
+            //Se realiza la primera validacion de lo contrario "Si esta lleno o digitador"
+            //Se realiza toma estos datos para digitar en la Base de Datos
+            if (TBDocumento.Text == Campo)
+            {
+                this.TBDocumento.ForeColor = Color.FromArgb(255, 255, 255);
+            }
+            else if (TBDocumento.Text == string.Empty)
+            {
+                this.TBDocumento.Text = Campo;
+                this.TBDocumento.ForeColor = Color.FromArgb(255, 255, 255);
+            }
+        }
+
+        private void TBTelefono_Leave(object sender, EventArgs e)
+        {
+            this.TBTelefono.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBMovil_Leave(object sender, EventArgs e)
+        {
+            this.TBMovil.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBCorreo_Leave(object sender, EventArgs e)
+        {
+            this.TBCorreo.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBPais_Leave(object sender, EventArgs e)
+        {
+            this.TBPais.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBCiudad_Leave(object sender, EventArgs e)
+        {
+            this.TBCiudad.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBDepartamento_Leave(object sender, EventArgs e)
+        {
+            this.TBDepartamento.BackColor = Color.FromArgb(3, 155, 229);
+        }
     }
 }

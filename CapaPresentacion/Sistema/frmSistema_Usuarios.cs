@@ -56,7 +56,7 @@ namespace CapaPresentacion
             this.btnExaminar.Enabled = false;
 
             //Color para Texboxt Buscar
-            this.TBBuscar.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBBuscar.BackColor = Color.FromArgb(3, 155, 229);
 
             //Ocultacion de Textbox
             this.TBIdempleado.Visible = false;
@@ -66,35 +66,35 @@ namespace CapaPresentacion
         {
             //Panel - Datos Basicos  
             this.TBUsuario.ReadOnly = false;
-            this.TBUsuario.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBUsuario.BackColor = Color.FromArgb(3, 155, 229);
             this.TBContraseña.ReadOnly = false;
-            this.TBContraseña.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBContraseña.BackColor = Color.FromArgb(3, 155, 229);
             this.TBDescripcion.ReadOnly = false;
-            this.TBDescripcion.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBDescripcion.BackColor = Color.FromArgb(3, 155, 229);
 
             //Panel - Permisos y/o Niveles
 
             this.CBGuardar.Enabled = true;
-            this.CBGuardar.BackColor = Color.FromArgb(32, 178, 170);
+            this.CBGuardar.BackColor = Color.FromArgb(3, 155, 229);
             this.CBEditar.Enabled = true;
-            this.CBEditar.BackColor = Color.FromArgb(32, 178, 170);
+            this.CBEditar.BackColor = Color.FromArgb(3, 155, 229);
             this.CBEliminar.Enabled = true;
-            this.CBEliminar.BackColor = Color.FromArgb(32, 178, 170);
+            this.CBEliminar.BackColor = Color.FromArgb(3, 155, 229);
             this.CBConsulta.Enabled = true;
-            this.CBConsulta.BackColor = Color.FromArgb(32, 178, 170);
+            this.CBConsulta.BackColor = Color.FromArgb(3, 155, 229);
 
             this.CBAlmacen.Enabled = true;
-            this.CBAlmacen.BackColor = Color.FromArgb(32, 178, 170);
+            this.CBAlmacen.BackColor = Color.FromArgb(3, 155, 229);
             this.CBGestionHumana.Enabled = true;
-            this.CBGestionHumana.BackColor = Color.FromArgb(32, 178, 170);
+            this.CBGestionHumana.BackColor = Color.FromArgb(3, 155, 229);
             this.CBProductos.Enabled = true;
-            this.CBProductos.BackColor = Color.FromArgb(32, 178, 170);
+            this.CBProductos.BackColor = Color.FromArgb(3, 155, 229);
             this.CBRemision.Enabled = true;
-            this.CBRemision.BackColor = Color.FromArgb(32, 178, 170);
+            this.CBRemision.BackColor = Color.FromArgb(3, 155, 229);
             this.CBReporte.Enabled = true;
-            this.CBReporte.BackColor = Color.FromArgb(32, 178, 170);
+            this.CBReporte.BackColor = Color.FromArgb(3, 155, 229);
             this.CBSistema.Enabled = true;
-            this.CBSistema.BackColor = Color.FromArgb(32, 178, 170);
+            this.CBSistema.BackColor = Color.FromArgb(3, 155, 229);
 
             this.btnExaminar.Enabled = true;
         }

@@ -47,22 +47,22 @@ namespace CapaPresentacion
             this.DGResultados.Enabled = false;
 
             //Color para Texboxt Buscar
-            this.TBBuscar.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBBuscar.BackColor = Color.FromArgb(3, 155, 229);
         }
 
         private void Habilitar()
         {
             //Panel - Datos Basicos  
             this.TBCodigo.ReadOnly = false;
-            this.TBCodigo.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBCodigo.BackColor = Color.FromArgb(3, 155, 229);
             this.TBNombre.ReadOnly = false;
-            this.TBNombre.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBNombre.BackColor = Color.FromArgb(3, 155, 229);
             this.TBCiudad.ReadOnly = false;
-            this.TBCiudad.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBCiudad.BackColor = Color.FromArgb(3, 155, 229);
             this.TBDireccion.ReadOnly = false;
-            this.TBDireccion.BackColor = Color.FromArgb(32, 178, 170);            
+            this.TBDireccion.BackColor = Color.FromArgb(3, 155, 229);            
             this.TBUbicacion.ReadOnly = false;
-            this.TBUbicacion.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBUbicacion.BackColor = Color.FromArgb(3, 155, 229);
         }
 
         private void Limpiar()

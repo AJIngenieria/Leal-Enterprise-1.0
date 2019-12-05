@@ -99,70 +99,70 @@ namespace CapaPresentacion
             this.DGResultados.Enabled = false;
 
             //Color para Texboxt Buscar
-            this.TBBuscar.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBBuscar.BackColor = Color.FromArgb(3, 155, 229);
         }
 
         private void Habilitar()
         {
             //Panel - Datos Basicos  
             this.TBNombre.ReadOnly = false;
-            this.TBNombre.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBNombre.BackColor = Color.FromArgb(3, 155, 229);
             this.TBReferencia.ReadOnly = false;
-            this.TBReferencia.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBReferencia.BackColor = Color.FromArgb(3, 155, 229);
             this.TBDescripcion01.ReadOnly = false;
-            this.TBDescripcion01.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBDescripcion01.BackColor = Color.FromArgb(3, 155, 229);
             this.TBDescripcion02.ReadOnly = false;
-            this.TBDescripcion02.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBDescripcion02.BackColor = Color.FromArgb(3, 155, 229);
             this.TBLotedeingreso.ReadOnly = false;
-            this.TBLotedeingreso.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBLotedeingreso.BackColor = Color.FromArgb(3, 155, 229);
             this.TBPresentacion.ReadOnly = false;
-            this.TBPresentacion.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBPresentacion.BackColor = Color.FromArgb(3, 155, 229);
 
             //
             this.TBUltimovalor.ReadOnly = false;
-            this.TBUltimovalor.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBUltimovalor.BackColor = Color.FromArgb(3, 155, 229);
             this.TBValorFinal.ReadOnly = false;
-            this.TBValorFinal.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBValorFinal.BackColor = Color.FromArgb(3, 155, 229);
             this.TBValorPromedio.ReadOnly = false;
-            this.TBValorPromedio.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBValorPromedio.BackColor = Color.FromArgb(3, 155, 229);
             this.TBValor01.ReadOnly = false;
-            this.TBValor01.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBValor01.BackColor = Color.FromArgb(3, 155, 229);
             this.TBValor02.ReadOnly = false;
-            this.TBValor02.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBValor02.BackColor = Color.FromArgb(3, 155, 229);
             this.TBValor03.ReadOnly = false;
-            this.TBValor03.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBValor03.BackColor = Color.FromArgb(3, 155, 229);
             this.TBOferta01.ReadOnly = false;
-            this.TBOferta01.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBOferta01.BackColor = Color.FromArgb(3, 155, 229);
             this.TBOferta02.ReadOnly = false;
-            this.TBOferta02.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBOferta02.BackColor = Color.FromArgb(3, 155, 229);
             //this.TBReceptor.ReadOnly = false;
-            //this.TBReceptor.BackColor = Color.FromArgb(32, 178, 170);
+            //this.TBReceptor.BackColor = Color.FromArgb(3, 155, 229);
             //this.TBObservacion.ReadOnly = false;
-            //this.TBObservacion.BackColor = Color.FromArgb(32, 178, 170);
+            //this.TBObservacion.BackColor = Color.FromArgb(3, 155, 229);
 
             //
             //this.TBValorRetencion.ReadOnly = false;
-            //this.TBValorRetencion.BackColor = Color.FromArgb(32, 178, 170);
+            //this.TBValorRetencion.BackColor = Color.FromArgb(3, 155, 229);
             //this.TBBancoPrincipal.ReadOnly = false;
-            //this.TBBancoPrincipal.BackColor = Color.FromArgb(32, 178, 170);
+            //this.TBBancoPrincipal.BackColor = Color.FromArgb(3, 155, 229);
             //this.TBCuenta01.ReadOnly = false;
-            //this.TBCuenta01.BackColor = Color.FromArgb(32, 178, 170);
+            //this.TBCuenta01.BackColor = Color.FromArgb(3, 155, 229);
             //this.TBCuenta02.ReadOnly = false;
-            //this.TBCuenta02.BackColor = Color.FromArgb(32, 178, 170);
+            //this.TBCuenta02.BackColor = Color.FromArgb(3, 155, 229);
             //this.TBBancoAuxiliar.ReadOnly = false;
-            //this.TBBancoAuxiliar.BackColor = Color.FromArgb(32, 178, 170);
+            //this.TBBancoAuxiliar.BackColor = Color.FromArgb(3, 155, 229);
             //this.TBCreditoMinimo.ReadOnly = false;
-            //this.TBCreditoMinimo.BackColor = Color.FromArgb(32, 178, 170);
+            //this.TBCreditoMinimo.BackColor = Color.FromArgb(3, 155, 229);
             //this.TBCreditoMaximo.ReadOnly = false;
-            //this.TBCreditoMaximo.BackColor = Color.FromArgb(32, 178, 170);
+            //this.TBCreditoMaximo.BackColor = Color.FromArgb(3, 155, 229);
             //this.TBUltimoCredito.ReadOnly = false;
-            //this.TBUltimoCredito.BackColor = Color.FromArgb(32, 178, 170);
+            //this.TBUltimoCredito.BackColor = Color.FromArgb(3, 155, 229);
             //this.TBCreditoMora.ReadOnly = false;
-            //this.TBCreditoMora.BackColor = Color.FromArgb(32, 178, 170);
+            //this.TBCreditoMora.BackColor = Color.FromArgb(3, 155, 229);
             //this.TBCreditoTotal.ReadOnly = false;
-            //this.TBCreditoTotal.BackColor = Color.FromArgb(32, 178, 170);
+            //this.TBCreditoTotal.BackColor = Color.FromArgb(3, 155, 229);
             //this.TBDiasProrroga.ReadOnly = false;
-            //this.TBDiasProrroga.BackColor = Color.FromArgb(32, 178, 170);
+            //this.TBDiasProrroga.BackColor = Color.FromArgb(3, 155, 229);
         }
 
         private void Limpiar()

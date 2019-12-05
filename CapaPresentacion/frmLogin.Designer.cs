@@ -108,7 +108,9 @@
             this.TBContraseña.Size = new System.Drawing.Size(200, 21);
             this.TBContraseña.TabIndex = 3;
             this.TBContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TBContraseña.Enter += new System.EventHandler(this.TBContraseña_Enter);
             this.TBContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBContraseña_KeyPress);
+            this.TBContraseña.Leave += new System.EventHandler(this.TBContraseña_Leave);
             // 
             // label2
             // 
@@ -135,7 +137,9 @@
             this.TBUsuario.Size = new System.Drawing.Size(200, 21);
             this.TBUsuario.TabIndex = 0;
             this.TBUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TBUsuario.Enter += new System.EventHandler(this.TBUsuario_Enter);
             this.TBUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBUsuario_KeyPress);
+            this.TBUsuario.Leave += new System.EventHandler(this.TBUsuario_Leave);
             // 
             // frmLogin
             // 

@@ -21,7 +21,7 @@ namespace CapaPresentacion
 
         private void FrmExaminar_Empleado_Load(object sender, EventArgs e)
         {
-            this.TBBuscar.BackColor = Color.FromArgb(32, 178, 170);
+            this.TBBuscar.BackColor = Color.FromArgb(3, 155, 229);
         }
 
         private void TBBuscar_TextChanged(object sender, EventArgs e)

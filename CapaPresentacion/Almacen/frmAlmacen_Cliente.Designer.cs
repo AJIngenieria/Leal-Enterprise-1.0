@@ -200,7 +200,9 @@
             this.TBDepartamento.Name = "TBDepartamento";
             this.TBDepartamento.Size = new System.Drawing.Size(250, 21);
             this.TBDepartamento.TabIndex = 19;
+            this.TBDepartamento.Enter += new System.EventHandler(this.TBDepartamento_Enter);
             this.TBDepartamento.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBDepartamento_KeyUp);
+            this.TBDepartamento.Leave += new System.EventHandler(this.TBDepartamento_Leave);
             // 
             // TBCiudad
             // 
@@ -208,7 +210,9 @@
             this.TBCiudad.Name = "TBCiudad";
             this.TBCiudad.Size = new System.Drawing.Size(250, 21);
             this.TBCiudad.TabIndex = 18;
+            this.TBCiudad.Enter += new System.EventHandler(this.TBCiudad_Enter);
             this.TBCiudad.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBCiudad_KeyUp);
+            this.TBCiudad.Leave += new System.EventHandler(this.TBCiudad_Leave);
             // 
             // label9
             // 
@@ -234,7 +238,9 @@
             this.TBPais.Name = "TBPais";
             this.TBPais.Size = new System.Drawing.Size(250, 21);
             this.TBPais.TabIndex = 13;
+            this.TBPais.Enter += new System.EventHandler(this.TBPais_Enter);
             this.TBPais.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBPais_KeyUp);
+            this.TBPais.Leave += new System.EventHandler(this.TBPais_Leave);
             // 
             // TBCorreo
             // 
@@ -242,7 +248,9 @@
             this.TBCorreo.Name = "TBCorreo";
             this.TBCorreo.Size = new System.Drawing.Size(250, 21);
             this.TBCorreo.TabIndex = 12;
+            this.TBCorreo.Enter += new System.EventHandler(this.TBCorreo_Enter);
             this.TBCorreo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBCorreo_KeyUp);
+            this.TBCorreo.Leave += new System.EventHandler(this.TBCorreo_Leave);
             // 
             // TBMovil
             // 
@@ -250,7 +258,9 @@
             this.TBMovil.Name = "TBMovil";
             this.TBMovil.Size = new System.Drawing.Size(250, 21);
             this.TBMovil.TabIndex = 11;
+            this.TBMovil.Enter += new System.EventHandler(this.TBMovil_Enter);
             this.TBMovil.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBMovil_KeyUp);
+            this.TBMovil.Leave += new System.EventHandler(this.TBMovil_Leave);
             // 
             // TBTelefono
             // 
@@ -258,7 +268,9 @@
             this.TBTelefono.Name = "TBTelefono";
             this.TBTelefono.Size = new System.Drawing.Size(250, 21);
             this.TBTelefono.TabIndex = 10;
+            this.TBTelefono.Enter += new System.EventHandler(this.TBTelefono_Enter);
             this.TBTelefono.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBTelefono_KeyUp);
+            this.TBTelefono.Leave += new System.EventHandler(this.TBTelefono_Leave);
             // 
             // TBDocumento
             // 
@@ -266,7 +278,9 @@
             this.TBDocumento.Name = "TBDocumento";
             this.TBDocumento.Size = new System.Drawing.Size(250, 21);
             this.TBDocumento.TabIndex = 9;
+            this.TBDocumento.Enter += new System.EventHandler(this.TBDocumento_Enter);
             this.TBDocumento.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBDocumento_KeyUp);
+            this.TBDocumento.Leave += new System.EventHandler(this.TBDocumento_Leave);
             // 
             // TBNombre
             // 
@@ -274,7 +288,9 @@
             this.TBNombre.Name = "TBNombre";
             this.TBNombre.Size = new System.Drawing.Size(250, 21);
             this.TBNombre.TabIndex = 8;
+            this.TBNombre.Enter += new System.EventHandler(this.TBNombre_Enter);
             this.TBNombre.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBNombre_KeyUp);
+            this.TBNombre.Leave += new System.EventHandler(this.TBNombre_Leave);
             // 
             // TBCodigo
             // 
