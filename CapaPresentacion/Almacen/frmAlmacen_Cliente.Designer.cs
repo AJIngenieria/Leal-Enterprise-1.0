@@ -393,7 +393,9 @@
             this.TBDescripcion.Name = "TBDescripcion";
             this.TBDescripcion.Size = new System.Drawing.Size(250, 75);
             this.TBDescripcion.TabIndex = 13;
+            this.TBDescripcion.Enter += new System.EventHandler(this.TBDescripcion_Enter);
             this.TBDescripcion.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBDescripcion_KeyUp);
+            this.TBDescripcion.Leave += new System.EventHandler(this.TBDescripcion_Leave);
             // 
             // label18
             // 
@@ -410,7 +412,9 @@
             this.TBReceptor.Name = "TBReceptor";
             this.TBReceptor.Size = new System.Drawing.Size(250, 21);
             this.TBReceptor.TabIndex = 11;
+            this.TBReceptor.Enter += new System.EventHandler(this.TBReceptor_Enter);
             this.TBReceptor.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBReceptor_KeyUp);
+            this.TBReceptor.Leave += new System.EventHandler(this.TBReceptor_Leave);
             // 
             // label17
             // 
@@ -427,7 +431,9 @@
             this.TBCiudad_01.Name = "TBCiudad_01";
             this.TBCiudad_01.Size = new System.Drawing.Size(250, 21);
             this.TBCiudad_01.TabIndex = 9;
+            this.TBCiudad_01.Enter += new System.EventHandler(this.TBCiudad_01_Enter);
             this.TBCiudad_01.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBCiudad_01_KeyUp);
+            this.TBCiudad_01.Leave += new System.EventHandler(this.TBCiudad_01_Leave);
             // 
             // label16
             // 
@@ -444,7 +450,9 @@
             this.TBPais_01.Name = "TBPais_01";
             this.TBPais_01.Size = new System.Drawing.Size(250, 21);
             this.TBPais_01.TabIndex = 7;
+            this.TBPais_01.Enter += new System.EventHandler(this.TBPais_01_Enter);
             this.TBPais_01.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBPais_01_KeyUp);
+            this.TBPais_01.Leave += new System.EventHandler(this.TBPais_01_Leave);
             // 
             // label15
             // 
@@ -461,7 +469,9 @@
             this.TBDireccion02.Name = "TBDireccion02";
             this.TBDireccion02.Size = new System.Drawing.Size(250, 21);
             this.TBDireccion02.TabIndex = 5;
+            this.TBDireccion02.Enter += new System.EventHandler(this.TBDireccion02_Enter);
             this.TBDireccion02.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBDireccion02_KeyUp);
+            this.TBDireccion02.Leave += new System.EventHandler(this.TBDireccion02_Leave);
             // 
             // TBDireccion01
             // 
@@ -469,7 +479,9 @@
             this.TBDireccion01.Name = "TBDireccion01";
             this.TBDireccion01.Size = new System.Drawing.Size(250, 21);
             this.TBDireccion01.TabIndex = 4;
+            this.TBDireccion01.Enter += new System.EventHandler(this.TBDireccion01_Enter);
             this.TBDireccion01.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBDireccion01_KeyUp);
+            this.TBDireccion01.Leave += new System.EventHandler(this.TBDireccion01_Leave);
             // 
             // label14
             // 
@@ -486,7 +498,9 @@
             this.TBDireccionPrincipal.Name = "TBDireccionPrincipal";
             this.TBDireccionPrincipal.Size = new System.Drawing.Size(250, 21);
             this.TBDireccionPrincipal.TabIndex = 2;
+            this.TBDireccionPrincipal.Enter += new System.EventHandler(this.TBDireccionPrincipal_Enter);
             this.TBDireccionPrincipal.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBDireccionPrincipal_KeyUp);
+            this.TBDireccionPrincipal.Leave += new System.EventHandler(this.TBDireccionPrincipal_Leave);
             // 
             // label13
             // 
@@ -548,7 +562,9 @@
             this.TBCreditoMora.Name = "TBCreditoMora";
             this.TBCreditoMora.Size = new System.Drawing.Size(197, 21);
             this.TBCreditoMora.TabIndex = 16;
+            this.TBCreditoMora.Enter += new System.EventHandler(this.TBCreditoMora_Enter);
             this.TBCreditoMora.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBCreditoMora_KeyUp);
+            this.TBCreditoMora.Leave += new System.EventHandler(this.TBCreditoMora_Leave);
             // 
             // label26
             // 
@@ -565,7 +581,9 @@
             this.TBCreditoTotal.Name = "TBCreditoTotal";
             this.TBCreditoTotal.Size = new System.Drawing.Size(197, 21);
             this.TBCreditoTotal.TabIndex = 14;
+            this.TBCreditoTotal.Enter += new System.EventHandler(this.TBCreditoTotal_Enter);
             this.TBCreditoTotal.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBCreditoTotal_KeyUp);
+            this.TBCreditoTotal.Leave += new System.EventHandler(this.TBCreditoTotal_Leave);
             // 
             // TBUltimoCredito
             // 
@@ -573,7 +591,9 @@
             this.TBUltimoCredito.Name = "TBUltimoCredito";
             this.TBUltimoCredito.Size = new System.Drawing.Size(197, 21);
             this.TBUltimoCredito.TabIndex = 13;
+            this.TBUltimoCredito.Enter += new System.EventHandler(this.TBUltimoCredito_Enter);
             this.TBUltimoCredito.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBUltimoCredito_KeyUp);
+            this.TBUltimoCredito.Leave += new System.EventHandler(this.TBUltimoCredito_Leave);
             // 
             // label25
             // 
@@ -590,7 +610,9 @@
             this.TBCreditoMaximo.Name = "TBCreditoMaximo";
             this.TBCreditoMaximo.Size = new System.Drawing.Size(240, 21);
             this.TBCreditoMaximo.TabIndex = 11;
+            this.TBCreditoMaximo.Enter += new System.EventHandler(this.TBCreditoMaximo_Enter);
             this.TBCreditoMaximo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBCreditoMaximo_KeyUp);
+            this.TBCreditoMaximo.Leave += new System.EventHandler(this.TBCreditoMaximo_Leave);
             // 
             // label24
             // 
@@ -607,7 +629,9 @@
             this.TBCreditoMinimo.Name = "TBCreditoMinimo";
             this.TBCreditoMinimo.Size = new System.Drawing.Size(240, 21);
             this.TBCreditoMinimo.TabIndex = 9;
+            this.TBCreditoMinimo.Enter += new System.EventHandler(this.TBCreditoMinimo_Enter);
             this.TBCreditoMinimo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBCreditoMinimo_KeyUp);
+            this.TBCreditoMinimo.Leave += new System.EventHandler(this.TBCreditoMinimo_Leave);
             // 
             // label23
             // 
@@ -624,7 +648,9 @@
             this.TBCuenta02.Name = "TBCuenta02";
             this.TBCuenta02.Size = new System.Drawing.Size(240, 21);
             this.TBCuenta02.TabIndex = 7;
+            this.TBCuenta02.Enter += new System.EventHandler(this.TBCuenta02_Enter);
             this.TBCuenta02.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBCuenta02_KeyUp);
+            this.TBCuenta02.Leave += new System.EventHandler(this.TBCuenta02_Leave);
             // 
             // TBCuenta01
             // 
@@ -632,7 +658,9 @@
             this.TBCuenta01.Name = "TBCuenta01";
             this.TBCuenta01.Size = new System.Drawing.Size(240, 21);
             this.TBCuenta01.TabIndex = 6;
+            this.TBCuenta01.Enter += new System.EventHandler(this.TBCuenta01_Enter);
             this.TBCuenta01.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBCuenta01_KeyUp);
+            this.TBCuenta01.Leave += new System.EventHandler(this.TBCuenta01_Leave);
             // 
             // label22
             // 
@@ -676,7 +704,9 @@
             this.TBBancoAuxiliar.Name = "TBBancoAuxiliar";
             this.TBBancoAuxiliar.Size = new System.Drawing.Size(240, 21);
             this.TBBancoAuxiliar.TabIndex = 1;
+            this.TBBancoAuxiliar.Enter += new System.EventHandler(this.TBBancoAuxiliar_Enter);
             this.TBBancoAuxiliar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBBancoAuxiliar_KeyUp);
+            this.TBBancoAuxiliar.Leave += new System.EventHandler(this.TBBancoAuxiliar_Leave);
             // 
             // TBBancoPrincipal
             // 
@@ -684,7 +714,9 @@
             this.TBBancoPrincipal.Name = "TBBancoPrincipal";
             this.TBBancoPrincipal.Size = new System.Drawing.Size(240, 21);
             this.TBBancoPrincipal.TabIndex = 0;
+            this.TBBancoPrincipal.Enter += new System.EventHandler(this.TBBancoPrincipal_Enter);
             this.TBBancoPrincipal.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBBancoPrincipal_KeyUp);
+            this.TBBancoPrincipal.Leave += new System.EventHandler(this.TBBancoPrincipal_Leave);
             // 
             // btnEliminar
             // 
@@ -740,6 +772,8 @@
             this.TBBuscar.Size = new System.Drawing.Size(381, 21);
             this.TBBuscar.TabIndex = 7;
             this.TBBuscar.TextChanged += new System.EventHandler(this.TBBuscar_TextChanged);
+            this.TBBuscar.Enter += new System.EventHandler(this.TBBuscar_Enter);
+            this.TBBuscar.Leave += new System.EventHandler(this.TBBuscar_Leave);
             // 
             // label12
             // 

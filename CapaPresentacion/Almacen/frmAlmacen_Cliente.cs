@@ -79,7 +79,6 @@ namespace CapaPresentacion
 
             //Color para Texboxt Buscar
             this.TBBuscar.BackColor = Color.FromArgb(3, 155, 229);
-
         }
 
         private void Habilitar()
@@ -1126,7 +1125,7 @@ namespace CapaPresentacion
                 {
                     //Al precionar la tecla Enter se realiza Focus al Texboxt Siguiente
 
-                    this.TBNombre.Focus();
+                    this.TBNombre.Select();
                 }
 
                 else if (Convert.ToInt32(e.KeyData) == Convert.ToInt32(Keys.Control) + Convert.ToInt32(Keys.Tab))
@@ -1204,7 +1203,7 @@ namespace CapaPresentacion
                     //Y se realiza Focus al primer Texboxt de la segunda pestaña del TapControl
 
                     this.TCPrincipal.SelectedIndex = 2;
-                    this.TBPais_01.Select();
+                    this.TBBancoPrincipal.Select();
                 }
                 else if (Convert.ToInt32(e.KeyData) == Convert.ToInt32(Keys.Control) + Convert.ToInt32(Keys.Enter))
                 {
@@ -1633,7 +1632,7 @@ namespace CapaPresentacion
                 {
                     //Al precionar la tecla Enter se realiza Focus al Texboxt Siguiente
 
-                    this.TBPais.Select();
+                    this.TBPais_01.Focus();
                 }
 
                 else if (Convert.ToInt32(e.KeyData) == Convert.ToInt32(Keys.Control) + Convert.ToInt32(Keys.Tab))
@@ -2550,6 +2549,176 @@ namespace CapaPresentacion
         private void TBDepartamento_Leave(object sender, EventArgs e)
         {
             this.TBDepartamento.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBPais_01_Enter(object sender, EventArgs e)
+        {
+            this.TBPais_01.BackColor = Color.Azure;
+        }
+
+        private void TBCiudad_01_Enter(object sender, EventArgs e)
+        {
+            this.TBCiudad_01.BackColor = Color.Azure;
+        }
+
+        private void TBDireccionPrincipal_Enter(object sender, EventArgs e)
+        {
+            this.TBDireccionPrincipal.BackColor = Color.Azure;
+        }
+
+        private void TBDireccion01_Enter(object sender, EventArgs e)
+        {
+            this.TBDireccion01.BackColor = Color.Azure;
+        }
+
+        private void TBDireccion02_Enter(object sender, EventArgs e)
+        {
+            this.TBDireccion02.BackColor = Color.Azure;
+        }
+
+        private void TBReceptor_Enter(object sender, EventArgs e)
+        {
+            this.TBReceptor.BackColor = Color.Azure;
+        }
+
+        private void TBDescripcion_Enter(object sender, EventArgs e)
+        {
+            this.TBDescripcion.BackColor = Color.Azure;
+        }
+
+        private void TBBancoPrincipal_Enter(object sender, EventArgs e)
+        {
+            this.TBBancoPrincipal.BackColor = Color.Azure;
+        }
+
+        private void TBCuenta01_Enter(object sender, EventArgs e)
+        {
+            this.TBCuenta01.BackColor = Color.Azure;
+        }
+
+        private void TBBancoAuxiliar_Enter(object sender, EventArgs e)
+        {
+            this.TBBancoAuxiliar.BackColor = Color.Azure;
+        }
+
+        private void TBCuenta02_Enter(object sender, EventArgs e)
+        {
+            this.TBCuenta02.BackColor = Color.Azure;
+        }
+
+        private void TBCreditoMinimo_Enter(object sender, EventArgs e)
+        {
+            this.TBCreditoMinimo.BackColor = Color.Azure;
+        }
+
+        private void TBCreditoMaximo_Enter(object sender, EventArgs e)
+        {
+            this.TBCreditoMaximo.BackColor = Color.Azure;
+        }
+
+        private void TBUltimoCredito_Enter(object sender, EventArgs e)
+        {
+            this.TBUltimoCredito.BackColor = Color.Azure;
+        }
+
+        private void TBCreditoMora_Enter(object sender, EventArgs e)
+        {
+            this.TBCreditoMora.BackColor = Color.Azure;
+        }
+
+        private void TBCreditoTotal_Enter(object sender, EventArgs e)
+        {
+            this.TBCreditoTotal.BackColor = Color.Azure;
+        }
+
+        private void TBPais_01_Leave(object sender, EventArgs e)
+        {
+            this.TBPais_01.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBCiudad_01_Leave(object sender, EventArgs e)
+        {
+            this.TBCiudad_01.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBDireccionPrincipal_Leave(object sender, EventArgs e)
+        {
+            this.TBDireccionPrincipal.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBDireccion01_Leave(object sender, EventArgs e)
+        {
+            this.TBDireccion01.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBDireccion02_Leave(object sender, EventArgs e)
+        {
+            this.TBDireccion02.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBReceptor_Leave(object sender, EventArgs e)
+        {
+            this.TBReceptor.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBDescripcion_Leave(object sender, EventArgs e)
+        {
+            this.TBDescripcion.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBBancoPrincipal_Leave(object sender, EventArgs e)
+        {
+            this.TBBancoPrincipal.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBCuenta01_Leave(object sender, EventArgs e)
+        {
+            this.TBCuenta01.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBBancoAuxiliar_Leave(object sender, EventArgs e)
+        {
+            this.TBBancoAuxiliar.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBCuenta02_Leave(object sender, EventArgs e)
+        {
+            this.TBCuenta02.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBCreditoMinimo_Leave(object sender, EventArgs e)
+        {
+            this.TBCreditoMinimo.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBCreditoMaximo_Leave(object sender, EventArgs e)
+        {
+            this.TBCreditoMaximo.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBUltimoCredito_Leave(object sender, EventArgs e)
+        {
+            this.TBUltimoCredito.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBCreditoMora_Leave(object sender, EventArgs e)
+        {
+            this.TBCreditoMora.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBCreditoTotal_Leave(object sender, EventArgs e)
+        {
+            this.TBCreditoTotal.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBBuscar_Enter(object sender, EventArgs e)
+        {
+            this.TBBuscar.BackColor = Color.Azure;
+        }
+
+        private void TBBuscar_Leave(object sender, EventArgs e)
+        {
+            this.TBBuscar.BackColor = Color.FromArgb(3, 155, 229);
         }
     }
 }
