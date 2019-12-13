@@ -93,6 +93,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.DGResultados = new System.Windows.Forms.DataGridView();
+            this.TPFacturacion = new System.Windows.Forms.TabPage();
             this.groupBox1.SuspendLayout();
             this.TCPrincipal.SuspendLayout();
             this.TPDatosBasicos.SuspendLayout();
@@ -159,6 +160,7 @@
             // 
             this.TCPrincipal.Controls.Add(this.TPDatosBasicos);
             this.TCPrincipal.Controls.Add(this.TPDatosDeEnvio);
+            this.TCPrincipal.Controls.Add(this.TPFacturacion);
             this.TCPrincipal.Controls.Add(this.TPDatosFinancieros);
             this.TCPrincipal.Location = new System.Drawing.Point(6, 20);
             this.TCPrincipal.Name = "TCPrincipal";
@@ -383,7 +385,7 @@
             this.TPDatosDeEnvio.Padding = new System.Windows.Forms.Padding(3);
             this.TPDatosDeEnvio.Size = new System.Drawing.Size(345, 249);
             this.TPDatosDeEnvio.TabIndex = 1;
-            this.TPDatosDeEnvio.Text = "Datos De Envio";
+            this.TPDatosDeEnvio.Text = "Envios";
             this.TPDatosDeEnvio.UseVisualStyleBackColor = true;
             // 
             // TBDescripcion
@@ -544,7 +546,7 @@
             this.TPDatosFinancieros.Name = "TPDatosFinancieros";
             this.TPDatosFinancieros.Size = new System.Drawing.Size(345, 249);
             this.TPDatosFinancieros.TabIndex = 3;
-            this.TPDatosFinancieros.Text = "Datos Financieros";
+            this.TPDatosFinancieros.Text = "Financiera";
             this.TPDatosFinancieros.UseVisualStyleBackColor = true;
             // 
             // label27
@@ -810,6 +812,16 @@
             this.DGResultados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGResultados_CellDoubleClick);
             this.DGResultados.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DGResultados_KeyPress);
             // 
+            // TPFacturacion
+            // 
+            this.TPFacturacion.Location = new System.Drawing.Point(4, 24);
+            this.TPFacturacion.Name = "TPFacturacion";
+            this.TPFacturacion.Padding = new System.Windows.Forms.Padding(3);
+            this.TPFacturacion.Size = new System.Drawing.Size(345, 249);
+            this.TPFacturacion.TabIndex = 4;
+            this.TPFacturacion.Text = "Facturacion";
+            this.TPFacturacion.UseVisualStyleBackColor = true;
+            // 
             // frmAlmacen_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -824,6 +836,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Almacen - Cliente";
             this.Load += new System.EventHandler(this.frmAlmacen_Cliente_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmAlmacen_Cliente_KeyDown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.TCPrincipal.ResumeLayout(false);
@@ -907,5 +920,6 @@
         private System.Windows.Forms.TextBox TBUltimoCredito;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox TBIdcliente;
+        private System.Windows.Forms.TabPage TPFacturacion;
     }
 }

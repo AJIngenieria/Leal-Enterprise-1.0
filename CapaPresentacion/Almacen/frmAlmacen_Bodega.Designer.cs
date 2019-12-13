@@ -152,7 +152,9 @@
             this.TBTipo.Name = "TBTipo";
             this.TBTipo.Size = new System.Drawing.Size(250, 21);
             this.TBTipo.TabIndex = 14;
+            this.TBTipo.Enter += new System.EventHandler(this.TBTipo_Enter);
             this.TBTipo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBTipo_KeyUp);
+            this.TBTipo.Leave += new System.EventHandler(this.TBTipo_Leave);
             // 
             // label1
             // 
@@ -169,7 +171,9 @@
             this.TBBodega.Name = "TBBodega";
             this.TBBodega.Size = new System.Drawing.Size(250, 21);
             this.TBBodega.TabIndex = 1;
+            this.TBBodega.Enter += new System.EventHandler(this.TBBodega_Enter);
             this.TBBodega.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBBodega_KeyUp);
+            this.TBBodega.Leave += new System.EventHandler(this.TBBodega_Leave);
             // 
             // label2
             // 
@@ -197,7 +201,9 @@
             this.TBCorreo.Name = "TBCorreo";
             this.TBCorreo.Size = new System.Drawing.Size(250, 21);
             this.TBCorreo.TabIndex = 13;
+            this.TBCorreo.Enter += new System.EventHandler(this.TBCorreo_Enter);
             this.TBCorreo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBCorreo_KeyUp);
+            this.TBCorreo.Leave += new System.EventHandler(this.TBCorreo_Leave);
             // 
             // label3
             // 
@@ -223,7 +229,9 @@
             this.TBCiudad.Name = "TBCiudad";
             this.TBCiudad.Size = new System.Drawing.Size(250, 21);
             this.TBCiudad.TabIndex = 5;
+            this.TBCiudad.Enter += new System.EventHandler(this.TBCiudad_Enter);
             this.TBCiudad.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBCiudad_KeyUp);
+            this.TBCiudad.Leave += new System.EventHandler(this.TBCiudad_Leave);
             // 
             // label6
             // 
@@ -249,7 +257,9 @@
             this.TBResponsable.Name = "TBResponsable";
             this.TBResponsable.Size = new System.Drawing.Size(225, 21);
             this.TBResponsable.TabIndex = 10;
+            this.TBResponsable.Enter += new System.EventHandler(this.TBResponsable_Enter);
             this.TBResponsable.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBResponsable_KeyUp);
+            this.TBResponsable.Leave += new System.EventHandler(this.TBResponsable_Leave);
             // 
             // TBTelefono
             // 
@@ -257,7 +267,9 @@
             this.TBTelefono.Name = "TBTelefono";
             this.TBTelefono.Size = new System.Drawing.Size(250, 21);
             this.TBTelefono.TabIndex = 7;
+            this.TBTelefono.Enter += new System.EventHandler(this.TBTelefono_Enter);
             this.TBTelefono.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBTelefono_KeyUp);
+            this.TBTelefono.Leave += new System.EventHandler(this.TBTelefono_Leave);
             // 
             // label5
             // 
@@ -274,7 +286,9 @@
             this.TBMovil.Name = "TBMovil";
             this.TBMovil.Size = new System.Drawing.Size(250, 21);
             this.TBMovil.TabIndex = 8;
+            this.TBMovil.Enter += new System.EventHandler(this.TBMovil_Enter);
             this.TBMovil.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBMovil_KeyUp);
+            this.TBMovil.Leave += new System.EventHandler(this.TBMovil_Leave);
             // 
             // tabPage2
             // 
@@ -307,7 +321,9 @@
             this.TBObservacion.Name = "TBObservacion";
             this.TBObservacion.Size = new System.Drawing.Size(230, 53);
             this.TBObservacion.TabIndex = 13;
+            this.TBObservacion.Enter += new System.EventHandler(this.TBObservacion_Enter);
             this.TBObservacion.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBObservacion_KeyUp);
+            this.TBObservacion.Leave += new System.EventHandler(this.TBObservacion_Leave);
             // 
             // label17
             // 
@@ -324,8 +340,10 @@
             this.TBNumeroImpresora.Name = "TBNumeroImpresora";
             this.TBNumeroImpresora.Size = new System.Drawing.Size(179, 21);
             this.TBNumeroImpresora.TabIndex = 11;
+            this.TBNumeroImpresora.Enter += new System.EventHandler(this.TBNumeroImpresora_Enter);
             this.TBNumeroImpresora.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBNumeroImpresora_KeyPress);
             this.TBNumeroImpresora.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBNumeroImpresora_KeyUp);
+            this.TBNumeroImpresora.Leave += new System.EventHandler(this.TBNumeroImpresora_Leave);
             // 
             // label16
             // 
@@ -342,8 +360,10 @@
             this.TBNumeroCelular.Name = "TBNumeroCelular";
             this.TBNumeroCelular.Size = new System.Drawing.Size(179, 21);
             this.TBNumeroCelular.TabIndex = 9;
+            this.TBNumeroCelular.Enter += new System.EventHandler(this.TBNumeroCelular_Enter);
             this.TBNumeroCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBNumeroCelular_KeyPress);
             this.TBNumeroCelular.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBNumeroCelular_KeyUp);
+            this.TBNumeroCelular.Leave += new System.EventHandler(this.TBNumeroCelular_Leave);
             // 
             // label15
             // 
@@ -360,8 +380,10 @@
             this.TBNumeroPC.Name = "TBNumeroPC";
             this.TBNumeroPC.Size = new System.Drawing.Size(179, 21);
             this.TBNumeroPC.TabIndex = 7;
+            this.TBNumeroPC.Enter += new System.EventHandler(this.TBNumeroPC_Enter);
             this.TBNumeroPC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBNumeroPC_KeyPress);
             this.TBNumeroPC.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBNumeroPC_KeyUp);
+            this.TBNumeroPC.Leave += new System.EventHandler(this.TBNumeroPC_Leave);
             // 
             // label14
             // 
@@ -378,7 +400,9 @@
             this.TBMercancia.Name = "TBMercancia";
             this.TBMercancia.Size = new System.Drawing.Size(179, 21);
             this.TBMercancia.TabIndex = 5;
+            this.TBMercancia.Enter += new System.EventHandler(this.TBMercancia_Enter);
             this.TBMercancia.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBMercancia_KeyUp);
+            this.TBMercancia.Leave += new System.EventHandler(this.TBMercancia_Leave);
             // 
             // label13
             // 
@@ -395,7 +419,9 @@
             this.TBDireccion02.Name = "TBDireccion02";
             this.TBDireccion02.Size = new System.Drawing.Size(230, 21);
             this.TBDireccion02.TabIndex = 3;
+            this.TBDireccion02.Enter += new System.EventHandler(this.TBDireccion02_Enter);
             this.TBDireccion02.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBDireccion02_KeyUp);
+            this.TBDireccion02.Leave += new System.EventHandler(this.TBDireccion02_Leave);
             // 
             // label12
             // 
@@ -421,7 +447,9 @@
             this.TBDireccion01.Name = "TBDireccion01";
             this.TBDireccion01.Size = new System.Drawing.Size(230, 21);
             this.TBDireccion01.TabIndex = 0;
+            this.TBDireccion01.Enter += new System.EventHandler(this.TBDireccion01_Enter);
             this.TBDireccion01.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TBDireccion01_KeyUp);
+            this.TBDireccion01.Leave += new System.EventHandler(this.TBDireccion01_Leave);
             // 
             // btnCancelar
             // 

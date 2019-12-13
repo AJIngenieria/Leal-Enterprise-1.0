@@ -2720,5 +2720,13 @@ namespace CapaPresentacion
         {
             this.TBBuscar.BackColor = Color.FromArgb(3, 155, 229);
         }
+
+        private void frmAlmacen_Cliente_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
     }
 }

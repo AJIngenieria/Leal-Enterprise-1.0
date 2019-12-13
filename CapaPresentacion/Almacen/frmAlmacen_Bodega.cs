@@ -1120,8 +1120,7 @@ namespace CapaPresentacion
                 {
                     //Al precionar la tecla Enter se realiza Focus al Texboxt Siguiente
 
-                    this.TBDireccion01.Select();
-                    this.TCPrincipal.SelectedIndex = 1;
+                    this.TBBodega.Select();
                 }
 
                 else if (Convert.ToInt32(e.KeyData) == Convert.ToInt32(Keys.Control) + Convert.ToInt32(Keys.Tab))
@@ -1733,5 +1732,144 @@ namespace CapaPresentacion
             }
         }
 
+        private void TBBodega_Enter(object sender, EventArgs e)
+        {
+            this.TBBodega.BackColor = Color.Azure;
+        }
+
+        private void TBTipo_Enter(object sender, EventArgs e)
+        {
+            this.TBTipo.BackColor = Color.Azure;
+        }
+
+        private void TBCiudad_Enter(object sender, EventArgs e)
+        {
+            this.TBCiudad.BackColor = Color.Azure;
+        }
+
+        private void TBTelefono_Enter(object sender, EventArgs e)
+        {
+            this.TBTelefono.BackColor = Color.Azure;
+        }
+
+        private void TBMovil_Enter(object sender, EventArgs e)
+        {
+            this.TBMovil.BackColor = Color.Azure;
+        }
+
+        private void TBResponsable_Enter(object sender, EventArgs e)
+        {
+            this.TBResponsable.BackColor = Color.Azure;
+        }
+
+        private void TBCorreo_Enter(object sender, EventArgs e)
+        {
+            this.TBCorreo.BackColor = Color.Azure;
+        }
+
+        private void TBBodega_Leave(object sender, EventArgs e)
+        {
+            this.TBBodega.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBTipo_Leave(object sender, EventArgs e)
+        {
+            this.TBTipo.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBCiudad_Leave(object sender, EventArgs e)
+        {
+            this.TBCiudad.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBTelefono_Leave(object sender, EventArgs e)
+        {
+            this.TBTelefono.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBMovil_Leave(object sender, EventArgs e)
+        {
+            this.TBMovil.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBResponsable_Leave(object sender, EventArgs e)
+        {
+            this.TBResponsable.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBCorreo_Leave(object sender, EventArgs e)
+        {
+            this.TBCorreo.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBDireccion01_Enter(object sender, EventArgs e)
+        {
+            this.TBDireccion01.BackColor = Color.Azure;
+        }
+
+        private void TBDireccion02_Enter(object sender, EventArgs e)
+        {
+            this.TBDireccion02.BackColor = Color.Azure;
+        }
+
+        private void TBMercancia_Enter(object sender, EventArgs e)
+        {
+            this.TBMercancia.BackColor = Color.Azure;
+        }
+
+        private void TBNumeroPC_Enter(object sender, EventArgs e)
+        {
+            this.TBNumeroPC.BackColor = Color.Azure;
+        }
+
+        private void TBNumeroCelular_Enter(object sender, EventArgs e)
+        {
+            this.TBNumeroCelular.BackColor = Color.Azure;
+        }
+
+        private void TBNumeroImpresora_Enter(object sender, EventArgs e)
+        {
+            this.TBNumeroImpresora.BackColor = Color.Azure;
+        }
+
+        private void TBObservacion_Enter(object sender, EventArgs e)
+        {
+            this.TBObservacion.BackColor = Color.Azure;
+        }
+
+        private void TBDireccion01_Leave(object sender, EventArgs e)
+        {
+            this.TBDireccion01.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBDireccion02_Leave(object sender, EventArgs e)
+        {
+            this.TBDireccion02.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBMercancia_Leave(object sender, EventArgs e)
+        {
+            this.TBMercancia.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBNumeroPC_Leave(object sender, EventArgs e)
+        {
+            this.TBNumeroPC.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBNumeroCelular_Leave(object sender, EventArgs e)
+        {
+            this.TBNumeroCelular.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBNumeroImpresora_Leave(object sender, EventArgs e)
+        {
+            this.TBNumeroImpresora.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBObservacion_Leave(object sender, EventArgs e)
+        {
+            this.TBObservacion.BackColor = Color.FromArgb(3, 155, 229);
+        }
     }
 }
