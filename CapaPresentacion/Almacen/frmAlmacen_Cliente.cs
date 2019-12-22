@@ -2437,6 +2437,9 @@ namespace CapaPresentacion
 
         private void TBNombre_Enter(object sender, EventArgs e)
         {
+            //Se evalua si el campo de texto esta vacio 
+            //Porque debe estar con datos digitados
+            //Y es obligatorio en la base de datos
             if (TBNombre.Text == Campo)
             {
                 this.TBNombre.BackColor = Color.Azure;
@@ -2447,6 +2450,9 @@ namespace CapaPresentacion
 
         private void TBDocumento_Enter(object sender, EventArgs e)
         {
+            //Se evalua si el campo de texto esta vacio 
+            //Porque debe estar con datos digitados
+            //Y es obligatorio en la base de datos
             if (TBDocumento.Text == Campo)
             {
                 this.TBDocumento.BackColor = Color.Azure;

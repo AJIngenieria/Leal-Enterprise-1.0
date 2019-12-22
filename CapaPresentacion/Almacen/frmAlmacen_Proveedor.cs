@@ -27,6 +27,8 @@ namespace CapaPresentacion
 
         //Parametros para AutoCompletar los Texboxt
 
+        private string Campo = "Campo Obligatorio - Leal Enterprise";
+
         //Panel Datos Basicos
         public string Idproveedor = "";
         public string Proveedor = "";
@@ -2598,5 +2600,314 @@ namespace CapaPresentacion
             this.btnImprimir.Image = Properties.Resources.BR_Imprimir;
         }
 
+        private void TBNombre_Enter(object sender, EventArgs e)
+        {
+            //Se evalua si el campo de texto esta vacio 
+            //Porque debe estar con datos digitados
+            //Y es obligatorio en la base de datos
+            if (TBNombre.Text == Campo)
+            {
+                this.TBNombre.BackColor = Color.Azure;
+                this.TBNombre.ForeColor = Color.FromArgb(0, 0, 0);
+                this.TBNombre.Clear();
+            }
+        }
+        
+        private void TBDocumento_Enter(object sender, EventArgs e)
+        {
+            //Se evalua si el campo de texto esta vacio 
+            //Porque debe estar con datos digitados
+            //Y es obligatorio en la base de datos
+            if (TBNombre.Text == Campo)
+            {
+                this.TBNombre.BackColor = Color.Azure;
+                this.TBNombre.ForeColor = Color.FromArgb(0, 0, 0);
+                this.TBNombre.Clear();
+            }
+        }
+
+        private void TBRepresentante_Enter(object sender, EventArgs e)
+        {
+            this.TBRepresentante.BackColor = Color.Azure;
+        }
+
+        private void TBPais_Enter(object sender, EventArgs e)
+        {
+            this.TBPais.BackColor = Color.Azure;
+        }
+
+        private void TBCiudad_Enter(object sender, EventArgs e)
+        {
+            this.TBCiudad.BackColor = Color.Azure;
+        }
+
+        private void TBNacionalidad_Enter(object sender, EventArgs e)
+        {
+            this.TBNacionalidad.BackColor = Color.Azure;
+        }
+
+        private void TBTelefono_Enter(object sender, EventArgs e)
+        {
+            this.TBTelefono.BackColor = Color.Azure;
+        }
+
+        private void TBMovil_Enter(object sender, EventArgs e)
+        {
+            this.TBMovil.BackColor = Color.Azure;
+        }
+
+        private void TBCorreo_Enter(object sender, EventArgs e)
+        {
+            this.TBCorreo.BackColor = Color.Azure;
+        }
+        private void TBPais_01_Enter(object sender, EventArgs e)
+        {
+            this.TBPais_01.BackColor = Color.Azure;
+        }
+
+        private void TBCiudad_01_Enter(object sender, EventArgs e)
+        {
+            this.TBCiudad_01.BackColor = Color.Azure;
+        }
+
+        private void TBDireccionPrincipal_Enter(object sender, EventArgs e)
+        {
+            this.TBDireccionPrincipal.BackColor = Color.Azure;
+        }
+
+        private void TBDireccion01_Enter(object sender, EventArgs e)
+        {
+            this.TBDireccion01.BackColor = Color.Azure;
+        }
+
+        private void TBDireccion02_Enter(object sender, EventArgs e)
+        {
+            this.TBDireccion02.BackColor = Color.Azure;
+        }
+
+        private void TBReceptor_Enter(object sender, EventArgs e)
+        {
+            this.TBReceptor.BackColor = Color.Azure;
+        }
+
+        private void TBObservacion_Enter(object sender, EventArgs e)
+        {
+            this.TBObservacion.BackColor = Color.Azure;
+        }
+        private void TBNombre_Leave(object sender, EventArgs e)
+        {
+            this.TBNombre.BackColor = Color.FromArgb(3, 155, 229);
+
+            //Si el campo de texto esta con su valor por defecto "Vacio"
+            //Se realiza la primera validacion de lo contrario "Si esta lleno o digitador"
+            //Se realiza toma estos datos para digitar en la Base de Datos
+            if (TBNombre.Text == Campo)
+            {
+                this.TBNombre.ForeColor = Color.FromArgb(255, 255, 255);
+            }
+            else if (TBNombre.Text == string.Empty)
+            {
+                this.TBDocumento.Text = Campo;
+                this.TBDocumento.ForeColor = Color.FromArgb(255, 255, 255);
+            }
+        }
+
+        private void TBDocumento_Leave(object sender, EventArgs e)
+        {
+            this.TBDocumento.BackColor = Color.FromArgb(3, 155, 229);
+
+            //Si el campo de texto esta con su valor por defecto "Vacio"
+            //Se realiza la primera validacion de lo contrario "Si esta lleno o digitador"
+            //Se realiza toma estos datos para digitar en la Base de Datos
+            if (TBDocumento.Text == Campo)
+            {
+                this.TBDocumento.ForeColor = Color.FromArgb(255, 255, 255);
+            }
+            else if (TBDocumento.Text == string.Empty)
+            {
+                this.TBDocumento.Text = Campo;
+                this.TBDocumento.ForeColor = Color.FromArgb(255, 255, 255);
+            }
+        }
+
+        private void TBRepresentante_Leave(object sender, EventArgs e)
+        {
+            this.TBRepresentante.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBPais_Leave(object sender, EventArgs e)
+        {
+            this.TBPais.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBCiudad_Leave(object sender, EventArgs e)
+        {
+            this.TBCiudad.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBNacionalidad_Leave(object sender, EventArgs e)
+        {
+            this.TBNacionalidad.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBTelefono_Leave(object sender, EventArgs e)
+        {
+            this.TBTelefono.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBMovil_Leave(object sender, EventArgs e)
+        {
+            this.TBMovil.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBCorreo_Leave(object sender, EventArgs e)
+        {
+            this.TBCorreo.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBPais_01_Leave(object sender, EventArgs e)
+        {
+            this.TBPais_01.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBCiudad_01_Leave(object sender, EventArgs e)
+        {
+            this.TBCiudad_01.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBDireccionPrincipal_Leave(object sender, EventArgs e)
+        {
+            this.TBDireccionPrincipal.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBDireccion01_Leave(object sender, EventArgs e)
+        {
+            this.TBDireccion01.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBDireccion02_Leave(object sender, EventArgs e)
+        {
+            this.TBDireccion02.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBReceptor_Leave(object sender, EventArgs e)
+        {
+            this.TBReceptor.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBObservacion_Leave(object sender, EventArgs e)
+        {
+            this.TBObservacion.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBValorRetencion_Enter(object sender, EventArgs e)
+        {
+            this.TBValorRetencion.BackColor = Color.Azure;
+        }
+
+        private void TBBancoPrincipal_Enter(object sender, EventArgs e)
+        {
+            this.TBBancoPrincipal.BackColor = Color.Azure;
+        }
+
+        private void TBCuenta01_Enter(object sender, EventArgs e)
+        {
+            this.TBCuenta01.BackColor = Color.Azure;
+        }
+
+        private void TBBancoAuxiliar_Enter(object sender, EventArgs e)
+        {
+            this.TBBancoAuxiliar.BackColor = Color.Azure;
+        }
+
+        private void TBCuenta02_Enter(object sender, EventArgs e)
+        {
+            this.TBCuenta02.BackColor = Color.Azure;
+        }
+
+        private void TBCreditoMinimo_Enter(object sender, EventArgs e)
+        {
+            this.TBCreditoMinimo.BackColor = Color.Azure;
+        }
+
+        private void TBCreditoMaximo_Enter(object sender, EventArgs e)
+        {
+            this.TBCreditoMaximo.BackColor = Color.Azure;
+        }
+
+        private void TBUltimoCredito_Enter(object sender, EventArgs e)
+        {
+            this.TBUltimoCredito.BackColor = Color.Azure;
+        }
+
+        private void TBCreditoMora_Enter(object sender, EventArgs e)
+        {
+            this.TBCreditoMora.BackColor = Color.Azure;
+        }
+
+        private void TBCreditoTotal_Enter(object sender, EventArgs e)
+        {
+            this.TBCreditoTotal.BackColor = Color.Azure;
+        }
+
+        private void TBDiasProrroga_Enter(object sender, EventArgs e)
+        {
+            this.TBDiasProrroga.BackColor = Color.Azure;
+        }
+
+        private void TBValorRetencion_Leave(object sender, EventArgs e)
+        {
+            this.TBValorRetencion.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBBancoPrincipal_Leave(object sender, EventArgs e)
+        {
+            this.TBBancoPrincipal.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBCuenta01_Leave(object sender, EventArgs e)
+        {
+            this.TBCuenta01.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBBancoAuxiliar_Leave(object sender, EventArgs e)
+        {
+            this.TBBancoAuxiliar.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBCuenta02_Leave(object sender, EventArgs e)
+        {
+            this.TBCuenta02.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBCreditoMinimo_Leave(object sender, EventArgs e)
+        {
+            this.TBCreditoMinimo.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBCreditoMaximo_Leave(object sender, EventArgs e)
+        {
+            this.TBCreditoMaximo.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBUltimoCredito_Leave(object sender, EventArgs e)
+        {
+            this.TBUltimoCredito.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBCreditoMora_Leave(object sender, EventArgs e)
+        {
+            this.TBCreditoMora.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBCreditoTotal_Leave(object sender, EventArgs e)
+        {
+            this.TBCreditoTotal.BackColor = Color.FromArgb(3, 155, 229);
+        }
+
+        private void TBDiasProrroga_Leave(object sender, EventArgs e)
+        {
+            this.TBDiasProrroga.BackColor = Color.FromArgb(3, 155, 229);
+        }
     }
 }
